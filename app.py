@@ -14,7 +14,7 @@ col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
 #List of all eating behaviors 
-intolerances = ["none",
+intolerances_lst = ["none",
     "dairy",
     "egg",
     "gluten",
@@ -27,8 +27,8 @@ intolerances = ["none",
     "sulfite",
     "tree nut",
     "wheat"]
-
-diet = ["none", 
+intolerances = ""
+diet_lst = ["none", 
     "gluten free",
     "ketogenic",
     "vegetarian",
@@ -41,16 +41,16 @@ diet = ["none",
     "low FODMAP",
     "whole30"
 ]
-
-excluded_ingredients = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
-
+diet = ""
+excluded_ingredients_lst = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
+excluded_ingredients = ""
 #variables
 price = 0.0
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
 def main():
-    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipe
+    recipe_ids = get_meal_plan(API_KEY, "day", diet_lst, excluded_ingredients_lst, intolerances_lst) #get random recipe
     total_cost = 0
 
     st.write("Food plan:")
@@ -69,20 +69,20 @@ st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Intolerances")
-    selected_allergy = st.selectbox("Intolerances", intolerances, key="intolerances")
+    selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
 
 with col2:
     st.header("Diet")
-    selected_diet = st.selectbox("Diet", diet, key="diet")
+    selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
     st.header("Your meal plan for the next week")
     st.write(f"Price: {price}")
 
 with col3:
     st.header("Excluded ingredients")
-    selected_exclude = st.selectbox("Exclude ingredients", excluded_ingredients, key="excluded_ingredients")
+    selected_exclude = st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
     st.divider()
     st.header("4-week budget forecast")
     st.write("Coming soon!")
@@ -95,10 +95,10 @@ if st.session_state.get("generate_button"):
     price = 0.0
     diet = st.session_state.get("diet")
     intolerances = st.session_state.get("allergies")
-    excluded_ingredients = st.session_state.get("excluded_ingredients")
+    excluded_ingredients  = st.session_state.get("excluded_ingredients")
 
-    if intolerances == "none":
-        intolerances = None
+    if intolerances  == "none":
+        intolerances  = None
     if diet == "none":
         diet = None
     if excluded_ingredients == "none":
