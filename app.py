@@ -1,5 +1,4 @@
-#link to the app: https://projectrepcs-kgxuhxcx6ux2eygqo8g8ey.streamlit.app/
-
+#link to the app: https://projectrepcs-f2thgw3scyfevbfah28c7b.streamlit.app
 import streamlit as st
 
 #import custom functions from folder functions
@@ -20,7 +19,28 @@ diet = ["none", "vegan", "vegetarian", "Pescetarian"]
 excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
 
 #variables
-price = 17.5
+price = 0.0
+allergies = None
+diet = None
+
+
+#central code of the app
+def main():
+    recipe_ids = get_meal_plan(API_KEY) #get random recipe
+    total_cost = 0
+
+    st.write("\n📊 Kostenübersicht:")
+    for rid in recipe_ids:
+        cost = get_recipe_price(API_KEY, rid)
+        total_cost += cost
+        st.write(f"Rezept {rid}: {cost:.2f}$")
+    st.write(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+
+
+    #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+
+
+
 
 
 #streamlit page
@@ -47,24 +67,13 @@ with col3:
 
 
 
-#main code with the central code
-def main():
-    recipe_ids = get_meal_plan(API_KEY)
-    total_cost = 0
-
-    st.write("\n📊 Kostenübersicht:")
-    for rid in recipe_ids:
-        cost = get_recipe_price(API_KEY, rid)
-        total_cost += cost
-        st.write(f"Rezept {rid}: {cost:.2f}$")
-    st.write(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
-    print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
-
-
+main()
 #call of the main function on button click
 if st.session_state.get("generate_button"):
-    main()
-
-
+    #variables
+    price = 0.0
+    allergies = st.session_state.get("allergies")
+    diet = st.session_state.get("diet")
+    app()
