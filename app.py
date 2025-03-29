@@ -14,29 +14,15 @@ col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
 #List of all eating behaviors - should be dynamic 
-intolerances = ["none","dairy"]
-
-
-diet = ["none", 
-    "gluten free",
-    "ketogenic",
-    "vegetarian",
-    "lacto-vegetarian",
-    "ovo-vegetarian",
-    "vegan",
-    "pescetarian",
-    "paleo",
-    "primal",
-    "low FODMAP",
-    "whole30"]
+allergies = ["none", "lactose", "gluten"]
+diet = ["none", "vegan", "vegetarian", "Pescetarian"]
 excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
-
 
 
 
 #variables
 price = 0.0
-intolerances = None
+allergies = None
 diet = None
 
 
@@ -62,7 +48,7 @@ st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
-    st.selectbox("Allergies", intolerances, key="allergies")
+    st.selectbox("Allergies", allergies, key="allergies")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
 with col2:
@@ -83,6 +69,6 @@ with col3:
 if st.session_state.get("generate_button"):
     #variables
     price = 0.0
-    intolerances = st.session_state.get("allergies")
+    allergies = st.session_state.get("allergies")
     diet = st.session_state.get("diet")
     main()
