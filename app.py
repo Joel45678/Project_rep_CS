@@ -74,7 +74,7 @@ st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
-    st.selectbox("Allergies", allergies, key="allergies")
+    st.selectbox("Allergies", excluded_ingredients, key="allergies")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
 with col2:
