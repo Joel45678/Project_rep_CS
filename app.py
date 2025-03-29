@@ -35,12 +35,9 @@ def main():
         cost = get_recipe_price(API_KEY, rid["id"])
         total_cost += cost
         #print(f"Rezept {rid["title"]}: {cost:.2f}$")
-        st.write(f"Rezept {rid["title"]}: {cost:.2f}$")
+        st.write(f"{rid["title"]}: {cost:.2f}$")
         
-    st.write(f"\n🧾 Price for the plan: {total_cost:.2f}$")
-    #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
-
-
+    st.write(f"\n Price for the plan: {total_cost:.2f}$")
     #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
