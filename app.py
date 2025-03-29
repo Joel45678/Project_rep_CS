@@ -105,3 +105,20 @@ if st.session_state.get("generate_button"):
         excluded_ingredients = None
     
     main()
+
+
+"""Debugging:
+#variables
+price = 0.0
+diet = "vegan"
+intolerances = "gluten"
+excluded_ingredients = "none"
+
+if intolerances == "none":
+    intolerances = None
+if diet == "none":
+    diet = None
+if excluded_ingredients == "none":
+    excluded_ingredients = None
+
+main()"""
