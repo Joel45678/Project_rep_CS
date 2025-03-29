@@ -14,7 +14,7 @@ col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
 #List of all eating behaviors - should be dynamic 
-intolerances = [None,
+intolerances = ["None",
     "dairy",
     "egg",
     "gluten",
@@ -29,7 +29,7 @@ intolerances = [None,
     "wheat"
 ]
 
-diet = [None,
+diet = ["None",
     "gluten free",
     "ketogenic",
     "vegetarian",
