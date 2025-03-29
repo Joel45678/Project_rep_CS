@@ -31,16 +31,19 @@ st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
     st.selectbox("Allergies", allergies, key="allergies")
+    st.divider
     st.button("Generate Meal Plan", key="generate_button")
 
 with col2:
     st.header("Diet")
     st.selectbox("Diet", diet, key="Diet")
+    st.divider
     st.header("Your meal plan for the next week")
     st.write(f"Price: {price}")
 with col3:
     st.header("Excluded ingredients")
     st.selectbox("Exclude ingredients", excluded_ingredients, key="Excluded-ingredients")
+    st.divider
     st.header("4-week budget forecast")
     st.write("Coming soon!")
 
