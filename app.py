@@ -25,6 +25,7 @@ diet = None
 
 
 #central code of the app - starts with button click (see below)
+#print() is only used for debugging purposes
 def main():
     recipe_ids = get_meal_plan(API_KEY) #get random recipe
     total_cost = 0
@@ -33,13 +34,13 @@ def main():
     for rid in recipe_ids:
         cost = get_recipe_price(API_KEY, rid["id"])
         total_cost += cost
-        print(f"Rezept {rid["title"]}: {cost:.2f}$")
+        #print(f"Rezept {rid["title"]}: {cost:.2f}$")
         st.write(f"Rezept {rid["title"]}: {cost:.2f}$")
         
-        print(rid["title"])
+        #print(rid["title"])
         st.write(f"Rezept {rid["title"]}")
     st.write(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
-    print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+    #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
     #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
