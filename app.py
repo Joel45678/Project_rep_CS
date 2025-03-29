@@ -14,7 +14,7 @@ col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
 #List of all eating behaviors 
-allergies = ["none",
+intolerances = ["none",
     "dairy",
     "egg",
     "gluten",
@@ -44,18 +44,13 @@ diet = ["none",
 
 excluded_ingredients = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
 
-
-
-
 #variables
 price = 0.0
-
-
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
 def main():
-    recipe_ids = get_meal_plan(API_KEY) #get random recipe
+    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipe
     total_cost = 0
 
     st.write("Food plan:")
@@ -73,8 +68,8 @@ def main():
 st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
-    st.header("Allergies")
-    selected_allergy = st.selectbox("Allergies", allergies, key="allergies")
+    st.header("Intolerances")
+    selected_allergy = st.selectbox("Intolerances", intolerances, key="intolerances")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
 
@@ -98,6 +93,15 @@ with col3:
 if st.session_state.get("generate_button"):
     #variables
     price = 0.0
-    allergies = st.session_state.get("allergies")
     diet = st.session_state.get("diet")
+    intolerances = st.session_state.get("allergies")
+    excluded_ingredients = st.session_state.get("excluded_ingredients")
+
+    if intolerances == "none":
+        intolerances = None
+    if diet == "none":
+        diet = None
+    if excluded_ingredients == "none":
+        excluded_ingredients = None
+    
     main()
