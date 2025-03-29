@@ -51,6 +51,9 @@ price = 0.0
 #print() is only used for debugging purposes
 def main():
     recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipe
+    if recipe_ids == 402:
+        st.error("Daily recipe limit exceeded")
+        return
     total_cost = 0
 
     st.write("Food plan:")
@@ -110,7 +113,7 @@ if st.session_state.get("generate_button"):
 #Debugging:
 #variables
 
-"""price = 0.0
+price = 0.0
 diet = "vegan"
 intolerances = "gluten"
 excluded_ingredients = "none"
@@ -122,4 +125,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()"""
+main()
