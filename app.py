@@ -28,7 +28,7 @@ allergies = ["none",
     "tree nut",
     "wheat"]
 
-diet = ["none",
+diet = ["none", 
     "gluten free",
     "ketogenic",
     "vegetarian",
@@ -49,8 +49,7 @@ excluded_ingredients = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
 
 #variables
 price = 0.0
-allergies = None
-diet = None
+
 
 
 #central code of the app - starts with button click (see below)
