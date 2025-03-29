@@ -30,16 +30,14 @@ def main():
     recipe_ids = get_meal_plan(API_KEY) #get random recipe
     total_cost = 0
 
-    st.write("\n📊 Kostenübersicht:")
+    st.write("Food plan:")
     for rid in recipe_ids:
         cost = get_recipe_price(API_KEY, rid["id"])
         total_cost += cost
         #print(f"Rezept {rid["title"]}: {cost:.2f}$")
         st.write(f"Rezept {rid["title"]}: {cost:.2f}$")
         
-        #print(rid["title"])
-        st.write(f"Rezept {rid["title"]}")
-    st.write(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+    st.write(f"\n🧾 Price for the plan: {total_cost:.2f}$")
     #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
