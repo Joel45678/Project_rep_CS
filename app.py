@@ -13,9 +13,35 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
-#List of all eating behaviors - should be dynamic 
-allergies = ["none", "lactose", "gluten"]
-diet = ["none", "vegan", "vegetarian", "Pescetarian"]
+#List of all eating behaviors 
+allergies = ["none",
+    "dairy",
+    "egg",
+    "gluten",
+    "grain",
+    "peanut",
+    "seafood",
+    "sesame",
+    "shellfish",
+    "soy",
+    "sulfite",
+    "tree nut",
+    "wheat"]
+
+diet = ["none",
+    "gluten free",
+    "ketogenic",
+    "vegetarian",
+    "lacto-vegetarian",
+    "ovo-vegetarian",
+    "vegan",
+    "pescetarian",
+    "paleo",
+    "primal",
+    "low FODMAP",
+    "whole30"
+    ]
+
 excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
 
 
