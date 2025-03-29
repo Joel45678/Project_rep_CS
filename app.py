@@ -1,7 +1,7 @@
 #link to the app: https://projectrepcs-kgxuhxcx6ux2eygqo8g8ey.streamlit.app/
 
 import streamlit as st
-st.write("Everything conected") #Test if it works properly
+st.write("Everything conected - change") #Test if it works properly
 
 #List of all eating behaviors
 allergies = ["lactose", "x", "y"]
