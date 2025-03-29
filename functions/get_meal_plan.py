@@ -5,10 +5,10 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, allergies=N
     url = "https://api.spoonacular.com/mealplanner/generate"
     params = {
         "apiKey": API_KEY,
-        "timeFrame": "day",  # Für 1 Tag, kann auch "week" sein
-        "diet": "vegetarian",  # Optional: vegetarian, vegan, etc.
-        "exclude": "peanuts,milk",  # Optional: Allergien
-        "allergies": "dairy",
+        "timeFrame": timeFrame,
+        "diet": diet,
+        "exclude": exclude,
+        "allergies": allergies,
         #"targetCalories": 10000  # Optional: Kalorienziel
     }
 
@@ -16,8 +16,8 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, allergies=N
     data = response.json()
 
     meals = data["meals"]
-    print("\n📝 Meal Plan:")
+    """print("\n📝 Meal Plan:")
     for meal in meals:
-        print(f"- {meal['title']} (ID: {meal['id']})")
+        print(f"- {meal['title']} (ID: {meal['id']})")"""
 
     return [meal["id"] for meal in meals]
