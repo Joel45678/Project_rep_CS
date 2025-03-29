@@ -40,9 +40,10 @@ diet = ["none",
     "primal",
     "low FODMAP",
     "whole30"
-    ]
+]
 
-excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
+excluded_ingredients = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
+
 
 
 
@@ -74,21 +75,24 @@ st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
-    st.selectbox("Allergies", excluded_ingredients, key="allergies")
+    selected_allergy = st.selectbox("Allergies", allergies, key="allergies")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
+
 with col2:
     st.header("Diet")
-    st.selectbox("Diet", diet, key="Diet")
+    selected_diet = st.selectbox("Diet", diet, key="diet")
     st.divider()
     st.header("Your meal plan for the next week")
     st.write(f"Price: {price}")
+
 with col3:
     st.header("Excluded ingredients")
-    st.selectbox("Exclude ingredients", excluded_ingredients, key="Excluded-ingredients")
+    selected_exclude = st.selectbox("Exclude ingredients", excluded_ingredients, key="excluded_ingredients")
     st.divider()
     st.header("4-week budget forecast")
     st.write("Coming soon!")
+
 
 
 #call of the main function on button click
