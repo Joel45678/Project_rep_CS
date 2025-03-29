@@ -2,6 +2,14 @@
 
 import streamlit as st
 
+#import custom functions from folder functions
+from functions import get_meal_plan
+from functions import get_recipe_price
+
+
+#API details for spoonacular.com
+API_KEY = "373547e7ea3647b1b17c5abc690d725c"
+
 #page layout
 col1, col2, col3 = st.columns(3)
 col1b, col2b = st.columns(2)
@@ -39,3 +47,21 @@ with col1b:
 with col2b:
     st.header("4-week budget forecast")
     st.write("Coming soon!")
+
+
+
+#api request
+
+def main():
+    recipe_ids = get_meal_plan(API_KEY)
+    total_cost = 0
+
+    print("\n📊 Kostenübersicht:")
+    for rid in recipe_ids:
+        cost = get_recipe_price(API_KEY, rid)
+        total_cost += cost
+
+    print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+
+if __name__ == "__main__":
+    main()
