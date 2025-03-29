@@ -4,8 +4,8 @@ import streamlit as st
 st.write("Everything conected") #Test if it works properly
 
 #List of all eating behaviors
-allergies = ["lactose", "x", "y"]
-diet = ["vegan", "vegetarian", "Pescetarian"]
+allergies = ["none", "lactose", "gluten"]
+diet = ["none", "vegan", "vegetarian", "Pescetarian"]
 excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
 
 #variables
@@ -15,11 +15,11 @@ col1, col2, col3 = st.columns(3)
 col1b, col2b = st.columns(2)
 
 with col1:
-    st.header("Allergies \n")
+    st.header("Allergies")
     st.selectbox("Allergies", allergies, key="allergies")
 
 with col2:
-    st.header("Diet \n")
+    st.header("Diet")
     st.selectbox("Diet", diet, key="Diet")
 
 with col3:
