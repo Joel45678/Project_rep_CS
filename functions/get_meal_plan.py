@@ -21,4 +21,4 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, allergies=N
         print(f"- {meal['title']} (ID: {meal['id']})")"""
 
     #return [meal["id"] for meal in meals]
-    return meals
+    return [meals]
