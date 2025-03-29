@@ -12,7 +12,7 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 
 #page layout
 col1, col2, col3 = st.columns(3)
-col_main = st.columns(1)
+colmain = st.columns(1)
 
 #List of all eating behaviors
 allergies = ["none", "lactose", "gluten"]
@@ -25,16 +25,14 @@ price = 17.5
 
 #streamlit page
 
-with col_main:
+with colmain:
     st.title("SmartMeal")
     st.subheader("A recipe recommender and meal planner")
-
 with col1:
     st.header("Allergies")
     st.selectbox("Allergies", allergies, key="allergies")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
-
 with col2:
     st.header("Diet")
     st.selectbox("Diet", diet, key="Diet")
@@ -55,7 +53,6 @@ def main():
     recipe_ids = get_meal_plan(API_KEY)
     total_cost = 0
 
-    print("\n📊 Kostenübersicht:")
     st.write("\n📊 Kostenübersicht:")
     for rid in recipe_ids:
         cost = get_recipe_price(API_KEY, rid)
