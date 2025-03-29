@@ -12,10 +12,10 @@ with col1:
     st.header("Allergies")
     st.selectbox("Allergies", allergies, key="allergies")
 
-with col1:
+with col2:
     st.header("Diet")
     st.selectbox("Diet", diet, key="Diet")
 
-with col1:
+with col3:
     st.header("Excluded ingredients")
     st.text_input("Exclude ingredients", key="Excluded-ingredients")
