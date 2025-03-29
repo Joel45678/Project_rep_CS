@@ -48,10 +48,19 @@ with col2b:
     st.header("4-week budget forecast")
     st.write("Coming soon!")
 
+def main():
+    recipe_ids = get_meal_plan(API_KEY)
+    total_cost = 0
 
+    print("\n📊 Kostenübersicht:")
+    for rid in recipe_ids:
+        cost = get_recipe_price(API_KEY, rid)
+        total_cost += cost
+
+    print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 #api request
-
+"""
 def main():
     recipe_ids = get_meal_plan(API_KEY)
     total_cost = 0
@@ -65,3 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
