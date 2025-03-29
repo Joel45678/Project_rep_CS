@@ -13,14 +13,44 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 col1, col2, col3 = st.columns(3)
 #colmain = st.columns(1)
 
-#List of all eating behaviors
-allergies = ["none", "lactose", "gluten"]
-diet = ["none", "vegan", "vegetarian", "Pescetarian"]
+#List of all eating behaviors - should be dynamic 
+intolerances = [None,
+    "dairy",
+    "egg",
+    "gluten",
+    "grain",
+    "peanut",
+    "seafood",
+    "sesame",
+    "shellfish",
+    "soy",
+    "sulfite",
+    "tree nut",
+    "wheat"
+]
+
+diet = [None,
+    "gluten free",
+    "ketogenic",
+    "vegetarian",
+    "lacto-vegetarian",
+    "ovo-vegetarian",
+    "vegan",
+    "pescetarian",
+    "paleo",
+    "primal",
+    "low FODMAP",
+    "whole30"]
 excluded_ingredients = ["none", "vegan", "vegetarian", "Pescetarian"]
+
+available_diets = [
+
+]
+
 
 #variables
 price = 0.0
-allergies = None
+intolerances = None
 diet = None
 
 
@@ -41,16 +71,12 @@ def main():
     #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
-
-
-
 #streamlit page
-
 st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
-    st.selectbox("Allergies", allergies, key="allergies")
+    st.selectbox("Allergies", intolerances, key="allergies")
     st.divider()
     st.button("Generate Meal Plan", key="generate_button")
 with col2:
@@ -67,11 +93,10 @@ with col3:
     st.write("Coming soon!")
 
 
-
 #call of the main function on button click
 if st.session_state.get("generate_button"):
     #variables
     price = 0.0
-    allergies = st.session_state.get("allergies")
+    intolerances = st.session_state.get("allergies")
     diet = st.session_state.get("diet")
     main()
