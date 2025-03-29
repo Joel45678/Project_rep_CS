@@ -31,22 +31,20 @@ st.subheader("A recipe recommender and meal planner")
 with col1:
     st.header("Allergies")
     st.selectbox("Allergies", allergies, key="allergies")
+    st.button("Generate Meal Plan", key="generate_button")
 
 with col2:
     st.header("Diet")
     st.selectbox("Diet", diet, key="Diet")
-
+    st.header("Your meal plan for the next week")
+    st.write(f"Price: {price}")
 with col3:
     st.header("Excluded ingredients")
     st.selectbox("Exclude ingredients", excluded_ingredients, key="Excluded-ingredients")
-
-with col1b:
-    st.header("Your meal plan for the next week")
-    st.write(f"Price: {price}")
-
-with col2b:
     st.header("4-week budget forecast")
     st.write("Coming soon!")
+
+
 
 #main code with the central code
 def main():
@@ -65,8 +63,8 @@ def main():
     print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
 
-#call of the main function
-if st.button("Generate Meal Plan"):
+#call of the main function on button click
+if st.session_state.get("generate_button"):
     main()
-main()
+
 
