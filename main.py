@@ -12,7 +12,7 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 
 #page layout
 col1, col2, col3 = st.columns(3)
-col1b, col2b = st.columns(2)
+col_main = st.columns(1)
 
 #List of all eating behaviors
 allergies = ["none", "lactose", "gluten"]
@@ -25,7 +25,7 @@ price = 17.5
 
 #streamlit page
 
-with col1:
+with col_main:
     st.title("SmartMeal")
     st.subheader("A recipe recommender and meal planner")
 
