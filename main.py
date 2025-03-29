@@ -3,8 +3,8 @@
 import streamlit as st
 
 #import custom functions from folder functions
-from functions import get_meal_plan
-from functions import get_recipe_price
+from functions.get_meal_plan import get_meal_plan
+from functions.get_recipe_price import get_recipe_price
 
 
 #API details for spoonacular.com
@@ -54,12 +54,19 @@ def main():
     total_cost = 0
 
     print("\n📊 Kostenübersicht:")
+    st.write("\n📊 Kostenübersicht:")
     for rid in recipe_ids:
         cost = get_recipe_price(API_KEY, rid)
         total_cost += cost
+        st.write(f"Rezept {rid}: {cost:.2f}$")
+    st.write(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
+
 
     print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
+
 #call of the main function
+if st.button("Generate Meal Plan"):
+    main()
 main()
 
