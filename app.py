@@ -12,12 +12,12 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Allergies")
-    st.selectbox(allergies, key="allergies")
+    st.selectbox("Allergies", allergies, key="allergies")
 
 with col2:
     st.header("Diet")
-    st.selectbox(diet, key="Diet")
+    st.selectbox("Diet", diet, key="Diet")
 
 with col3:
     st.header("Excluded ingredients")
-    st.selectbox(excluded_ingredients, key="Excluded-ingredients")
+    st.selectbox("Exclude ingredients", excluded_ingredients, key="Excluded-ingredients")
