@@ -25,8 +25,9 @@ price = 17.5
 
 #streamlit page
 
-st.title("SmartMeal")
-st.subheader("A recipe recommender and meal planner")
+with col1:
+    st.title("SmartMeal")
+    st.subheader("A recipe recommender and meal planner")
 
 with col1:
     st.header("Allergies")
