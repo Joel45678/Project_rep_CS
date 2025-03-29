@@ -53,7 +53,7 @@ def main():
     total_cost = 0
 
     st.write("\n📊 Kostenübersicht:")
-    for rid in recipe_ids:
+    for rid in recipe_ids["id"]:
         cost = get_recipe_price(API_KEY, rid)
         total_cost += cost
         st.write(f"Rezept {rid}: {cost:.2f}$")
