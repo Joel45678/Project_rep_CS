@@ -15,11 +15,11 @@ col1, col2, col3 = st.columns(3)
 col1b, col2b = st.columns(2)
 
 with col1:
-    st.header("Allergies")
+    st.header("Allergies \n")
     st.selectbox("Allergies", allergies, key="allergies")
 
 with col2:
-    st.header("Diet")
+    st.header("Diet \n")
     st.selectbox("Diet", diet, key="Diet")
 
 with col3:
@@ -32,4 +32,4 @@ with col1b:
 
 with col2b:
     st.header("Calculate your weekly cost")
-    st.write("Coming soon!") #This feature is not implemented yet
+    st.write("Coming soon!")
