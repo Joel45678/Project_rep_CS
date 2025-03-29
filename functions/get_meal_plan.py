@@ -5,7 +5,7 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, allergies=N
     url = "https://api.spoonacular.com/mealplanner/generate"
     params = {
         "apiKey": API_KEY,
-        "timeFrame": timeFrame,
+        "timeFrame": timeFrame, #day/week
         "diet": diet,
         "exclude": exclude,
         "allergies": allergies,
@@ -20,5 +20,5 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, allergies=N
     for meal in meals:
         print(f"- {meal['title']} (ID: {meal['id']})")"""
 
-    #return [meal["id"] for meal in meals]
-    return [meals]
+    return [meal["id"] for meal in meals] #ids der Rezepte werden zurückgegeben
+    #return [meals]
