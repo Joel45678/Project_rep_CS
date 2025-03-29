@@ -50,7 +50,7 @@ price = 0.0
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
 def main():
-    recipe_ids = get_meal_plan(API_KEY, "day", diet_lst, excluded_ingredients_lst, intolerances_lst) #get random recipe
+    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipe
     total_cost = 0
 
     st.write("Food plan:")
@@ -107,7 +107,7 @@ if st.session_state.get("generate_button"):
     main()
 
 
-"""Debugging:
+#Debugging:
 #variables
 price = 0.0
 diet = "vegan"
@@ -121,4 +121,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()"""
+main()
