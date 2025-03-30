@@ -11,9 +11,8 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 
 #page layout
 col1, col2, col3 = st.columns(3)
-#colmain = st.columns(1)
 
-#List of all eating behaviors 
+#List of all possible eating behaviors 
 intolerances_lst = ["none",
     "dairy",
     "egg",
@@ -70,6 +69,7 @@ def main():
 #streamlit page
 st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
+st.image("assets/01_Logo.png")
 with col1:
     st.header("Intolerances")
     selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")

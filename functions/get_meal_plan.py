@@ -14,7 +14,7 @@ def get_meal_plan(API_KEY, timeFrame='day', diet=None, exclude=None, intolerance
 
     response = requests.get(url, params=params)
     data = response.json()
-    if data["code"] == 402:
+    if data["code"] == 402: #check if daliy free limit is reached
         return 402
     meals = data["meals"]
     """print("\n📝 Meal Plan:")
