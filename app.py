@@ -69,7 +69,7 @@ def main():
 #streamlit page
 st.title("SmartMeal")
 st.subheader("A recipe recommender and meal planner")
-st.image("assets/01_Logo.png")
+st.image("./assets/01_Logo.png")
 with col1:
     st.header("Intolerances")
     selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
