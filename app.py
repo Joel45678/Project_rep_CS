@@ -73,7 +73,7 @@ with col1h:
     st.image("./assets/01_Logo.png")
 
 with col2h:
-    st.title("SmartMeal")
+    #st.title("SmartMeal")
     st.subheader("A recipe recommender and meal planner")
 
 with col1:
@@ -90,7 +90,7 @@ with col2:
     st.write(f"Price: {price}")
 
 with col3:
-    st.header("Excluded ingredients")
+    st.header("Ingredients")
     selected_exclude = st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
     st.divider()
     st.header("4-week budget forecast")
