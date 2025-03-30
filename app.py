@@ -70,7 +70,7 @@ def main():
 
 #streamlit page
 with col1h:
-    st.image("./assets/01_Logo.png", width=200)
+    st.image("./assets/01_Logo.png")
 
 with col2h:
     #st.title("SmartMeal")
