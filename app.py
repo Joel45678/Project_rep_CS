@@ -10,7 +10,9 @@ from functions.get_recipe_price import get_recipe_price
 API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 
 #page layout
+col1h, col2h, col3h = st.columns(3)
 col1, col2, col3 = st.columns(3)
+
 
 #List of all possible eating behaviors 
 intolerances_lst = ["none",
@@ -67,10 +69,10 @@ def main():
 
 
 #streamlit page
-with col1:
+with col1h:
     st.image("./assets/01_Logo.png")
 
-with col2:
+with col2h:
     st.title("SmartMeal")
     st.subheader("A recipe recommender and meal planner")
 
