@@ -10,7 +10,7 @@ from functions.get_recipe_price import get_recipe_price
 API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 
 #page layout
-col1h, col2h, col3h = st.columns(3)
+col1h, col2h = st.columns(2)
 col1, col2, col3 = st.columns(3)
 
 
