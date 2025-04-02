@@ -12,7 +12,6 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 #page layout
 col1h, col2h = st.columns(2)
 col1, col2, col3 = st.columns(3)
-#comment
 
 #List of all possible eating behaviors 
 intolerances_lst = ["none",
@@ -29,6 +28,7 @@ intolerances_lst = ["none",
     "tree nut",
     "wheat"]
 intolerances = ""
+
 diet_lst = ["none", 
     "gluten free",
     "ketogenic",
@@ -42,6 +42,7 @@ diet_lst = ["none",
     "low FODMAP",
     "whole30"
 ]
+
 diet = ""
 excluded_ingredients_lst = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
 excluded_ingredients = ""
@@ -63,7 +64,7 @@ def main():
         total_cost += cost
         #print(f"Rezept {rid["title"]}: {cost:.2f}$")
         st.write(f"{rid["title"]}: {cost:.2f}$")
-        
+
     st.write(f"\n Price for the plan: {total_cost:.2f}$")
     #print(f"\n🧾 Gesamtpreis für den Tag: {total_cost:.2f}$")
 
