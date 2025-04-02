@@ -12,7 +12,7 @@ API_KEY = "373547e7ea3647b1b17c5abc690d725c"
 #page layout
 col1h, col2h = st.columns(2)
 col1, col2, col3 = st.columns(3)
-
+#comment
 
 #List of all possible eating behaviors 
 intolerances_lst = ["none",
