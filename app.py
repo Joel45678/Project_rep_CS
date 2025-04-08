@@ -3,8 +3,8 @@ import streamlit as st
 
 #import custom functions from folder functions
 from functions.get_meal_plan import get_meal_plan
-from Project_rep_CS.functions.get_recipe_information import get_recipe_price
-from Project_rep_CS.functions.get_recipe_information import get_recipe_details
+from functions.get_recipe_information import get_recipe_price
+from functions.get_recipe_information import get_recipe_details
 
 
 #API details for spoonacular.com
