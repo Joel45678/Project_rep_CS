@@ -3,8 +3,8 @@ import streamlit as st
 
 #import custom functions from folder functions
 from functions.get_meal_plan import get_meal_plan
-from functions.get_recipe_price import get_recipe_price
-from functions.get_recipe_price import get_recipe_details
+from Project_rep_CS.functions.get_recipe_information import get_recipe_price
+from Project_rep_CS.functions.get_recipe_information import get_recipe_details
 
 
 #API details for spoonacular.com
@@ -53,7 +53,7 @@ price = 0.0
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
 def main():
-    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances)
+    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipes
     if recipe_ids == 402:
         st.error("Daily recipe limit exceeded")
         return
@@ -61,11 +61,11 @@ def main():
     total_cost = 0
     st.write("Food plan:")
     
-    for rid in recipe_ids:
+    for rid in recipe_ids: 
         recipe_id = rid["id"]
-        title, image, instructions = get_recipe_details(API_KEY, recipe_id)
-        cost = get_recipe_price(API_KEY, recipe_id)
-        total_cost += cost
+        title, image, instructions = get_recipe_details(API_KEY, recipe_id) #get additional information about the recipe
+        cost = get_recipe_price(API_KEY, recipe_id) #get the price information about the recipe
+        total_cost += cost # sum of all recipe prices 
 
         st.markdown(f"### 🍽 {title}")
         st.write(f"💰 Price: {cost:.2f}$")

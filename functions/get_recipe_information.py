@@ -1,6 +1,6 @@
 import requests #pip install requests for api requests
 
-
+# calculate the price of the recipe
 def get_recipe_price(API_KEY,recipe_id):
     url = f"https://api.spoonacular.com/recipes/{recipe_id}/information"
     params = {"apiKey": API_KEY}
@@ -17,6 +17,7 @@ def get_recipe_price(API_KEY,recipe_id):
     total_price = price_per_serving * servings
     return total_price
 
+# get additional information about the recipe
 def get_recipe_details(API_KEY, recipe_id):
     url = f"https://api.spoonacular.com/recipes/{recipe_id}/information"
     params = {"apiKey": API_KEY}
