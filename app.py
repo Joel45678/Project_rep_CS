@@ -113,7 +113,7 @@ def main():
         st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
         st.markdown("———")
         
-    titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles])) #list of Titles
+    titles_placeholder.markdown("\n".join([f"- {t}" for t in recipe_titles])) #list of Titles
     price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
     #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
 
