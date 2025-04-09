@@ -6,54 +6,31 @@ from functions.get_meal_plan import get_meal_plan
 from functions.get_recipe_information import get_recipe_price
 from functions.get_recipe_information import get_recipe_details
 
+# import ingredients lst
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-#API details for spoonacular.com
-API_KEY = "373547e7ea3647b1b17c5abc690d725c"
+from Project_rep_CS.utilitis.constants import intolerances_lst
+from Project_rep_CS.utilitis.constants import diet_lst
+from Project_rep_CS.utilitis.constants import excluded_ingredients_lst
+from Project_rep_CS.utilitis.constants import API_KEY
+
 
 #page layout
 col1h, col2h = st.columns(2)
 col1, col2, col3 = st.columns(3)
 
-#List of all possible eating behaviors 
-intolerances_lst = ["none",
-    "dairy",
-    "egg",
-    "gluten",
-    "grain",
-    "peanut",
-    "seafood",
-    "sesame",
-    "shellfish",
-    "soy",
-    "sulfite",
-    "tree nut",
-    "wheat"]
-intolerances = ""
-
-diet_lst = ["none", 
-    "gluten free",
-    "ketogenic",
-    "vegetarian",
-    "lacto-vegetarian",
-    "ovo-vegetarian",
-    "vegan",
-    "pescetarian",
-    "paleo",
-    "primal",
-    "low FODMAP",
-    "whole30"
-]
-
-diet = ""
-excluded_ingredients_lst = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
-excluded_ingredients = ""
 #variables
+diet = ""
+excluded_ingredients = ""
 price = 0.0
 
 
 #streamlit page
 with col1h:
-    st.image("./assets/01_Logo.png", width=200)
+    st.subheader("")
+ #   st.image("./assets/01_Logo.png", width=200)
 
 with col2h:
     #st.title("SmartMeal")
@@ -90,7 +67,7 @@ with col3:
 def main():
     recipe_titles = []
 
-    recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipes
+    recipe_ids = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients) #get random recipes
     if recipe_ids == 402:
         st.error("Daily recipe limit exceeded")
         return
@@ -144,7 +121,7 @@ if st.session_state.get("generate_button"):
 
 #Debugging:
 #variables
-"""
+
 price = 0.0
 diet = "vegan"
 intolerances = "gluten"
@@ -157,4 +134,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()"""
+main()
