@@ -71,7 +71,7 @@ with col2:
     st.divider()
     st.header("Your meal plan for the next week")
     titles_placeholder = st.empty() #placeholder for recips
-    privce_placeholder = st.write() #placeholder for price
+    price_placeholder = st.empty() #placeholder for price
 
 with col3:
     st.header("Ingredients")
@@ -114,7 +114,7 @@ def main():
         st.markdown("———")
         
     titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles])) #list of Titles
-    privce_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
+    price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
     #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
 
 
