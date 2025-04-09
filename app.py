@@ -70,8 +70,8 @@ with col2:
     selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
     st.header("Your meal plan for the next week")
-    titles_placeholder = st.empty() #place holder for recips
-    st.write(f"Price: {price}")
+    titles_placeholder = st.empty() #placeholder for recips
+    privce_placeholder = st.write() #placeholder for price
 
 with col3:
     st.header("Ingredients")
@@ -113,8 +113,9 @@ def main():
         st.write(instructions or "No instructions provided.")
         st.markdown("———")
         
-    titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles]))
-    st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
+    titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles])) #list of Titles
+    privce_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
+    #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
 
 
 
