@@ -105,7 +105,7 @@ def main():
         total_cost += cost # sum of all recipe prices 
         recipe_titles.append(title) # List with recipe titles
 
-        st.markdown(f'<a name="{title.replace(" ", "-").lower()}"></a>', unsafe_allow_html=True)
+        #st.markdown(f'<a name="{title.replace(" ", "-").lower()}"></a>', unsafe_allow_html=True) evtl. verlinken
         st.markdown(f"{title}")
         st.write(f"Price: {cost:.2f}$")
         
