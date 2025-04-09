@@ -70,7 +70,7 @@ with col2:
     selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
     st.header("Your meal plan for the next week")
-    st.write("",key="st_meal_plan_list")
+    titles_placeholder = st.empty("",key="st_meal_plan_list")
     st.write(f"Price: {price}")
 
 with col3:
@@ -85,6 +85,8 @@ with col3:
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
 def main():
+    recipe_titles = []
+
     recipe_ids = get_meal_plan(API_KEY, "day", diet, excluded_ingredients, intolerances) #get random recipes
     if recipe_ids == 402:
         st.error("Daily recipe limit exceeded")
@@ -92,24 +94,26 @@ def main():
 
     total_cost = 0
     st.header("Food plan:")
-    
+
     for rid in recipe_ids: 
         recipe_id = rid["id"]
         title, image, instructions = get_recipe_details(API_KEY, recipe_id) #get additional information about the recipe
         cost = get_recipe_price(API_KEY, recipe_id) #get the price information about the recipe
         total_cost += cost # sum of all recipe prices 
+        recipe_titles.append(title) # List with recipe titles
 
         st.markdown(f"### 🍽 {title}")
         st.write(f"💰 Price: {cost:.2f}$")
         
         if image:
-            st.image(image, width=250)#use_container_width=True)
+            st.image(image, width=250)
 
-        st.session_state.update("st_meal_plan_list",title)
+        #st.session_state.update("st_meal_plan_list",title)
         st.markdown("**Instructions:**")
         st.write(instructions or "No instructions provided.")
         st.markdown("———")
-
+        
+    titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles]))
     st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
 
 
