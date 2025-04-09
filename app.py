@@ -63,12 +63,14 @@ with col1:
     st.header("Intolerances")
     selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.divider()
+    st.empty()
     st.button("Generate Meal Plan", key="generate_button")
 
 with col2:
     st.header("Diet")
     selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
+    st.empty()
     st.header("Your meal plan for the next week")
     titles_placeholder = st.empty() #placeholder for recips
     price_placeholder = st.empty() #placeholder for price
@@ -77,6 +79,8 @@ with col3:
     st.header("Ingredients")
     selected_exclude = st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
     st.divider()
+    st.empty()
+
     st.header("4-week budget forecast")
     st.write("Coming soon!")
 
