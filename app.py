@@ -102,15 +102,15 @@ def main():
         total_cost += cost # sum of all recipe prices 
         recipe_titles.append(title) # List with recipe titles
 
-        st.markdown(f"### 🍽 {title}")
-        st.write(f"💰 Price: {cost:.2f}$")
+        st.markdown(f"{title}")
+        st.write(f"Price: {cost:.2f}$")
         
         if image:
             st.image(image, width=250)
 
         #st.session_state.update("st_meal_plan_list",title)
-        st.markdown("**Instructions:**")
-        st.write(instructions or "No instructions provided.")
+        st.markdown("**Instructions:**", unsafe_allow_html=True)
+        st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
         st.markdown("———")
         
     titles_placeholder.markdown("## Your Recipes:\n" + "\n".join([f"- {t}" for t in recipe_titles])) #list of Titles
