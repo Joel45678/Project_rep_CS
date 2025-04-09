@@ -70,7 +70,7 @@ with col2:
     selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
     st.header("Your meal plan for the next week")
-    titles_placeholder = st.empty("",key="st_meal_plan_list")
+    titles_placeholder = st.empty() #place holder for recips
     st.write(f"Price: {price}")
 
 with col3:
