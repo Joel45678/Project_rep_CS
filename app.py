@@ -1,4 +1,4 @@
-#link to the app: https://projectrepcs-f2thgw3scyfevbfah28c7b.streamlit.app or https://projectrepcs-kgxuhxcx6ux2eygqo8g8ey.streamlit.app/
+#link to the app: (https://projectrepcs-f2thgw3scyfevbfah28c7b.streamlit.app) or https://projectrepcs-kgxuhxcx6ux2eygqo8g8ey.streamlit.app/
 import streamlit as st
 
 #import custom functions from folder functions
@@ -71,7 +71,7 @@ def main():
         st.write(f"💰 Price: {cost:.2f}$")
         
         if image:
-            st.image(image, use_column_width=True)
+            st.image(image, width=250)#use_container_width=True)
 
         st.markdown("**Instructions:**")
         st.write(instructions or "No instructions provided.")
