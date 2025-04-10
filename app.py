@@ -2,19 +2,15 @@
 import streamlit as st
 
 #import custom functions from folder functions
-from functions.get_meal_plan import get_meal_plan
-from functions.get_recipe_information import get_recipe_price
-from functions.get_recipe_information import get_recipe_details
-
 # import ingredients lst
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from Project_rep_CS.utilitis.constants import intolerances_lst
-from Project_rep_CS.utilitis.constants import diet_lst
-from Project_rep_CS.utilitis.constants import excluded_ingredients_lst
-from Project_rep_CS.utilitis.constants import API_KEY
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY
+from functions.get_meal_plan import get_meal_plan
+from functions.get_recipe_information import get_recipe_price, get_recipe_details
+
 
 
 #page layout
@@ -122,7 +118,7 @@ if st.session_state.get("generate_button"):
 #Debugging:
 #variables
 
-price = 0.0
+"""price = 0.0
 diet = "vegan"
 intolerances = "gluten"
 excluded_ingredients = "none"
@@ -134,4 +130,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()
+main()"""

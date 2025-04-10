@@ -16,7 +16,7 @@ intolerances_lst = ["none",
     "sulfite",
     "tree nut",
     "wheat"]
-intolerances = ""
+
 
 diet_lst = ["none", 
     "gluten free",
