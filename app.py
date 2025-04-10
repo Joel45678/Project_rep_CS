@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY3
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY2
 from functions.get_meal_plan import get_meal_plan
 from functions.get_recipe_information import get_recipe_price, get_recipe_details
 
@@ -64,7 +64,9 @@ with col3:
 def main():
     recipe_titles = []
 
-    recipe_ids, foody_type = get_meal_plan(API_KEY3, "day", diet, intolerances, excluded_ingredients) #get random recipes
+    recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
+    
+    # check if API-Limit is exceeded
     if recipe_ids == 402:
         st.error("Daily recipe limit exceeded")
         return
@@ -74,8 +76,8 @@ def main():
 
     for rid in recipe_ids: 
         recipe_id = rid["id"]
-        title, image, instructions = get_recipe_details(API_KEY3, recipe_id) #get additional information about the recipe
-        cost = get_recipe_price(API_KEY3, recipe_id) #get the price information about the recipe
+        title, image, instructions = get_recipe_details(API_KEY2, recipe_id) #get additional information about the recipe
+        cost = get_recipe_price(API_KEY2, recipe_id) #get the price information about the recipe
         total_cost += cost # sum of all recipe prices 
         recipe_titles.append(title) # List with recipe titles
 
@@ -100,12 +102,13 @@ def main():
 
 #call of the main function on button click
 if st.session_state.get("generate_button"):
-    #variables
     price = 0.0
+    #get user inputs
     diet = st.session_state.get("diet")
     intolerances = st.session_state.get("allergies")
     excluded_ingredients  = st.session_state.get("excluded_ingredients")
 
+    # convert "none" to None-type
     if intolerances  == "none":
         intolerances  = None
     if diet == "none":

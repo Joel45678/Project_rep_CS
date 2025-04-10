@@ -103,4 +103,16 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs
 782601,lacto-vegetarian,peanut,beef,main course,0.0
 633921,pescetarian,none,onion,main course,4.4376
 648320,paleo,shellfish,garlic,main course,6.9604
-782601,lacto-vegetarian,shellfish,none,main course,1.6843000000000001
+782601,lacto-vegetarian,shellfish,none,main course,1.6843
+716004,lacto-vegetarian,gluten,onion,main course,1.8691
+648320,pescetarian,gluten,garlic,main course,6.9604
+782601,lacto-vegetarian,dairy,pork,main course,1.6843
+782601,vegan,peanut,pork,main course,1.6843
+648320,primal,wheat,none,main course,6.9604
+662654,low FODMAP,none,pork,main course,4.7797
+782601,ovo-vegetarian,dairy,none,main course,1.6843
+715415,gluten free,sesame,beef,main course,3.0045
+659135,whole30,gluten,garlic,main course,5.2046
+648320,paleo,peanut,garlic,main course,6.9604
+636787,whole30,shellfish,none,main course,2.2409
+648320,primal,shellfish,garlic,main course,6.9604

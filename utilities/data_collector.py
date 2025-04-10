@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from random_user_generator import generate_random_preferences
 #from ..functions.get_meal_plan import get_meal_plan
-from constants import API_KEY3
+from constants import API_KEY2
 #from ..functions.get_recipe_information import get_recipe_price
 
 import sys
@@ -19,16 +19,16 @@ def generate_data():
     #generate data
     for i in range(20):
         try:        
-            dish, food_type = get_meal_plan(API_KEY3, "day", random_preferences[0], random_preferences[1], random_preferences[2])
+            dish, food_type = get_meal_plan(API_KEY2, "day", random_preferences[0], random_preferences[1], random_preferences[2])
         except:
-            dish = get_meal_plan(API_KEY3, "day", random_preferences[0], random_preferences[1], random_preferences[2])
+            dish = get_meal_plan(API_KEY2, "day", random_preferences[0], random_preferences[1], random_preferences[2])
             if dish == 402: #check if daily limit is exceeded
                 print("Tageslimit erreicht")
                 break
-        price = get_recipe_price(API_KEY3, dish[0]["id"])
+        price = get_recipe_price(API_KEY2, dish[0]["id"])
         save_training_example(dish[0]["id"], random_preferences[0], random_preferences[1], random_preferences[2], food_type, price)
         random_preferences = generate_random_preferences()
-        
+    print("Data collected")
 
 # to get paths 
 import pandas as pd
