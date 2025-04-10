@@ -3,7 +3,8 @@ import requests #pip install requests for api requests
 
 def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclude=None, number=1, food_type="main course"):
     
-    # Meal Planer
+    # API-Call for Meal Planer (optional)
+    """
     url = "https://api.spoonacular.com/mealplanner/generate"
     params = {
         "apiKey": API_KEY,
@@ -13,9 +14,9 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
         "allergies": intolerances,
         "number": number
         #"targetCalories": 10000  # Optional: Kalorienziel
-    }
+    }"""
 
-    # Research recipes by meal type
+    # API-Call for recipes by meal type
     url = "https://api.spoonacular.com/recipes/complexSearch"
     params = {
         "apiKey": API_KEY,
@@ -35,9 +36,4 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
             return 402
     except:
         meals = data["results"]
-        """print("\n📝 Meal Plan:")
-        for meal in meals:
-            print(f"- {meal['title']} (ID: {meal['id']})")"""
-
-        #return [meal["id"] for meal in meals] #ids der Rezepte werden zurückgegeben
         return meals, food_type

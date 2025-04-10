@@ -14,7 +14,7 @@ def get_recipe_price(API_KEY,recipe_id):
     price_per_serving = data.get("pricePerServing", 0) / 100  # Cents to Dollar 
 
     #calculate total price
-    total_price = price_per_serving * servings
+    #total_price = price_per_serving * servings 
     return price_per_serving
 
 # get additional information about the recipe
