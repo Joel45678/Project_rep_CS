@@ -1,0 +1,24 @@
+food_id,diet,intolerances,excluded_ingredients,meal_costs
+716627,vegan,shellfish,pork,2.1204
+661340,primal,peanut,none,3.3897000000000004
+1044252,paleo,sesame,none,11.868
+639851,whole30,gluten,garlic,12.5228
+715446,none,egg,pork,16.224600000000002
+659060,ketogenic,none,pork,17.7188
+715446,gluten free,sesame,mushrooms,16.224600000000002
+652417,vegan,tree nut,garlic,3.7836
+716627,vegan,shellfish,pork,2.1204
+659143,pescetarian,gluten,onion,17.1104
+716408,pescetarian,soy,mushrooms,12.1436
+1044252,paleo,none,none,11.868
+659135,whole30,soy,none,10.4092
+716627,vegan,peanut,beef,2.1204
+1044252,whole30,seafood,onion,11.868
+652417,vegan,egg,garlic,3.7836
+716330,whole30,seafood,none,4.5095
+636589,gluten free,gluten,onion,3.4039
+716330,whole30,seafood,mushrooms,4.5095
+634715,ketogenic,sulfite,onion,25.4996
+716408,pescetarian,egg,pork,12.1436
+1044252,whole30,sulfite,pork,11.868
+716330,whole30,gluten,onion,4.5095

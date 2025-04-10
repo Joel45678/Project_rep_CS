@@ -15,7 +15,7 @@ def get_recipe_price(API_KEY,recipe_id):
 
     #calculate total price
     total_price = price_per_serving * servings
-    return total_price
+    return price_per_serving
 
 # get additional information about the recipe
 def get_recipe_details(API_KEY, recipe_id):

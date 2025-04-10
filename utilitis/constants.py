@@ -33,3 +33,5 @@ diet_lst = ["none",
 ]
 
 excluded_ingredients_lst = ["none", "beef", "pork", "mushrooms", "onion", "garlic"]
+
+dish_types_lst = ["main coruse", "bread", "marinade", "side dish", "dessert", "appetizer", "salad", "bread", "breakfast", "soup", "beverage", "sauce", "marinade", "fingerfood", "snack", "drink"]

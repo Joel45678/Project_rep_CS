@@ -67,7 +67,7 @@ with col3:
 def main():
     recipe_titles = []
 
-    recipe_ids = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients) #get random recipes
+    recipe_ids, foody_type = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients) #get random recipes
     if recipe_ids == 402:
         st.error("Daily recipe limit exceeded")
         return
