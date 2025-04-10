@@ -29,8 +29,9 @@ with col1h:
     st.image("./assets/01_Logo.png", width=200)
 
 with col2h:
+    st.empty()
     #st.title("SmartMeal")
-    st.subheader("A recipe recommender and meal planner")
+    #st.subheader("A recipe recommender and meal planner")
 
 with col1:
     st.header("Intolerances")
