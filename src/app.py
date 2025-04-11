@@ -8,8 +8,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY3
-from functions.get_meal_plan import get_meal_plan
-from functions.get_recipe_information import get_recipe_price, get_recipe_details
+from recipe_api.get_meal_plan import get_meal_plan
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
 
 
 
@@ -26,7 +26,7 @@ price = 0.0
 #streamlit page
 with col1h:
     st.subheader("")
-    st.image("./assets/01_Logo.png", width=200)
+    #st.image("./assets/01_Logo.png", width=200)
 
 with col2h:
     st.empty()

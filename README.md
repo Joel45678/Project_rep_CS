@@ -21,9 +21,13 @@ This app allows users to:
 4. ...
 
 ## Folder Overview
-- `functions/` – contains the main Python functions
-- `assets/` – images and media used in the project
-- `app.py` – the main application file
-- `debugging.py` – testing and debugging scripts
+- `functions/`          – contains the main Python functions
+- `assets/`             – images used in the project
+- `utilities/`
+│   ├── constants.py                - Global constants (API-KEY, ingerdients list)
+│   ├── data_collector.py           - Data scraping
+│   ├── random_user_generator.py    - Generates random user data
+- `app.py`              – the main application file
+- `debugging.py`        – testing and debugging scripts
 
 ## Notes

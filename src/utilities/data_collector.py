@@ -10,8 +10,8 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from functions.get_meal_plan import get_meal_plan
-from functions.get_recipe_information import get_recipe_price
+from recipe_api.get_meal_plan import get_meal_plan
+from recipe_api.get_recipe_information import get_recipe_price
 
 
 def generate_data():
