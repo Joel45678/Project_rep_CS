@@ -5,7 +5,7 @@ This is a university project for the course Grundlagen und Methoden der Informat
 ## Team Members
 - Fábio Vinício Scheurer
 - Joel Nussbaumer
-- Laura SangiorgioLaura Sangiorgio
+- Laura Sangiorgio
 - Ricky Kurt
 
 ## Project Description
