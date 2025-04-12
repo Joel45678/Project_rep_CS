@@ -339,3 +339,224 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs
 716342,ketogenic,sesame,beef,main course,1.6749
 715415,none,peanut,pork,main course,3.0045
 648320,paleo,wheat,beef,main course,0.0
+716004,ovo-vegetarian,soy,onion,main course,1.8691
+715415,gluten free,sesame,beef,main course,3.0045
+643061,ketogenic,sulfite,pork,main course,2.6873
+716342,ketogenic,tree nut,garlic,main course,1.6749
+662654,low FODMAP,none,onion,main course,4.7797
+648320,primal,egg,garlic,main course,6.9604
+716004,ovo-vegetarian,sesame,garlic,main course,1.8691
+782601,ovo-vegetarian,peanut,beef,main course,1.6843
+1050445,low FODMAP,seafood,pork,main course,2.0832
+648320,primal,wheat,mushrooms,main course,6.9604
+664501,paleo,sulfite,beef,main course,2.5686
+782601,ovo-vegetarian,none,pork,main course,1.6843
+716342,ketogenic,wheat,garlic,main course,1.6749
+648320,primal,none,garlic,main course,6.9604
+782601,vegetarian,tree nut,pork,main course,1.6843
+715415,gluten free,shellfish,mushrooms,main course,3.0045
+716342,ketogenic,sesame,garlic,main course,1.6749
+782601,vegetarian,soy,pork,main course,1.6843
+648320,primal,shellfish,mushrooms,main course,6.9604
+782601,ovo-vegetarian,egg,pork,main course,1.6843
+715446,gluten free,grain,garlic,main course,2.7041000000000004
+715415,none,seafood,beef,main course,3.0045
+659135,pescetarian,grain,mushrooms,main course,5.2046
+648320,pescetarian,shellfish,beef,main course,6.9604
+715415,none,soy,pork,main course,3.0045
+639851,whole30,sesame,onion,main course,6.2614
+782601,ovo-vegetarian,tree nut,pork,main course,1.6843
+716342,ketogenic,wheat,beef,main course,1.6749
+636589,gluten free,tree nut,onion,main course,3.4039
+645849,low FODMAP,peanut,none,main course,4.454
+782601,lacto-vegetarian,tree nut,none,main course,1.6843
+716004,ovo-vegetarian,shellfish,onion,main course,1.8691
+648320,paleo,shellfish,beef,main course,6.9604
+782601,vegetarian,gluten,pork,main course,1.6843
+639851,whole30,soy,onion,main course,6.2614
+715415,none,shellfish,beef,main course,3.0045
+648320,primal,gluten,mushrooms,main course,6.9604
+782601,lacto-vegetarian,wheat,none,main course,1.6843
+782601,vegetarian,none,pork,main course,1.6843
+1046982,paleo,seafood,beef,main course,4.8176
+662654,low FODMAP,gluten,none,main course,4.7797
+716627,vegan,tree nut,garlic,main course,1.0602
+633921,pescetarian,soy,onion,main course,4.4376
+648320,pescetarian,wheat,beef,main course,6.9604
+659135,whole30,dairy,pork,main course,5.2046
+982371,vegetarian,sulfite,garlic,main course,3.0167
+1044252,paleo,grain,mushrooms,main course,2.3736
+636787,whole30,shellfish,beef,main course,2.2409
+716004,ovo-vegetarian,sesame,garlic,main course,1.8691
+648320,paleo,soy,mushrooms,main course,6.9604
+782601,vegan,tree nut,beef,main course,1.6843
+636787,whole30,egg,mushrooms,main course,2.2409
+715415,none,peanut,pork,main course,3.0045
+716004,lacto-vegetarian,grain,onion,main course,1.8691
+715446,none,soy,garlic,main course,2.7041000000000004
+638626,ketogenic,peanut,none,main course,4.9025
+662654,low FODMAP,dairy,beef,main course,4.7797
+1044252,primal,sulfite,pork,main course,2.3736
+638626,ketogenic,gluten,mushrooms,main course,4.9025
+782601,vegetarian,sesame,pork,main course,1.6843
+715446,none,sesame,garlic,main course,2.7041000000000004
+648320,paleo,sesame,pork,main course,6.9604
+652417,vegan,sesame,onion,main course,1.2612
+664147,vegan,grain,pork,main course,0.497
+782601,lacto-vegetarian,wheat,pork,main course,1.6843
+716004,lacto-vegetarian,seafood,garlic,main course,1.8691
+659135,whole30,dairy,pork,main course,5.2046
+633921,pescetarian,dairy,onion,main course,4.4376
+638626,ketogenic,peanut,pork,main course,4.9025
+716004,lacto-vegetarian,none,onion,main course,1.8691
+782601,ovo-vegetarian,gluten,beef,main course,0.0
+648320,paleo,tree nut,garlic,main course,6.9604
+664147,vegetarian,sulfite,pork,main course,0.497
+659135,whole30,shellfish,garlic,main course,5.2046
+648320,primal,none,garlic,main course,6.9604
+782601,lacto-vegetarian,peanut,pork,main course,1.6843
+648320,pescetarian,tree nut,none,main course,6.9604
+715446,gluten free,soy,garlic,main course,2.7041000000000004
+648320,pescetarian,egg,beef,main course,6.9604
+782601,lacto-vegetarian,wheat,pork,main course,1.6843
+659135,whole30,dairy,garlic,main course,5.2046
+664147,vegan,grain,beef,main course,0.497
+1044252,primal,sesame,onion,main course,2.3736
+643061,ketogenic,sulfite,pork,main course,2.6873
+638626,ketogenic,seafood,pork,main course,4.9025
+662654,low FODMAP,dairy,mushrooms,main course,4.7797
+648320,paleo,tree nut,pork,main course,6.9604
+662654,low FODMAP,none,none,main course,4.7797
+715415,none,dairy,beef,main course,3.0045
+782601,vegetarian,egg,none,main course,1.6843
+1044252,paleo,grain,garlic,main course,2.3736
+648320,paleo,egg,pork,main course,6.9604
+661340,primal,grain,mushrooms,main course,3.3897000000000004
+664147,ovo-vegetarian,sulfite,mushrooms,main course,0.497
+782601,vegan,shellfish,none,main course,1.6843
+648320,pescetarian,tree nut,none,main course,6.9604
+782601,vegetarian,peanut,beef,main course,1.6843
+633921,pescetarian,soy,onion,main course,4.4376
+636787,whole30,soy,beef,main course,2.2409
+716004,lacto-vegetarian,shellfish,onion,main course,1.8691
+782601,vegan,tree nut,none,main course,1.6843
+648320,primal,sesame,beef,main course,6.9604
+716004,gluten free,sesame,onion,main course,1.8691
+715415,gluten free,seafood,none,main course,3.0045
+652417,vegan,soy,onion,main course,1.2612
+1044252,paleo,grain,none,main course,2.3736
+633921,pescetarian,gluten,onion,main course,4.4376
+645849,low FODMAP,grain,onion,main course,4.454
+715415,none,tree nut,pork,main course,3.0045
+715446,gluten free,dairy,garlic,main course,2.7041000000000004
+648320,paleo,sesame,none,main course,6.9604
+782601,ovo-vegetarian,tree nut,mushrooms,main course,1.6843
+659135,whole30,egg,garlic,main course,5.2046
+716627,vegan,gluten,garlic,main course,1.0602
+782601,vegetarian,peanut,pork,main course,1.6843
+662654,low FODMAP,wheat,beef,main course,4.7797
+659060,ketogenic,egg,onion,main course,8.8594
+638626,ketogenic,tree nut,none,main course,4.9025
+782601,ovo-vegetarian,peanut,mushrooms,main course,0.0
+715415,gluten free,tree nut,pork,main course,0.0
+716004,vegetarian,sesame,onion,main course,1.8691
+982371,vegan,sulfite,garlic,main course,3.0167
+648320,primal,wheat,beef,main course,6.9604
+782601,lacto-vegetarian,sesame,pork,main course,1.6843
+715415,none,egg,pork,main course,3.0045
+715415,none,grain,none,main course,3.0045
+659135,whole30,wheat,pork,main course,5.2046
+782601,lacto-vegetarian,wheat,mushrooms,main course,1.6843
+716004,gluten free,egg,onion,main course,1.8691
+662654,low FODMAP,none,garlic,main course,4.7797
+638626,ketogenic,sesame,none,main course,4.9025
+639411,paleo,grain,beef,main course,8.8111
+782601,vegetarian,shellfish,mushrooms,main course,1.6843
+648320,pescetarian,soy,mushrooms,main course,6.9604
+648320,primal,gluten,mushrooms,main course,6.9604
+662654,low FODMAP,egg,mushrooms,main course,4.7797
+638626,ketogenic,peanut,pork,main course,4.9025
+648320,paleo,sesame,beef,main course,6.9604
+715446,gluten free,dairy,garlic,main course,2.7041000000000004
+645849,low FODMAP,grain,beef,main course,4.454
+715415,none,soy,pork,main course,0.0
+716342,ketogenic,wheat,beef,main course,1.6749
+715446,none,none,garlic,main course,2.7041000000000004
+648320,pescetarian,gluten,mushrooms,main course,6.9604
+645849,low FODMAP,soy,pork,main course,0.0
+716004,lacto-vegetarian,grain,pork,main course,0.0
+715415,none,tree nut,beef,main course,3.0045
+648320,primal,gluten,pork,main course,6.9604
+716342,ketogenic,tree nut,beef,main course,1.6749
+715415,gluten free,tree nut,none,main course,3.0045
+652417,vegan,dairy,onion,main course,1.2612
+716004,vegetarian,peanut,onion,main course,1.8691
+645849,low FODMAP,grain,onion,main course,4.454
+715446,gluten free,grain,garlic,main course,2.7041000000000004
+782601,vegetarian,gluten,beef,main course,1.6843
+782601,ovo-vegetarian,seafood,mushrooms,main course,1.6843
+648320,paleo,sesame,garlic,main course,6.9604
+648320,paleo,shellfish,beef,main course,6.9604
+782601,vegan,egg,none,main course,1.6843
+664147,gluten free,sulfite,beef,main course,0.497
+782601,vegan,seafood,mushrooms,main course,1.6843
+1044252,paleo,sulfite,onion,main course,2.3736
+782601,vegan,gluten,beef,main course,1.6843
+782601,vegetarian,dairy,mushrooms,main course,1.6843
+648320,pescetarian,tree nut,beef,main course,6.9604
+1044252,paleo,sulfite,none,main course,2.3736
+645849,low FODMAP,peanut,pork,main course,4.454
+664147,vegan,sulfite,none,main course,0.497
+662654,low FODMAP,shellfish,mushrooms,main course,4.7797
+638626,ketogenic,grain,mushrooms,main course,4.9025
+715446,none,soy,garlic,main course,2.7041000000000004
+662654,low FODMAP,none,mushrooms,main course,4.7797
+664147,vegan,grain,beef,main course,0.497
+636787,whole30,shellfish,mushrooms,main course,2.2409
+715415,none,dairy,none,main course,3.0045
+782601,lacto-vegetarian,egg,none,main course,1.6843
+982371,vegan,sulfite,garlic,main course,3.0167
+659060,ketogenic,none,onion,main course,8.8594
+715415,none,grain,beef,main course,3.0045
+638626,ketogenic,tree nut,mushrooms,main course,4.9025
+648320,pescetarian,sesame,garlic,main course,6.9604
+648320,pescetarian,peanut,beef,main course,6.9604
+648320,paleo,shellfish,mushrooms,main course,6.9604
+782601,lacto-vegetarian,gluten,mushrooms,main course,1.6843
+661340,primal,seafood,mushrooms,main course,3.3897000000000004
+782601,ovo-vegetarian,gluten,none,main course,1.6843
+782601,lacto-vegetarian,none,mushrooms,main course,1.6843
+715415,none,shellfish,none,main course,3.0045
+638626,ketogenic,peanut,pork,main course,4.9025
+782601,vegetarian,dairy,none,main course,1.6843
+664147,vegan,grain,pork,main course,0.497
+662654,low FODMAP,gluten,beef,main course,4.7797
+715415,gluten free,shellfish,beef,main course,3.0045
+715446,none,grain,garlic,main course,2.7041000000000004
+782601,ovo-vegetarian,peanut,beef,main course,1.6843
+636787,whole30,grain,none,main course,2.2409
+1044252,primal,grain,onion,main course,2.3736
+638626,ketogenic,none,pork,main course,4.9025
+715415,none,gluten,none,main course,3.0045
+662654,low FODMAP,none,garlic,main course,4.7797
+1044252,paleo,grain,onion,main course,2.3736
+636787,whole30,sesame,none,main course,0.0
+648320,pescetarian,wheat,none,main course,6.9604
+782601,lacto-vegetarian,sesame,beef,main course,1.6843
+648320,primal,soy,pork,main course,6.9604
+638626,ketogenic,soy,pork,main course,0.0
+638626,ketogenic,tree nut,mushrooms,main course,4.9025
+782601,ovo-vegetarian,soy,pork,main course,1.6843
+715415,gluten free,egg,none,main course,3.0045
+661340,primal,grain,mushrooms,main course,3.3897000000000004
+716342,ketogenic,egg,beef,main course,0.0
+654432,ketogenic,sulfite,beef,main course,3.8258
+782601,vegan,gluten,mushrooms,main course,1.6843
+648320,pescetarian,sesame,garlic,main course,0.0
+782601,ovo-vegetarian,none,mushrooms,main course,0.0
+715415,none,shellfish,beef,main course,3.0045
+782601,lacto-vegetarian,dairy,mushrooms,main course,1.6843
+716004,ovo-vegetarian,gluten,onion,main course,1.8691
+648320,primal,soy,pork,main course,6.9604
+715415,gluten free,wheat,pork,main course,3.0045
+1044252,primal,peanut,onion,main course,0.0

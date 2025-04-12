@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY3
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY1
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
 
@@ -64,7 +64,7 @@ with col3:
 def main():
     recipe_titles = []
 
-    recipe_ids, foody_type = get_meal_plan(API_KEY3, "day", diet, intolerances, excluded_ingredients) #get random recipes
+    recipe_ids, foody_type = get_meal_plan(API_KEY1, "day", diet, intolerances, excluded_ingredients) #get random recipes
     
     # check if API-Limit is exceeded
     if recipe_ids == 402:
@@ -76,8 +76,8 @@ def main():
 
     for rid in recipe_ids: 
         recipe_id = rid["id"]
-        title, image, instructions = get_recipe_details(API_KEY3, recipe_id) #get additional information about the recipe
-        cost = get_recipe_price(API_KEY3, recipe_id) #get the price information about the recipe
+        title, image, instructions = get_recipe_details(API_KEY1, recipe_id) #get additional information about the recipe
+        cost = get_recipe_price(API_KEY1, recipe_id) #get the price information about the recipe
         total_cost += cost # sum of all recipe prices 
         recipe_titles.append(title) # List with recipe titles
 

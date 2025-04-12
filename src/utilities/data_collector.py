@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from random_user_generator import generate_random_preferences
 #from ..functions.get_meal_plan import get_meal_plan
-from constants import API_KEY3
+from constants import API_KEY1
 #from ..functions.get_recipe_information import get_recipe_price
 
 import sys
@@ -21,15 +21,15 @@ def generate_data():
     for i in range(25):
         # check if daliy limit es exceeded via try-except
         try:        
-            dish, food_type = get_meal_plan(API_KEY3, "day", random_preferences[0], random_preferences[1], random_preferences[2])
+            dish, food_type = get_meal_plan(API_KEY1, "day", random_preferences[0], random_preferences[1], random_preferences[2])
         except:
-            dish = get_meal_plan(API_KEY3, "day", random_preferences[0], random_preferences[1], random_preferences[2])
+            dish = get_meal_plan(API_KEY1, "day", random_preferences[0], random_preferences[1], random_preferences[2])
             if dish == 402: # check if daily limit is exceeded
                 print("Tageslimit erreicht")
                 break
             print("Unbekannter Fehler")
             break
-        price = get_recipe_price(API_KEY3, dish[0]["id"])
+        price = get_recipe_price(API_KEY1, dish[0]["id"])
         # call "save" function with tupe. "random_preferences"
         save_training_example(dish[0]["id"], random_preferences[0], random_preferences[1], random_preferences[2], food_type, price)
         random_preferences = generate_random_preferences() #generate new preferences
