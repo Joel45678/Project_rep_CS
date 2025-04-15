@@ -34,7 +34,7 @@ with col2h:
     #st.title("SmartMeal")
     #st.subheader("A recipe recommender and meal planner")
 
-with col1s [0]: #add features
+with col1s [0]: #add amount of meals
     st.markdown("<br>" *3, unsafe_allow_html= True)
     st.header("Desired amount of meals")
     selected_amount = st.number_input(
@@ -73,7 +73,7 @@ with col3:
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
-def main():
+def main(selected_amount):
     recipe_titles = []
 
     try:
@@ -132,7 +132,7 @@ if st.session_state.get("generate_button"):
     if excluded_ingredients == "none":
         excluded_ingredients = None
     
-    main()
+    main(selected_amount)
 
 
 #Debugging:
