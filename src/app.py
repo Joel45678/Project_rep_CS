@@ -64,38 +64,42 @@ with col3:
 def main():
     recipe_titles = []
 
-    recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
-    
+    try:
+        recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
+
+        total_cost = 0
+        st.header("Food plan:")
+
+        for rid in recipe_ids: 
+            recipe_id = rid["id"]
+            title, image, instructions = get_recipe_details(API_KEY2, recipe_id) #get additional information about the recipe
+            cost = get_recipe_price(API_KEY2, recipe_id) #get the price information about the recipe
+            total_cost += cost # sum of all recipe prices 
+            recipe_titles.append(title) # List with recipe titles
+
+            #st.markdown(f'<a name="{title.replace(" ", "-").lower()}"></a>', unsafe_allow_html=True) evtl. verlinken
+            st.markdown(f"{title}")
+            st.write(f"Price: {cost:.2f}$")
+            
+            if image:
+                st.image(image, width=250)
+
+            #st.session_state.update("st_meal_plan_list",title)
+            st.markdown("**Instructions:**", unsafe_allow_html=True)
+            st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
+            st.markdown("———")
+            
+        titles_placeholder.markdown("\n".join([f"#### {t}" for t in recipe_titles])) #list of Titles [f"- {t}" for t in recipe_titles])
+        price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
+        #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
+    except:
     # check if API-Limit is exceeded
-    if recipe_ids == 402:
-        st.error("Daily recipe limit exceeded")
-        return
+        recipe_ids = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
+        if recipe_ids == 402:
+            st.error("Daily recipe limit exceeded")
+            return
 
-    total_cost = 0
-    st.header("Food plan:")
 
-    for rid in recipe_ids: 
-        recipe_id = rid["id"]
-        title, image, instructions = get_recipe_details(API_KEY2, recipe_id) #get additional information about the recipe
-        cost = get_recipe_price(API_KEY2, recipe_id) #get the price information about the recipe
-        total_cost += cost # sum of all recipe prices 
-        recipe_titles.append(title) # List with recipe titles
-
-        #st.markdown(f'<a name="{title.replace(" ", "-").lower()}"></a>', unsafe_allow_html=True) evtl. verlinken
-        st.markdown(f"{title}")
-        st.write(f"Price: {cost:.2f}$")
-        
-        if image:
-            st.image(image, width=250)
-
-        #st.session_state.update("st_meal_plan_list",title)
-        st.markdown("**Instructions:**", unsafe_allow_html=True)
-        st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
-        st.markdown("———")
-        
-    titles_placeholder.markdown("\n".join([f"#### {t}" for t in recipe_titles])) #list of Titles [f"- {t}" for t in recipe_titles])
-    price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
-    #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
 
 
 
@@ -122,7 +126,7 @@ if st.session_state.get("generate_button"):
 #Debugging:
 #variables
 
-"""price = 0.0
+price = 0.0
 diet = "vegan"
 intolerances = "gluten"
 excluded_ingredients = "none"
@@ -134,4 +138,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()"""
+main()
