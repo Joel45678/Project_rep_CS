@@ -15,6 +15,7 @@ from recipe_api.get_recipe_information import get_recipe_price, get_recipe_detai
 
 #page layout
 col1h, col2h = st.columns(2)
+col1s = st.columns(1)
 col1, col2, col3 = st.columns(3)
 
 #variables
@@ -33,6 +34,17 @@ with col2h:
     #st.title("SmartMeal")
     #st.subheader("A recipe recommender and meal planner")
 
+with col1s [0]: #add features
+    st.markdown("<br>" *3, unsafe_allow_html= True)
+    st.header("Desired amount of meals")
+    selected_amount = st.number_input(
+        label= "choose the amount of recipies that you prefear",
+        min_value=1,
+        step=1,
+        format="%d",
+        key="number_input"
+    )
+    
 with col1:
     st.header("Intolerances")
     selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
