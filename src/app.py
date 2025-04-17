@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY1
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY2
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
 
@@ -77,15 +77,15 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
     recipe_titles = []
 
     try:
-        recipe_ids, foody_type = get_meal_plan(API_KEY1, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
+        recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
 
         total_cost = 0
         st.header("Food plan:")
 
         for rid in recipe_ids: 
             recipe_id = rid["id"]
-            title, image, instructions = get_recipe_details(API_KEY1, recipe_id) #get additional information about the recipe
-            cost = get_recipe_price(API_KEY1, recipe_id) #get the price information about the recipe
+            title, image, instructions = get_recipe_details(API_KEY2, recipe_id) #get additional information about the recipe
+            cost = get_recipe_price(API_KEY2, recipe_id) #get the price information about the recipe
             total_cost += cost # sum of all recipe prices 
             recipe_titles.append(title) # List with recipe titles
 
@@ -106,7 +106,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
     except:
     # check if API-Limit is exceeded
-        recipe_ids = get_meal_plan(API_KEY1, "day", diet, intolerances, excluded_ingredients) #get random recipes
+        recipe_ids = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
         if recipe_ids == 402:
             st.error("Daily recipe limit exceeded")
             return
