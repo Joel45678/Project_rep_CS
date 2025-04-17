@@ -31,3 +31,26 @@ def get_recipe_details(API_KEY, recipe_id):
 
     return title, image, instructions
 
+
+def get_recipe_nutrition(API_KEY, recipe_id):
+    url = f"https://api.spoonacular.com/recipes/{recipe_id}/nutritionWidget.json"
+    params = {"apiKey": API_KEY}
+
+    response = requests.get(url, params=params)
+
+    if response.status_code == 200:
+        data = response.json()
+        return {
+            "calories": data.get("calories", ""),
+            "carbs": data.get("carbs", ""),
+            "fat": data.get("fat", ""),
+            "protein": data.get("protein", "")
+        }
+    else:
+        print(f"[Fehler] Nährwerte konnten nicht geladen werden - Statuscode: {response.status_code}")
+        return {
+            "calories": "",
+            "carbs": "",
+            "fat": "",
+            "protein": ""
+        }
