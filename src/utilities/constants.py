@@ -1,5 +1,8 @@
 #API details for spoonacular.com
-API_KEY1 = "373547e7ea3647b1b17c5abc690d725c"
+API_KEY01 = "ba80c1860a62481381ffc4ce732b01a7"
+API_KEY00 = "acd9a8dcc21e44e2942cac31ef6b66b4" # for testing
+API_KEY0 = "11977d3f57d149c9afdb4894358fab7a" # for testing
+API_KEY1 = "373547e7ea3647b1b17c5abc690d725c" # for testing
 API_KEY2 = "de69a22855d946b6b1a3f231c90d36a2" # for ml training
 API_KEY3 = "35ebfc08491044658f5e2804ff01bb26" # for ml training
 

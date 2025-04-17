@@ -1,7 +1,7 @@
 import requests #pip install requests for api requests
 #This functions is used to get random meal plans with the imputs form the user 
 
-def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclude=None, number=selected_amount, food_type="main course"):
+def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclude=None, number=1, food_type="main course"):
     
     # API-Call for Meal Planer (optional)
     """
@@ -13,7 +13,7 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
         "exclude": exclude,
         "allergies": intolerances,
         "number": number
-        #"targetCalories": 10000  # Optional: Kalorienziel
+        #"targetCalories": 10000  # Optional: Kalorienzielstreamlit run src/app.py
     }"""
 
     # API-Call for recipes by meal type
