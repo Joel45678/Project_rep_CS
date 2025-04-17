@@ -9,12 +9,16 @@ from constants import API_KEY2
 
 import sys
 import os
+import time
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price
 
-
+"""!!!!"""
+# !!! - !!!
+# evtl. sollten die Kalorien mitgespeichert werden, um die Kosten pro Kalorien berechnen zu können und daraus die Prognose ableiten zu können
 def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 
@@ -30,19 +34,25 @@ def generate_data():
                 break
             print("Unbekannter Fehler")
             break
-        price = get_recipe_price(API_KEY2, dish[0]["id"])
+        try:
+            price = get_recipe_price(API_KEY2, dish[0]["id"])
+            actual_diets = dish[0].get("diets", [])
+
+            save_training_example(dish[0]["id"], 
+                                random_preferences[0], #diets
+                                random_preferences[1], #intolerances
+                                random_preferences[2], #excluded
+                                food_type,
+                                price,
+                                actual_diets)
+            random_preferences = generate_random_preferences() #generate new preferences
+            time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+        except:
+            print("Fehler im API-Call ")
+            break
         # call "save" function with tupe. "random_preferences"
         # Extract actual diets from the recipe response
-        actual_diets = dish[0].get("diets", [])
 
-        save_training_example(dish[0]["id"], 
-                              random_preferences[0], #diets
-                              random_preferences[1], #intolerances
-                              random_preferences[2], #excluded
-                              food_type,
-                              price,
-                              actual_diets)
-        random_preferences = generate_random_preferences() #generate new preferences
     print("Data collected")
 
 # to get paths 

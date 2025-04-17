@@ -25,12 +25,12 @@ price = 0.0
 
 
 #streamlit page
-with col1h:
-    st.subheader("")
-    st.image("src/assets/01_Logo.png", width=200)
+#with col1h:
+    #st.subheader("")
+    #st.image("src/assets/01_Logo.png", width=200)
 
-with col2h:
-    st.empty()
+#with col2h:
+    #st.empty()
     #st.title("SmartMeal")
     #st.subheader("A recipe recommender and meal planner")
 
@@ -38,7 +38,7 @@ with col1s [0]: #add amount of meals
     st.markdown("<br>" *3, unsafe_allow_html= True)
     st.header("Desired amount of meals")
     selected_amount = st.number_input(
-        label= "choose the amount of recipies that you prefear",
+        label= "choose the number of recipes you prefer",
         min_value=1,
         step=1,
         format="%d",
@@ -73,11 +73,11 @@ with col3:
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
-def main(selected_amount):
+def main(selected_amount, diet, intolerances, excluded_ingredients):
     recipe_titles = []
 
     try:
-        recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
+        recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
 
         total_cost = 0
         st.header("Food plan:")
@@ -132,12 +132,11 @@ if st.session_state.get("generate_button"):
     if excluded_ingredients == "none":
         excluded_ingredients = None
     
-    main(selected_amount)
-
+    main(selected_amount, diet, intolerances, excluded_ingredients)
 
 #Debugging:
 #variables
-
+"""
 price = 0.0
 diet = "vegan"
 intolerances = "gluten"
@@ -150,4 +149,4 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()
+main()"""
