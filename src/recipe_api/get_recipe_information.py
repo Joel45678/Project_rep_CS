@@ -7,6 +7,10 @@ def get_recipe_price(API_KEY,recipe_id):
 
     #api request
     response = requests.get(url, params=params)
+
+    if response.status_code != 200:
+        raise Exception(f"[Fehler] Rezeptpreis konnte nicht geladen werden – Statuscode: {response.status_code}")
+
     data = response.json() #convert response to json
 
     #get price information
