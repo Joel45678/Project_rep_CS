@@ -150,7 +150,7 @@ with col2h:
 # number-input column
 col1s = st.columns(1)
 with col1s[0]:
-    st.header("Desired amount of meals")
+    st.header("Desired amount of meals-")
     st.number_input(
         "choose the amount of recipies that you prefear",
         min_value=1,
