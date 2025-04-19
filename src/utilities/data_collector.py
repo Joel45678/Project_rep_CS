@@ -17,19 +17,19 @@ from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price
 from recipe_api.get_recipe_information import get_recipe_nutrition
 from recipe_api.recipe_data import RecipeData #Recipe object
-
+API_KEY = API_KEY2
 
 
 def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 
-    # generate 25 sets data
-    for i in range(20):
+    # generate 30 sets data
+    for i in range(10):
         # check if daliy limit es exceeded via try-except
         try:        
-            dish, food_type = get_meal_plan(API_KEY2, "day", *random_preferences)
+            dish, food_type = get_meal_plan(API_KEY, "day", *random_preferences)
         except:
-            dish = get_meal_plan(API_KEY2, "day", *random_preferences)
+            dish = get_meal_plan(API_KEY, "day", *random_preferences)
             if dish == 402:
                 print("Tageslimit erreicht")
                 break
@@ -44,8 +44,8 @@ def generate_data():
                 intolerances = random_preferences[1],
                 excluded_ingredients = random_preferences[2],
                 food_type = food_type,
-                cost = get_recipe_price(API_KEY2, dish[0]["id"]),
-                nutrition = get_recipe_nutrition(API_KEY2, dish[0]["id"])
+                cost = get_recipe_price(API_KEY, dish[0]["id"]),
+                nutrition = get_recipe_nutrition(API_KEY, dish[0]["id"])
             )
             save_training_example(recipe)
             random_preferences = generate_random_preferences() #generate new preferences
