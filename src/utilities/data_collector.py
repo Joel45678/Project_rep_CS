@@ -24,7 +24,7 @@ def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 
     # generate 30 sets data
-    for i in range(10):
+    for i in range(49):
         # check if daliy limit es exceeded via try-except
         try:        
             dish, food_type = get_meal_plan(API_KEY, "day", *random_preferences)
@@ -44,9 +44,10 @@ def generate_data():
                 intolerances = random_preferences[1],
                 excluded_ingredients = random_preferences[2],
                 food_type = food_type,
-                cost = get_recipe_price(API_KEY, dish[0]["id"]),
-                nutrition = get_recipe_nutrition(API_KEY, dish[0]["id"])
+                cost = get_recipe_price(API_KEY, dish[0]["id"]), 
             )
+            time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+            recipe.nutrition = get_recipe_nutrition(API_KEY, dish[0]["id"])
             save_training_example(recipe)
             random_preferences = generate_random_preferences() #generate new preferences
             time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
