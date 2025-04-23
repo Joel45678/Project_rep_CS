@@ -7,6 +7,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
 from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY2
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
@@ -51,7 +52,10 @@ with col1:
     selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.divider()
     st.markdown("<br>" * 3, unsafe_allow_html=True)
-    st.button("Generate Meal Plan", key="generate_button")
+    
+    if st.button ("generate Meal Plan"):
+        st.session_state["generate_meal_plan"]= True
+
 
 with col2:
     st.header("Diet")
@@ -70,7 +74,10 @@ with col3:
     st.header("4-week budget forecast")
     st.write("Coming soon!")
 
-
+def extract_grams(value):
+    if isinstance(value, str):
+        return float(value.replace("g", "").strip())
+    return float(value)
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
@@ -81,25 +88,25 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         recipe_ids, foody_type = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
 
         total_cost = 0
-        toatal_carbs = 0
+        total_carbs = 0
         total_fat = 0 
         total_protein = 0 
-        
+
         st.header("Food plan:")
 
         for rid in recipe_ids: 
             recipe_id = rid["id"]
             title, image, instructions = get_recipe_details(API_KEY2, recipe_id) #get additional information about the recipe
             cost = get_recipe_price(API_KEY2, recipe_id) #get the price information about the recipe
-            nutrition= get_recipe_information(API_KEY2, recipe_id)
+            nutrition = get_recipe_nutrition(API_KEY2, recipe_id)
 
-            carbs= nutrition.get("carbs", 0)
+            carbs = extract_grams(nutrition.get("carbs", 0))
             total_carbs += carbs 
 
-            protein= nutrition.get("protein", 0)
+            protein = extract_grams(nutrition.get("protein", 0))
             total_protein += protein
 
-            fat= nutrition.get("fat",0)
+            fat = extract_grams(nutrition.get("fat", 0))
             total_fat += fat
 
             total_cost += cost # sum of all recipe prices 
@@ -116,11 +123,11 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             st.markdown("**Instructions:**", unsafe_allow_html=True)
             st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
             st.markdown("———")
-            
+          
+        # Display the total calories and price after looping through all recipes
         titles_placeholder.markdown("\n".join([f"#### {t}" for t in recipe_titles])) #list of Titles [f"- {t}" for t in recipe_titles])
         price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
         #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
-    
         st.markdown(f"**Total carbs for the meal plan:** {total_carbs} g")  # Display the total calories
         st.markdown(f"**Total Proteins for the meal plan:** {total_protein} g") # Display the total protein
         st.markdown(f"**Total Fat for the meal plan:** {total_fat} g") # Display the total protein
@@ -128,7 +135,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         st.session_state["total_protein"] = total_protein
         st.session_state["total_fat"] = total_fat
         st.session_state["total_carbs"] = total_carbs
-        
+
     except:
     # check if API-Limit is exceeded
         recipe_ids = get_meal_plan(API_KEY2, "day", diet, intolerances, excluded_ingredients) #get random recipes
@@ -139,12 +146,14 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
 
 
 
+
+
 #call of the main function on button click
-if st.session_state.get("generate_button"):
+if st.session_state.get("generate_meal_plan"):
     price = 0.0
     #get user inputs
     diet = st.session_state.get("diet")
-    intolerances = st.session_state.get("allergies")
+    intolerances = st.session_state.get("intolerances")
     excluded_ingredients  = st.session_state.get("excluded_ingredients")
 
     # convert "none" to None-type
@@ -156,6 +165,8 @@ if st.session_state.get("generate_button"):
         excluded_ingredients = None
     
     main(selected_amount, diet, intolerances, excluded_ingredients)
+
+
 
 #Debugging:
 #variables
@@ -173,7 +184,6 @@ if excluded_ingredients == "none":
     excluded_ingredients = None
 
 main()"""
-
 average_protein= st.session_state.get("total_protein", 0) / selected_amount
 average_fat= st.session_state.get("total_fat",0)/ selected_amount
 average_carbs= st.session_state.get("total_carbs", 0)/ selected_amount
