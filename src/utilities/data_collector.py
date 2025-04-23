@@ -24,7 +24,7 @@ def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 
     # generate 30 sets data
-    for i in range(49):
+    for i in range(50):
         # check if daliy limit es exceeded via try-except
         try:        
             dish, food_type = get_meal_plan(API_KEY, "day", *random_preferences)
