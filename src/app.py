@@ -202,81 +202,48 @@ with col3:
 
 col1f =st.columns(1)[0]
 with col1f:
-    macronutrients = ["Protein", "Fat", "Carbs"]
-    values = [
-        average_carbs,
-        average_fat,
-        average_carbs
-    ]
+    if (
+        "recipes" in st.session_state and
+        "total_carbs" in st.session_state and
+        "total_fat" in st.session_state and
+        "total_protein" in st.session_state and
+        "total_cost" in st.session_state and
+        len(st.session_state.recipes) > 0 and
+        selected_amount > 0
+    ):
+        average_carbs = st.session_state.total_carbs / selected_amount
+        average_fat = st.session_state.total_fat / selected_amount
+        average_protein = st.session_state.total_protein / selected_amount
 
-    bar_fig= go.Figure([go.Bar(
-        x=macronutrients, 
-        y=values,
-        text=values,
-        textposition='auto'
-    )])
+        macronutrients = ["Protein", "Fat", "Carbs"]
+        values = [average_protein, average_fat, average_carbs]
 
-    bar_fig.update_layout(
-        title= "Average Macronutrient Breakdown per Meal",
-        xaxis_title= "Macronutrients",
-        yaxis_title="Grams",
-        template="plotly_white",
-        yaxis=dict(
-            range=(0,300),
-            tick0=0,
-            dtick=500, 
-            tickformat=',d'
+        bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
+        bar_fig.update_layout(
+            title="Average Macronutrient Breakdown per Meal",
+            xaxis_title="Macronutrients",
+            yaxis_title="Grams",
+            template="plotly_white",
+            yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
         )
-    )
-st.plotly_chart(bar_fig)
-bar_fig.update_yaxes(autorange=True)
+        st.plotly_chart(bar_fig)
 
-    
-# placeholders for cost & titles
-titles_placeholder = st.empty()
-price_placeholder  = st.empty()
-
-
-# ─── Always‑run display block ─────────────────────────────────────────────────
-
-if "recipes" in st.session_state:
-    # show total cost
-    price_placeholder.markdown(
-        f"**Price for the plan:** {st.session_state.total_cost:.2f}$"
-    )
-
-    # render each recipe + its regenerate button
-    for idx, r in enumerate(st.session_state.recipes):
-        st.markdown(f"### {r['title']}")
-        st.write(f"Price: {r['price']:.2f}$")
-        if r["image"]:
-            st.image(r["image"], width=250)
-        st.markdown("**Instructions:**")
-        st.write(r["instructions"] or "No instructions provided.")
-        st.markdown("___")
-
-        st.button(
-            "Regenerate this recipe",
-            key=f"regen_{idx}",
-            on_click=regenerate_one,
-            args=(idx,),
+        price_placeholder.markdown(
+            f"**Price for the plan:** {st.session_state.total_cost:.2f}$"
         )
-        
-    average_carbs = st.session_state.total_carbs / selected_amount
-    average_fat = st.session_state.total_fat / selected_amount
-    average_protein = st.session_state.total_protein / selected_amount
-    
-    macronutrients = ["Protein", "Fat", "Carbs"]
-    values = [average_protein, average_fat, average_carbs]
 
-    bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
+        for idx, r in enumerate(st.session_state.recipes):
+            st.markdown(f"### {r['title']}")
+            st.write(f"Price: {r['price']:.2f}$")
+            if r["image"]:
+                st.image(r["image"], width=250)
+            st.markdown("**Instructions:**")
+            st.write(r["instructions"] or "No instructions provided.")
+            st.markdown("___")
 
-    bar_fig.update_layout(
-        title="Average Macronutrient Breakdown per Meal",
-        xaxis_title="Macronutrients",
-        yaxis_title="Grams",
-        template="plotly_white",
-        yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
-    )
-    
-    st.plotly_chart(bar_fig)
+            st.button(
+                "Regenerate this recipe",
+                key=f"regen_{idx}",
+                on_click=regenerate_one,
+                args=(idx,),
+            )
