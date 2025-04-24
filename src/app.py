@@ -66,6 +66,8 @@ def generate_plan():
         carbs = extract_grams(nutrition.get("carbs", 0))
         fat = extract_grams(nutrition.get("fat", 0))
         protein = extract_grams(nutrition.get("protein", 0))
+        
+        st.write(f"Recipe: {title}, Carbs: {carbs}, Fat: {fat}, Protein: {protein}")
 
         st.session_state.total_carbs += carbs
         st.session_state.total_fat += fat
@@ -81,7 +83,10 @@ def generate_plan():
         })
 
 
-
+st.write(f"Total Carbs: {st.session_state.total_carbs}")
+st.write(f"Total Protein: {st.session_state.total_protein}")
+st.write(f"Total Fat: {st.session_state.total_fat}")
+st.write(f"Total Cost: {st.session_state.total_cost}")
 
 def regenerate_one(idx):
     """Fetch a truly random recipe (excluding any already in the plan)
@@ -211,6 +216,8 @@ with col1f:
         len(st.session_state.recipes) > 0 and
         selected_amount > 0
     ):
+        st.write(f"Carbs: {st.session_state.total_carbs}, Fat: {st.session_state.total_fat}, Protein: {st.session_state.total_protein}, Cost: {st.session_state.total_cost}")
+        
         average_carbs = st.session_state.total_carbs / selected_amount
         average_fat = st.session_state.total_fat / selected_amount
         average_protein = st.session_state.total_protein / selected_amount
