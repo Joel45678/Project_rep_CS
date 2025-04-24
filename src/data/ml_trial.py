@@ -2,10 +2,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-import joblib
 import numpy as np
 
-# 1. CSV laden wie es sollte
+# 1. CSV laden
 data = pd.read_csv('training_data_nutrition.csv')
 
 # 2. Makronährstoffe umwandeln
@@ -25,23 +24,30 @@ data = pd.get_dummies(data, columns=categorical_cols)
 X = data.drop(columns=['meal_costs_perserving', 'all_diets'])
 y = data['meal_costs_perserving']
 
-# ➤ Jetzt NaN und inf bereinigen!
+# 6. NaN und inf bereinigen
 X.replace([np.inf, -np.inf], np.nan, inplace=True)
 X = X.dropna()
 y = y.loc[X.index]
 
-# 6. Split in Training und Test
+# 7. Split in Training und Test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# 7. Modell trainieren
+# 8. Modell trainieren
 model = RandomForestRegressor(random_state=42)
 model.fit(X_train, y_train)
 
-# 8. Modell speichern
-joblib.dump(model, 'kosten_forecast_model.pkl')
-
-# 9. Modell testen
+# 9. Vorhersagen machen
 y_pred = model.predict(X_test)
+
+# 10. Fehler ausgeben
 mae = mean_absolute_error(y_test, y_pred)
 print(f"Mean Absolute Error: {round(mae, 2)} €")
 
+# 11. Vorhersagen in Text-Datei speichern
+with open('forecast_results.txt', 'w') as f:
+    f.write(f"Mean Absolute Error: {round(mae, 2)} €\n")
+    f.write("Vorhersagen (Kosten pro Portion):\n")
+    for idx, value in enumerate(y_pred):
+        f.write(f"{idx+1}: {round(value, 2)} €\n")
+
+print("Vorhersagen wurden in 'forecast_results.txt' gespeichert.")
