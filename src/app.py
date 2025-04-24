@@ -255,6 +255,12 @@ if "recipes" in st.session_state:
         st.write(r["instructions"] or "No instructions provided.")
         st.markdown("___")
 
+        st.button(
+            "Regenerate this recipe",
+            key=f"regen_{idx}",
+            on_click=regenerate_one,
+            args=(idx,),
+            
     average_carbs = st.session_state.total_carbs / selected_amount
     average_fat = st.session_state.total_fat / selected_amount
     average_protein = st.session_state.total_protein / selected_amount
@@ -272,9 +278,3 @@ if "recipes" in st.session_state:
         yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
     )
     st.plotly_chart(bar_fig)
-        st.button(
-            "Regenerate this recipe",
-            key=f"regen_{idx}",
-            on_click=regenerate_one,
-            args=(idx,),
-        )
