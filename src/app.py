@@ -247,3 +247,5 @@ with col1f:
                 on_click=regenerate_one,
                 args=(idx,),
             )
+    else:
+        st.info("Generate a meal plan to see your recipes and breakdown.")
