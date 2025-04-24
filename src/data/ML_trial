@@ -1,0 +1,21 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+import joblib
+
+# 1. CSV laden
+data = pd.read_csv('eure_daten.csv')
+
+# 2. Features & Ziel definieren
+X = data[['zutaten', 'menge', 'datum', ...]]   # Beispielhafte Features
+y = data['kosten']
+
+# 3. Split in Training & Test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# 4. Modell trainieren
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+
+# 5. Modell speichern
+joblib.dump(model, 'kosten_forecast_model.pkl')
