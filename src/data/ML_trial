@@ -1,21 +1,40 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
 import joblib
 
 # 1. CSV laden
-data = pd.read_csv('eure_daten.csv')
+data = pd.read_csv('training_data_nutrition.csv')
 
-# 2. Features & Ziel definieren
-X = data[['zutaten', 'menge', 'datum', ...]]   # Beispielhafte Features
-y = data['kosten']
+# 2. Makronährstoffe umwandeln
+for col in ['carbs', 'fat', 'protein']:
+    data[col] = data[col].str.replace('g', '').astype(float)
 
-# 3. Split in Training & Test
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+# 3. 'all_diets' in Features umwandeln
+diet_types = ['gluten free', 'dairy free', 'vegan', 'ketogenic', 'paleolithic', 'primal', 'whole 30', 'lacto ovo vegetarian']
+for diet in diet_types:
+    data[diet] = data['all_diets'].apply(lambda x: 1 if diet and diet in x else 0)
 
-# 4. Modell trainieren
-model = RandomForestRegressor()
+# 4. One-Hot-Encoding für kategorische Spalten
+categorical_cols = ['diet', 'intolerances', 'excluded_ingredients', 'food_type']
+data = pd.get_dummies(data, columns=categorical_cols)
+
+# 5. Features & Ziel definieren
+X = data.drop(columns=['meal_costs_perserving', 'all_diets'])
+y = data['meal_costs_perserving']
+
+# 6. Split in Training und Test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 7. Modell trainieren
+model = RandomForestRegressor(random_state=42)
 model.fit(X_train, y_train)
 
-# 5. Modell speichern
+# 8. Modell speichern
 joblib.dump(model, 'kosten_forecast_model.pkl')
+
+# 9. Modell testen
+y_pred = model.predict(X_test)
+mae = mean_absolute_error(y_test, y_pred)
+print(f"Mean Absolute Error: {round(mae, 2)} €")
