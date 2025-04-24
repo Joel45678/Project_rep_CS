@@ -17,6 +17,22 @@ def extract_grams(value):
         return float(value.replace("g", "").strip())
     return float(value)
 
+# Ensure session state variables exist before accessing them
+if 'total_carbs' not in st.session_state:
+    st.session_state.total_carbs = 0.0
+if 'total_fat' not in st.session_state:
+    st.session_state.total_fat = 0.0
+if 'total_protein' not in st.session_state:
+    st.session_state.total_protein = 0.0
+if 'total_cost' not in st.session_state:
+    st.session_state.total_cost = 0.0
+if 'recipes' not in st.session_state:
+    st.session_state.recipes = []
+
+# You might also want to ensure that the number of meals is correctly set
+if 'number_input' not in st.session_state:
+    st.session_state.number_input = 1  # default to 1 meal if not set
+
 # ─── Callbacks ────────────────────────────────────────────────────────────────
 
 def generate_plan():
@@ -81,12 +97,6 @@ def generate_plan():
             "instructions": instr,
             "price":        cost,
         })
-
-
-st.write(f"Total Carbs: {st.session_state.total_carbs}")
-st.write(f"Total Protein: {st.session_state.total_protein}")
-st.write(f"Total Fat: {st.session_state.total_fat}")
-st.write(f"Total Cost: {st.session_state.total_cost}")
 
 def regenerate_one(idx):
     """Fetch a truly random recipe (excluding any already in the plan)
@@ -207,20 +217,25 @@ with col3:
 
 col1f =st.columns(1)[0]
 with col1f:
+    total_carbs = st.session_state.get("total_carbs", 0.0)
+    total_fat = st.session_state.get("total_fat", 0.0)
+    total_protein = st.session_state.get("total_protein", 0.0)
+    total_cost = st.session_state.get("total_cost", 0.0)
+    recipes = st.session_state.get("recipes", [])
+
+    # Ensure we have valid values for the variables
     if (
-        "recipes" in st.session_state and
-        "total_carbs" in st.session_state and
-        "total_fat" in st.session_state and
-        "total_protein" in st.session_state and
-        "total_cost" in st.session_state and
-        len(st.session_state.recipes) > 0 and
+        recipes and
+        total_carbs != 0.0 and
+        total_fat != 0.0 and
+        total_protein != 0.0 and
+        total_cost != 0.0 and
         selected_amount > 0
     ):
-        st.write(f"Carbs: {st.session_state.total_carbs}, Fat: {st.session_state.total_fat}, Protein: {st.session_state.total_protein}, Cost: {st.session_state.total_cost}")
-        
-        average_carbs = st.session_state.total_carbs / selected_amount
-        average_fat = st.session_state.total_fat / selected_amount
-        average_protein = st.session_state.total_protein / selected_amount
+        # If valid data exists, calculate averages
+        average_carbs = total_carbs / selected_amount
+        average_fat = total_fat / selected_amount
+        average_protein = total_protein / selected_amount
 
         macronutrients = ["Protein", "Fat", "Carbs"]
         values = [average_protein, average_fat, average_carbs]
@@ -236,10 +251,10 @@ with col1f:
         st.plotly_chart(bar_fig)
 
         price_placeholder.markdown(
-            f"**Price for the plan:** {st.session_state.total_cost:.2f}$"
+            f"**Price for the plan:** {total_cost:.2f}$"
         )
 
-        for idx, r in enumerate(st.session_state.recipes):
+        for idx, r in enumerate(recipes):
             st.markdown(f"### {r['title']}")
             st.write(f"Price: {r['price']:.2f}$")
             if r["image"]:
@@ -256,3 +271,4 @@ with col1f:
             )
     else:
         st.info("Generate a meal plan to see your recipes and breakdown.")
+       
