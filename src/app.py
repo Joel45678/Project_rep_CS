@@ -6,7 +6,7 @@ import requests
 
 # Load the pre-trained machine learning model for meal cost prediction
 # The file 'kosten_forecast_model.pkl' was created by running ml_trial.py
-model = joblib.load("../data/kosten_forecast_model.pkl")
+model = joblib.load("data/kosten_forecast_model.pkl")
 
 # assure imports still work
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
