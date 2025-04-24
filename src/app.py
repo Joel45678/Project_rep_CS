@@ -15,7 +15,7 @@ from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
 
-
+#testinggggggggggggg
 # ─── Callbacks ────────────────────────────────────────────────────────────────
 
 def generate_plan():
