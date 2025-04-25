@@ -11,13 +11,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
-
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
 
 
 #page layout
 col1h, col2h = st.columns(2)
 col1s = st.columns(1)
 col1, col2, col3 = st.columns(3)
+col1f =st.columns(1)[0]
 
 #variables
 diet = ""
@@ -102,6 +103,9 @@ with col1:
     st.divider()
     st.markdown("<br>" * 3, unsafe_allow_html=True)
     st.button("Generate Meal Plan", key="generate_button")
+    
+    if st.button ("generate Meal Plan"):
+        st.session_state["generate_meal_plan"]= True
 
 with col2:
     st.header("Diet")
@@ -120,65 +124,10 @@ with col3:
     st.header("4-week budget forecast")
     st.write("Coming soon!")
 
-# Chart
-col1f = st.columns(1)[0]
-with col1f:
-    total_carbs = st.session_state.get("total_carbs", 0.0)
-    total_fat = st.session_state.get("total_fat", 0.0)
-    total_protein = st.session_state.get("total_protein", 0.0)
-    total_cost = st.session_state.get("total_cost", 0.0)
-    recipes = st.session_state.get("recipes", [])
-
-    # Ensure we have valid values for the variables
-    if (
-        recipes and
-        total_carbs != 0.0 and
-        total_fat != 0.0 and
-        total_protein != 0.0 and
-        total_cost != 0.0 and
-        selected_amount > 0
-    ):
-        # If valid data exists, calculate averages
-        average_carbs = total_carbs / selected_amount
-        average_fat = total_fat / selected_amount
-        average_protein = total_protein / selected_amount
-
-        macronutrients = ["Protein", "Fat", "Carbs"]
-        values = [average_protein, average_fat, average_carbs]
-
-        bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
-        bar_fig.update_layout(
-            title="Average Macronutrient Breakdown per Meal",
-            xaxis_title="Macronutrients",
-            yaxis_title="Grams",
-            template="plotly_white",
-            yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
-        )
-        st.plotly_chart(bar_fig)
-
-        price_placeholder.markdown(
-            f"**Price for the plan:** {total_cost:.2f}$"
-        )
-
-        for idx, r in enumerate(recipes):
-            st.markdown(f"### {r['title']}")
-            st.write(f"Price: {r['price']:.2f}$")
-            if r["image"]:
-                st.image(r["image"], width=250)
-            st.markdown("**Instructions:**")
-            st.write(r["instructions"] or "No instructions provided.")
-            st.markdown("___")
-
-            st.button(
-                "Regenerate this recipe",
-                key=f"regen_{idx}",
-                on_click = regenerate_one,
-                args=(idx,),
-            )
-    else:
-        st.info("Generate a meal plan to see your recipes and breakdown.")
-
-
+def extract_grams(value):
+    if isinstance(value, str):
+        return float(value.replace("g", "").strip())
+    return float(value)
 
 #central code of the app - starts with button click (see below)
 #print() is only used for debugging purposes
@@ -189,12 +138,27 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         recipe_ids, foody_type = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
 
         total_cost = 0
+        total_carbs = 0
+        total_fat = 0 
+        total_protein = 0 
+
         st.header("Food plan:")
 
         for rid in recipe_ids: 
             recipe_id = rid["id"]
             title, image, instructions = get_recipe_details(API_KEY, recipe_id) #get additional information about the recipe
             cost = get_recipe_price(API_KEY, recipe_id) #get the price information about the recipe
+            nutrition = get_recipe_nutrition(API_KEY2, recipe_id)
+
+            carbs = extract_grams(nutrition.get("carbs", 0))
+            total_carbs += carbs 
+
+            protein = extract_grams(nutrition.get("protein", 0))
+            total_protein += protein
+
+            fat = extract_grams(nutrition.get("fat", 0))
+            total_fat += fat
+
             total_cost += cost # sum of all recipe prices 
             recipe_titles.append(title) # List with recipe titles
 
@@ -210,9 +174,20 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
             st.markdown("———")
             
+        
+        # Display the total calories and price after looping through all recipes
         titles_placeholder.markdown("\n".join([f"#### {t}" for t in recipe_titles])) #list of Titles [f"- {t}" for t in recipe_titles])
         price_placeholder.markdown(f"\n**Price for the plan:** {total_cost:.2f}$")
         #st.write(f"\n**Price for the plan:** {total_cost:.2f}$")
+        st.markdown(f"**Total carbs for the meal plan:** {total_carbs} g")  # Display the total calories
+        st.markdown(f"**Total Proteins for the meal plan:** {total_protein} g") # Display the total protein
+        st.markdown(f"**Total Fat for the meal plan:** {total_fat} g") # Display the total protein
+
+        st.session_state["total_protein"] = total_protein
+        st.session_state["total_fat"] = total_fat
+        st.session_state["total_carbs"] = total_carbs
+    
+    
     except:
     # check if API-Limit is exceeded
         recipe_ids = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients) #get random recipes
@@ -259,3 +234,35 @@ if excluded_ingredients == "none":
     excluded_ingredients = None
 
 main()"""
+
+# Chart
+with col1f:
+    macronutrients = ["Protein", "Fat", "Carbs"]
+    values = [
+        average_carbs,
+        average_fat,
+        average_carbs
+    ]
+
+    bar_fig= go.Figure([go.Bar(
+        x=macronutrients, 
+        y=values,
+        text=values,
+        textposition='auto'
+    )])
+
+    bar_fig.update_layout(
+        title= "Average Macronutrient Breakdown per Meal",
+        xaxis_title= "Macronutrients",
+        yaxis_title="Grams",
+        template="plotly_white",
+        yaxis=dict(
+            range=(0,300),
+            tick0=0,
+            dtick=500, 
+            tickformat=',d'
+        )
+    )
+st.plotly_chart(bar_fig)
+bar_fig.update_yaxes(autorange=True)
+
