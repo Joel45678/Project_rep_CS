@@ -1,5 +1,6 @@
 #link to the app: https://projectrepcs-gtgiolma4dy7hv6hprifgr.streamlit.app/
 import streamlit as st
+import plotly.graph_objects as go
 
 #import custom functions from folder functions
 # import ingredients lst
@@ -22,6 +23,56 @@ col1, col2, col3 = st.columns(3)
 diet = ""
 excluded_ingredients = ""
 price = 0.0
+
+
+def regenerate_one(idx):
+    """Fetch a truly random recipe (excluding any already in the plan)
+    and slot it into position `idx`."""
+    # 1) user’s filters
+    diet = st.session_state.diet
+    intl = st.session_state.intolerances
+    excl = st.session_state.excluded_ingredients
+
+    diet = None if diet == "none" else diet
+    intl = None if intl == "none" else intl
+    excl = None if excl == "none" else excl
+
+    # 2) Build params for /recipes/random
+    params = {"apiKey": API_KEY, "number": 1}
+    if diet:
+        params["tags"] = diet
+    if intl:
+        params["intolerances"] = intl
+    if excl:
+        params["excludeIngredients"] = excl
+
+    # 3) Gather the ID
+    #existing_ids = [r["id"] for r in st.session_state.recipes]
+
+    # 4) get recipe
+    new_rec = get_meal_plan(API_KEY, "day", diet, intl, excl, 1)
+    new_id    = new_rec["id"]
+    title     = new_rec.get("title", "")
+    image_url = new_rec.get("image", "")
+    instr     = new_rec.get("instructions", "") or ""
+
+    # 6) Get cost
+    cost = get_recipe_price(API_KEY, new_id)
+
+    # 7) Update total_cost in session_state
+    old_price = st.session_state.recipes[idx]["price"]
+    st.session_state.total_cost = st.session_state.total_cost - old_price + cost
+
+    # 8) Overwrite 
+    st.session_state.recipes[idx] = {
+        "id":           new_id,
+        "title":        title,
+        "image":        image_url,
+        "instructions": instr,
+        "price":        cost,
+    }
+
+
 
 
 #streamlit page
@@ -68,6 +119,64 @@ with col3:
     st.markdown("<br>" * 3, unsafe_allow_html=True)
     st.header("4-week budget forecast")
     st.write("Coming soon!")
+
+# Chart
+col1f = st.columns(1)[0]
+with col1f:
+    total_carbs = st.session_state.get("total_carbs", 0.0)
+    total_fat = st.session_state.get("total_fat", 0.0)
+    total_protein = st.session_state.get("total_protein", 0.0)
+    total_cost = st.session_state.get("total_cost", 0.0)
+    recipes = st.session_state.get("recipes", [])
+
+    # Ensure we have valid values for the variables
+    if (
+        recipes and
+        total_carbs != 0.0 and
+        total_fat != 0.0 and
+        total_protein != 0.0 and
+        total_cost != 0.0 and
+        selected_amount > 0
+    ):
+        # If valid data exists, calculate averages
+        average_carbs = total_carbs / selected_amount
+        average_fat = total_fat / selected_amount
+        average_protein = total_protein / selected_amount
+
+        macronutrients = ["Protein", "Fat", "Carbs"]
+        values = [average_protein, average_fat, average_carbs]
+
+        bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
+        bar_fig.update_layout(
+            title="Average Macronutrient Breakdown per Meal",
+            xaxis_title="Macronutrients",
+            yaxis_title="Grams",
+            template="plotly_white",
+            yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
+        )
+        st.plotly_chart(bar_fig)
+
+        price_placeholder.markdown(
+            f"**Price for the plan:** {total_cost:.2f}$"
+        )
+
+        for idx, r in enumerate(recipes):
+            st.markdown(f"### {r['title']}")
+            st.write(f"Price: {r['price']:.2f}$")
+            if r["image"]:
+                st.image(r["image"], width=250)
+            st.markdown("**Instructions:**")
+            st.write(r["instructions"] or "No instructions provided.")
+            st.markdown("___")
+
+            st.button(
+                "Regenerate this recipe",
+                key=f"regen_{idx}",
+                on_click = regenerate_one,
+                args=(idx,),
+            )
+    else:
+        st.info("Generate a meal plan to see your recipes and breakdown.")
 
 
 

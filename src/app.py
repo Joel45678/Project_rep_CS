@@ -215,6 +215,8 @@ with col3:
     st.header("4‑week budget forecast")
     st.write("Coming soon!")
 
+
+# Chart
 col1f =st.columns(1)[0]
 with col1f:
     total_carbs = st.session_state.get("total_carbs", 0.0)
