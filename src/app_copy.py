@@ -8,11 +8,11 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY01
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY0
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
 
-API_KEY = API_KEY01
+API_KEY = API_KEY0
 
 #page layout
 col1h, col2h = st.columns(2)
@@ -25,10 +25,29 @@ diet = ""
 excluded_ingredients = ""
 price = 0.0
 
+# Initialize session state variables to update values
+if "recipes" not in st.session_state:
+    st.session_state.recipes = []
 
-def regenerate_one(idx):
-    """Fetch a truly random recipe (excluding any already in the plan)
-    and slot it into position `idx`."""
+if "total_carbs" not in st.session_state:
+    st.session_state.total_carbs = 0.0
+
+if "total_fat" not in st.session_state:
+    st.session_state.total_fat = 0.0
+
+if "total_protein" not in st.session_state:
+    st.session_state.total_protein = 0.0
+
+if "total_cost" not in st.session_state:
+    st.session_state.total_cost = 0.0
+
+if "number_input" not in st.session_state:
+    st.session_state.number_input = 1  # default to 1 meal
+
+
+#does not work !!!
+def regenerate_one(id_r):
+
     # 1) user’s filters
     diet = st.session_state.diet
     intl = st.session_state.intolerances
@@ -38,39 +57,28 @@ def regenerate_one(idx):
     intl = None if intl == "none" else intl
     excl = None if excl == "none" else excl
 
-    # 2) Build params for /recipes/random
-    params = {"apiKey": API_KEY, "number": 1}
-    if diet:
-        params["tags"] = diet
-    if intl:
-        params["intolerances"] = intl
-    if excl:
-        params["excludeIngredients"] = excl
 
-    # 3) Gather the ID
-    #existing_ids = [r["id"] for r in st.session_state.recipes]
+    #get new recipe
+    new_recipe, foody_type = get_meal_plan(API_KEY, "day", diet, intl, excl, 1)
+    new_id      = new_recipe[0]["id"]
+    title       = new_recipe[0].get("title", "")
+    image_url   = new_recipe[0].get("image", "")
+    instr       = new_recipe[0].get("instructions", "") or ""
 
-    # 4) get recipe
-    new_rec = get_meal_plan(API_KEY, "day", diet, intl, excl, 1)
-    new_id    = new_rec["id"]
-    title     = new_rec.get("title", "")
-    image_url = new_rec.get("image", "")
-    instr     = new_rec.get("instructions", "") or ""
-
-    # 6) Get cost
     cost = get_recipe_price(API_KEY, new_id)
 
-    # 7) Update total_cost in session_state
-    old_price = st.session_state.recipes[idx]["price"]
+    # Update total_cost in session_state
+    old_price = st.session_state.recipes(id_r)["price"]
+
     st.session_state.total_cost = st.session_state.total_cost - old_price + cost
 
-    # 8) Overwrite 
-    st.session_state.recipes[idx] = {
-        "id":           new_id,
-        "title":        title,
-        "image":        image_url,
+    # Overwrite 
+    st.session_state.recipes[id_r] = {
+        "id": new_id,
+        "title": title,
+        "image": image_url,
         "instructions": instr,
-        "price":        cost,
+        "price": cost,
     }
 
 
@@ -78,8 +86,8 @@ def regenerate_one(idx):
 
 #streamlit page
 with col1h:
-    #st.subheader("")
-    st.image("src/assets/01_Logo.png", width=200)
+    st.subheader("")
+    #st.image("src/assets/01_Logo.png", width=200)
 
 #with col2h:
     #st.empty()
@@ -134,15 +142,20 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
     recipe_titles = []
 
     try:
+        #get recipes
         recipe_ids, foody_type = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients, selected_amount) #get random recipes
 
         total_cost = 0
         total_carbs = 0
         total_fat = 0 
         total_protein = 0 
-
+        
+        #store all recipes
+        recipes_list = []
+        
+        # list all recipes
         st.header("Food plan:")
-
+        recipe_number = 0
         for rid in recipe_ids: 
             recipe_id = rid["id"]
             title, image, instructions = get_recipe_details(API_KEY, recipe_id) #get additional information about the recipe
@@ -172,6 +185,26 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             st.markdown("**Instructions:**", unsafe_allow_html=True)
             st.write(instructions or "No instructions provided.", unsafe_allow_html=True)
             st.markdown("———")
+
+            # button to regenerate recipe
+            st.button(
+                "Regenerate this recipe",
+                key=f"regen_{recipe_id}",
+                on_click=regenerate_one,
+                args=(recipe_number,)
+            )
+            recipe_number += 1
+
+            recipes_list.append({
+                "id": recipe_id,
+                "title": title,
+                "image": image,
+                "instructions": instructions,
+                "price": cost
+            })
+
+        # Am Ende:
+        st.session_state.recipes = recipes_list
             
         
         # Display the total calories and price after looping through all recipes
@@ -202,7 +235,7 @@ if st.session_state.get("generate_button"):
     price = 0.0
     #get user inputs
     diet = st.session_state.get("diet")
-    intolerances = st.session_state.get("allergies")
+    intolerances = st.session_state.get("intolerances")
     excluded_ingredients  = st.session_state.get("excluded_ingredients")
 
     # convert "none" to None-type
@@ -232,7 +265,7 @@ with col1f:
     macronutrients = ["Protein", "Fat", "Carbs"]
     
     values = [
-        round(average_carbs,2),
+        round(average_protein,2),
         round(average_fat, 2),
         round(average_carbs,2)
     ]

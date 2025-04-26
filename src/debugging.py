@@ -1,7 +1,6 @@
-"""Use this module for development with VS Code and the integrated debugger"""
-import debugpy
+#import app
+#import debugpy
 import streamlit as st
-import app
 
 from app_copy import main
 
