@@ -8,11 +8,11 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY00
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY0
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
 
-API_KEY = API_KEY00
+API_KEY = API_KEY0
 
 #page layout
 col1h, col2h = st.columns(2)
@@ -25,9 +25,9 @@ diet = ""
 excluded_ingredients = ""
 price = 0.0
 
-# Initialize session state variables to update values
-if "recipes" not in st.session_state:
-    st.session_state.recipes = []
+# Initialize session state variables to update values later
+if "recipes_list" not in st.session_state:
+    st.session_state.recipes_list = []
 
 if "total_carbs" not in st.session_state:
     st.session_state.total_carbs = 0.0
@@ -44,11 +44,17 @@ if "total_cost" not in st.session_state:
 if "number_input" not in st.session_state:
     st.session_state.number_input = 1  # default to 1 meal
 
+if "number_input" not in st.session_state:
+    st.session_state.number_input = 1  # default to 1 meal
+
+#store all recipes
+#recipes_list = []
+
 
 #does not work !!!
 def regenerate_one(id_r):
 
-    # 1) user’s filters
+    #filters
     diet = st.session_state.diet
     intl = st.session_state.intolerances
     excl = st.session_state.excluded_ingredients
@@ -68,20 +74,45 @@ def regenerate_one(id_r):
     cost = get_recipe_price(API_KEY, new_id)
 
     # Update total_cost in session_state
-    old_price = st.session_state.recipes(id_r)["price"]
+    old_price = st.session_state.recipes_list[id_r]["price"]
 
     st.session_state.total_cost = st.session_state.total_cost - old_price + cost
 
     # Overwrite 
-    st.session_state.recipes[id_r] = {
+    st.session_state.recipes_list[id_r] = {
         "id": new_id,
         "title": title,
         "image": image_url,
         "instructions": instr,
         "price": cost,
     }
+    #st.markdown(f'<a name="{title.replace(" ", "-").lower()}"></a>', unsafe_allow_html=True) evtl. verlinken
+    st.markdown(f"{title}")
+    st.write(f"Price: {cost:.2f}$")
+    
+    if image_url:
+        st.image(image_url, width=250)
+
+    #st.session_state.update("st_meal_plan_list",title)
+    st.markdown("**Instructions:**", unsafe_allow_html=True)
+    st.write(instr or "No instructions provided.", unsafe_allow_html=True)
+    st.markdown("———")
+
+    # button to regenerate recipe
+    st.button(
+        "Regenerate this recipe",
+        key=f"regen_{new_id}",
+        on_click=regenerate_one,
+        args=(id_r,)
+    )
 
 
+
+    st.markdown(f"{title}")
+    st.write(f"Price: {cost:.2f}$")
+    
+    if image_url:
+        st.image(image_url, width=250)
 
 
 #streamlit page
@@ -89,10 +120,6 @@ with col1h:
     st.subheader("")
     #st.image("src/assets/01_Logo.png", width=200)
 
-#with col2h:
-    #st.empty()
-    #st.title("SmartMeal")
-    #st.subheader("A recipe recommender and meal planner")
 
 with col1s [0]: #add amount of meals
     st.markdown("<br>" *3, unsafe_allow_html= True)
@@ -137,7 +164,7 @@ def extract_grams(value):
     return float(value)
 
 #central code of the app - starts with button click (see below)
-#print() is only used for debugging purposes
+
 def main(selected_amount, diet, intolerances, excluded_ingredients):
     recipe_titles = []
 
@@ -149,9 +176,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         total_carbs = 0
         total_fat = 0 
         total_protein = 0 
-        
-        #store all recipes
-        recipes_list = []
+    
         
         # list all recipes
         st.header("Food plan:")
@@ -195,7 +220,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             )
             recipe_number += 1
 
-            recipes_list.append({
+            st.session_state.recipes_list.append({
                 "id": recipe_id,
                 "title": title,
                 "image": image,
@@ -204,7 +229,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             })
 
         # Am Ende:
-        st.session_state.recipes = recipes_list
+        #st.session_state.recipes_list = recipes_list
             
         
         # Display the total calories and price after looping through all recipes
@@ -218,7 +243,23 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
         st.session_state["total_protein"] = total_protein
         st.session_state["total_fat"] = total_fat
         st.session_state["total_carbs"] = total_carbs
-    
+
+
+        for idx, r in enumerate(recipes):
+            st.markdown(f"### {r['title']}")
+            st.write(f"Price: {r['price']:.2f}$")
+            if r["image"]:
+                st.image(r["image"], width=250)
+            st.markdown("**Instructions:**")
+            st.write(r["instructions"] or "No instructions provided.")
+            st.markdown("___")
+
+            st.button(
+                "Regenerate this recipe",
+                key=f"regen_{idx}",
+                on_click=regenerate_one,
+                args=(idx,),
+            )
     
     except:
     # check if API-Limit is exceeded
@@ -250,7 +291,7 @@ if st.session_state.get("generate_button"):
     main(selected_amount, diet, intolerances, excluded_ingredients)
 
 
-# Chart
+# Chart 
 with col1f:
 
     total_carbs = st.session_state.get("total_carbs", 0.0)

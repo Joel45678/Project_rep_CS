@@ -6,18 +6,18 @@ import requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY01
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY2
 from recipe_api.get_meal_plan import get_meal_plan
-from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_grams
 
 import plotly.graph_objects as go
 
-def extract_grams(value):
+"""def extract_grams(value):
     if isinstance(value, str):
         return float(value.replace("g", "").strip())
-    return float(value)
+    return float(value)"""
 
-# Ensure session state variables exist before accessing them
+# session state variables for updates and recipe regeneration
 if 'total_carbs' not in st.session_state:
     st.session_state.total_carbs = 0.0
 if 'total_fat' not in st.session_state:
@@ -28,60 +28,71 @@ if 'total_cost' not in st.session_state:
     st.session_state.total_cost = 0.0
 if 'recipes' not in st.session_state:
     st.session_state.recipes = []
-
-# You might also want to ensure that the number of meals is correctly set
 if 'number_input' not in st.session_state:
     st.session_state.number_input = 1  # default to 1 meal if not set
 
-# ─── Callbacks ────────────────────────────────────────────────────────────────
+API_KEY = API_KEY2
+
 
 def generate_plan():
-    """Fetch N recipes and stash them in session_state, with error handling."""
-    # 1) Grab & normalize inputs:
-    amt   = st.session_state.number_input
-    diet  = st.session_state.diet
-    intl  = st.session_state.intolerances
-    excl  = st.session_state.excluded_ingredients
 
-    # convert the literal "none" back to None
-    diet = None if diet == "none" else diet
-    intl = None if intl == "none" else intl
-    excl = None if excl == "none" else excl
+    #use inputs from session state
+    input_number    = st.session_state.number_input
+    diet            = st.session_state.diet
+    intolerances    = st.session_state.intolerances
+    excluded_ingredients  = st.session_state.excluded_ingredients
 
-    # 2) Call meal-plan API
-    result = get_meal_plan(
-        API_KEY01,
-        "day",
-        diet,
-        intl,
-        excl,
-        amt
-    )
+    # convert the literal "none" to None-Value
+    if diet == "none":
+        diet = None
+    if intolerances == "none":
+        intolerances = None
+    if excluded_ingredients == "none":
+        diet = None
 
-    # 3) If it returned an int, treat that as an error code
-    if isinstance(result, int):
-        if result == 402:
-            st.error("Daily recipe limit exceeded – try again tomorrow.")
-        else:
-            st.error(f"Error fetching meal plan (code {result}).")
-        return
-        
-    recipe_ids, _ = result
+    #API-Call to get recipe
+    try:
+        recipes, food_type = get_meal_plan(
+            API_KEY,
+            "day",
+            diet,
+            intolerances,
+            excluded_ingredients,
+            input_number
+        )
+    except:
+        recipes = get_meal_plan(
+            API_KEY,
+            "day",
+            diet,
+            intolerances,
+            excluded_ingredients,
+            input_number
+        )
+        #Check for API response (int is always an error code - correct call returns a list)
+        if isinstance(recipes, int):
+            if recipes == 402:
+                st.error("Daily recipe limit exceeded - Sorry.  You can try again tomorrow :)")
+            else:
+                st.error(f"API-Call Error: {recipes}.")
+            return
+
     st.session_state.recipes = []
     st.session_state.total_cost = 0.0
     st.session_state.total_carbs = 0.0
     st.session_state.total_protein = 0.0
     st.session_state.total_fat = 0.0
 
-    for rid in recipe_ids:
+    #go through recipes to create the output for each recipe
+    for rid in recipes:
         rec_id = rid["id"]
-        title, img, instr = get_recipe_details(API_KEY01, rec_id)
-        cost = get_recipe_price(API_KEY01, rec_id)
-        nutrition = get_recipe_nutrition(API_KEY01, rec_id)
+        title, img, instr = get_recipe_details(API_KEY, rec_id)   # instructions for recipe
+        cost = get_recipe_price(API_KEY, rec_id)                  # calculate costs for recipe
+        nutrition = get_recipe_nutrition(API_KEY, rec_id)         # get ingredients
 
-        carbs = extract_grams(nutrition.get("carbs", 0))
-        fat = extract_grams(nutrition.get("fat", 0))
-        protein = extract_grams(nutrition.get("protein", 0))
+        carbs = get_recipe_grams(nutrition.get("carbs", 0))
+        fat = get_recipe_grams(nutrition.get("fat", 0))
+        protein = get_recipe_grams(nutrition.get("protein", 0))
         
         st.write(f"Recipe: {title}, Carbs: {carbs}, Fat: {fat}, Protein: {protein}")
 
@@ -98,32 +109,36 @@ def generate_plan():
             "price":        cost,
         })
 
-def regenerate_one(idx):
-    """Fetch a truly random recipe (excluding any already in the plan)
-    and slot it into position `idx`."""
-    # 1) user’s filters
+#regenerate meal, if user doesn't like the meal
+def regenerate_one(id_regenerate):
+
+    #inputs
     diet = st.session_state.diet
-    intl = st.session_state.intolerances
-    excl = st.session_state.excluded_ingredients
+    intolerances = st.session_state.intolerances
+    excluded_ingredients = st.session_state.excluded_ingredients
 
-    diet = None if diet == "none" else diet
-    intl = None if intl == "none" else intl
-    excl = None if excl == "none" else excl
+    # convert values
+    if diet == "none":
+        diet = None
+    if intolerances == "none":
+        intolerances = None
+    if excluded_ingredients == "none":
+        excluded_ingredients = None
 
-    # 2) Build params for /recipes/random
-    params = {"apiKey": API_KEY01, "number": 1}
+    # Build params for /recipes/random
+    params = {"apiKey": API_KEY, "number": 1}
     if diet:
         params["tags"] = diet
-    if intl:
-        params["intolerances"] = intl
-    if excl:
-        params["excludeIngredients"] = excl
+    if intolerances:
+        params["intolerances"] = intolerances
+    if excluded_ingredients:
+        params["excludeIngredients"] = excluded_ingredients
 
-    # 3) Gather the ID
-    existing_ids = [r["id"] for r in st.session_state.recipes]
+    #ID for current recipes
+    currents_recipe_id = [r["id"] for r in st.session_state.recipes]
 
     # 4) non-duplicate recipe
-    new_rec = None
+    new_recipe = None
     for _ in range(5):
         resp = requests.get("https://api.spoonacular.com/recipes/random", params=params)
         if resp.status_code != 200:
@@ -137,29 +152,27 @@ def regenerate_one(idx):
             return
 
         candidate = candidates[0]
-        if candidate["id"] not in existing_ids:
-            new_rec = candidate
+        if candidate["id"] not in currents_recipe_id:
+            new_recipe = candidate
             break
 
-    if new_rec is None:
+    if new_recipe is None:
         st.error("Couldn’t find a new recipe after several tries. Try again later.")
         return
 
-    # 5) Unpack the new recipe
-    new_id    = new_rec["id"]
-    title     = new_rec.get("title", "")
-    image_url = new_rec.get("image", "")
-    instr     = new_rec.get("instructions", "") or ""
+    #extract values for the new recipe
+    new_id    = new_recipe["id"]
+    title     = new_recipe.get("title", "")
+    image_url = new_recipe.get("image", "")
+    instr     = new_recipe.get("instructions", "") or ""
 
-    # 6) Get cost
-    cost = get_recipe_price(API_KEY01, new_id)
-
-    # 7) Update total_cost in session_state
-    old_price = st.session_state.recipes[idx]["price"]
+    #price for recipe and update of current sum
+    cost = get_recipe_price(API_KEY, new_id)
+    old_price = st.session_state.recipes[id_regenerate]["price"]
     st.session_state.total_cost = st.session_state.total_cost - old_price + cost
 
-    # 8) Overwrite 
-    st.session_state.recipes[idx] = {
+    #Insert new recipe
+    st.session_state.recipes[id_regenerate] = {
         "id":           new_id,
         "title":        title,
         "image":        image_url,
@@ -169,20 +182,20 @@ def regenerate_one(idx):
 
 
 
-# ─── Layout ───────────────────────────────────────────────────────────────────
+# Structure of the app
 
-# header/logo
-col1h, col2h = st.columns(2)
-with col1h:
-    st.image("src/assets/01_Logo.png", width=200)
-with col2h:
-    st.empty()
+# Logo (header)
+col1h = st.columns(1)
+with col1h[0]:
+    titles_placeholder = st.empty() #placeholder for recips
+#   st.image("src/assets/01_Logo.png", width=200)
 
-# number-input column
-col1s = st.columns(1)
-with col1s [0]: #add amount of meals
-    st.markdown("<br>" *3, unsafe_allow_html= True)
-    st.header("Desired amount of meals")
+
+# number-input column (input)
+col1i = st.columns(1)
+with col1i [0]: 
+    st.markdown("<br>" *3, unsafe_allow_html= True) # only design item
+    st.header("Select amount of meals")
     selected_amount = st.number_input(
         label= "choose the number of recipes you prefer",
         min_value=1,
@@ -191,24 +204,24 @@ with col1s [0]: #add amount of meals
         key="number_input"
     )
 
-# filters & generate button
-col1, col2, col3 = st.columns(3)
-with col1:
+# preferences (body)
+col1b, col2b, col3b = st.columns(3)
+with col1b:
     st.header("Intolerances")
     st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.divider()
+    st.markdown("<br>" , unsafe_allow_html=True)
     st.button("Generate Meal Plan", on_click=generate_plan)
 
-with col2:
+with col2b:
     st.header("Diet")
     selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
-    st.markdown("<br>" * 3, unsafe_allow_html=True)
     st.header("Your meal plan for the next week")
     titles_placeholder = st.empty() #placeholder for recips
     price_placeholder = st.empty() #placeholder for price
     
-with col3:
+with col3b:
     st.header("Ingredients")
     st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
     st.divider()
@@ -216,7 +229,7 @@ with col3:
     st.write("Coming soon!")
 
 
-# Chart
+# Chart and meals with instructions
 col1f =st.columns(1)[0]
 with col1f:
     total_carbs = st.session_state.get("total_carbs", 0.0)
@@ -234,7 +247,7 @@ with col1f:
         total_cost != 0.0 and
         selected_amount > 0
     ):
-        # If valid data exists, calculate averages
+        #calculate averages
         average_carbs = total_carbs / selected_amount
         average_fat = total_fat / selected_amount
         average_protein = total_protein / selected_amount

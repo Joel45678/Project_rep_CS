@@ -58,3 +58,8 @@ def get_recipe_nutrition(API_KEY, recipe_id):
             "fat": "",
             "protein": ""
         }
+
+def get_recipe_grams(value):
+    if isinstance(value, str):
+        return float(value.replace("g", "").strip())
+    return float(value)
