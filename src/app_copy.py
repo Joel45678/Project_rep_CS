@@ -8,11 +8,11 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY0
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY00
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
 
-API_KEY = API_KEY0
+API_KEY = API_KEY00
 
 #page layout
 col1h, col2h = st.columns(2)
