@@ -79,7 +79,7 @@ def regenerate_one(idx):
 #streamlit page
 with col1h:
     st.subheader("")
-    st.image("src/assets/01_Logo.png", width=200)
+    #st.image("src/assets/01_Logo.png", width=200)
 
 #with col2h:
     #st.empty()
@@ -135,7 +135,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
     recipe_titles = []
 
     try:
-        recipe_ids, foody_type = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients, number=st.session_state.get("number_input", 1)) #get random recipes
+        recipe_ids, foody_type = get_meal_plan(API_KEY, "day", diet, intolerances, excluded_ingredients, selected_amount) #get random recipes
 
         total_cost = 0
         total_carbs = 0
@@ -148,7 +148,7 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
             recipe_id = rid["id"]
             title, image, instructions = get_recipe_details(API_KEY, recipe_id) #get additional information about the recipe
             cost = get_recipe_price(API_KEY, recipe_id) #get the price information about the recipe
-            nutrition = get_recipe_nutrition(API_KEY2, recipe_id)
+            nutrition = get_recipe_nutrition(API_KEY, recipe_id)
 
             carbs = extract_grams(nutrition.get("carbs", 0))
             total_carbs += carbs 
@@ -198,8 +198,6 @@ def main(selected_amount, diet, intolerances, excluded_ingredients):
 
 
 
-
-
 #call of the main function on button click
 if st.session_state.get("generate_button"):
     price = 0.0
@@ -216,6 +214,7 @@ if st.session_state.get("generate_button"):
     if excluded_ingredients == "none":
         excluded_ingredients = None
     
+    selected_amount=st.session_state.get("number_input", 1)
     main(selected_amount, diet, intolerances, excluded_ingredients)
 
 
@@ -278,4 +277,7 @@ if diet == "none":
 if excluded_ingredients == "none":
     excluded_ingredients = None
 
-main()"""
+selected_amount = 1
+
+main(selected_amount, diet, intolerances, excluded_ingredients)"""
+
