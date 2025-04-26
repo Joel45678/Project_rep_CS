@@ -99,7 +99,7 @@ with col1s [0]: #add amount of meals
     
 with col1:
     st.header("Intolerances")
-    selected_allergy = st.selectbox(intolerances_lst, key="intolerances")
+    selected_allergy = st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.divider()
     st.markdown("<br>" * 3, unsafe_allow_html=True)
     st.button("Generate Meal Plan", key="generate_button")
@@ -108,7 +108,7 @@ with col1:
 
 with col2:
     st.header("Diet")
-    selected_diet = st.selectbox(diet_lst, key="diet")
+    selected_diet = st.selectbox("Diet", diet_lst, key="diet")
     st.divider()
     st.markdown("<br>" * 2, unsafe_allow_html=True)
     st.header("Your meal plan for the next week")
