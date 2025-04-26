@@ -83,7 +83,7 @@ with col1h:
 
 #with col2h:
     #st.empty()
-    #st.title("SmartMeal")
+    st.title("SmartMeal")
     #st.subheader("A recipe recommender and meal planner")
 
 with col1s [0]: #add amount of meals
