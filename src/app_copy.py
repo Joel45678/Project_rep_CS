@@ -232,9 +232,9 @@ with col1f:
     macronutrients = ["Protein", "Fat", "Carbs"]
     
     values = [
-        average_carbs,
-        average_fat,
-        average_carbs
+        round(average_carbs,2),
+        round(average_fat, 2),
+        round(average_carbs,2)
     ]
 
     bar_fig= go.Figure([go.Bar(
