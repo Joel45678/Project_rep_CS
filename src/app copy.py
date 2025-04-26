@@ -1,4 +1,4 @@
-#link to the app: https://projectrepcs-gtgiolma4dy7hv6hprifgr.streamlit.app/
+#link to the app: https://projectrepcs-49ugqkb7g93vmakdwggv4j.streamlit.app/
 import streamlit as st
 import plotly.graph_objects as go
 
@@ -8,11 +8,11 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY01
 from recipe_api.get_meal_plan import get_meal_plan
-from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
-from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
 
+API_KEY = API_KEY01
 
 #page layout
 col1h, col2h = st.columns(2)
@@ -218,26 +218,21 @@ if st.session_state.get("generate_button"):
     
     main(selected_amount, diet, intolerances, excluded_ingredients)
 
-#Debugging:
-#variables
-"""
-price = 0.0
-diet = "vegan"
-intolerances = "gluten"
-excluded_ingredients = "none"
-
-if intolerances == "none":
-    intolerances = None
-if diet == "none":
-    diet = None
-if excluded_ingredients == "none":
-    excluded_ingredients = None
-
-main()"""
 
 # Chart
 with col1f:
+
+    total_carbs = st.session_state.get("total_carbs", 0.0)
+    total_fat = st.session_state.get("total_fat", 0.0)
+    total_protein = st.session_state.get("total_protein", 0.0)
+    total_cost = st.session_state.get("total_cost", 0.0)
+    recipes = st.session_state.get("recipes", [])
+
+    average_carbs = total_carbs / selected_amount
+    average_fat = total_fat / selected_amount
+    average_protein = total_protein / selected_amount
     macronutrients = ["Protein", "Fat", "Carbs"]
+    
     values = [
         average_carbs,
         average_fat,
@@ -266,3 +261,21 @@ with col1f:
 st.plotly_chart(bar_fig)
 bar_fig.update_yaxes(autorange=True)
 
+
+
+#Debugging:
+#variables
+"""
+price = 0.0
+diet = "vegan"
+intolerances = "gluten"
+excluded_ingredients = "none"
+
+if intolerances == "none":
+    intolerances = None
+if diet == "none":
+    diet = None
+if excluded_ingredients == "none":
+    excluded_ingredients = None
+
+main()"""
