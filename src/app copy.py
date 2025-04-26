@@ -77,9 +77,9 @@ def regenerate_one(idx):
 
 
 #streamlit page
-#with col1h:
-    #st.subheader("")
-    #st.image("src/assets/01_Logo.png", width=200)
+with col1h:
+    st.subheader("")
+    st.image("src/assets/01_Logo.png", width=200)
 
 #with col2h:
     #st.empty()
