@@ -262,22 +262,4 @@ bar_fig.update_yaxes(autorange=True)
 
 
 
-#Debugging:
-#variables
-"""
-price = 0.0
-diet = "vegan"
-intolerances = "gluten"
-excluded_ingredients = "none"
-
-if intolerances == "none":
-    intolerances = None
-if diet == "none":
-    diet = None
-if excluded_ingredients == "none":
-    excluded_ingredients = None
-
-selected_amount = 1
-
-main(selected_amount, diet, intolerances, excluded_ingredients)"""
 
