@@ -78,12 +78,12 @@ def regenerate_one(idx):
 
 #streamlit page
 with col1h:
-    st.subheader("")
-    #st.image("src/assets/01_Logo.png", width=200)
+    #st.subheader("")
+    st.image("src/assets/01_Logo.png", width=200)
 
 #with col2h:
     #st.empty()
-    st.title("SmartMeal")
+    #st.title("SmartMeal")
     #st.subheader("A recipe recommender and meal planner")
 
 with col1s [0]: #add amount of meals
