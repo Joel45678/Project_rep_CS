@@ -36,22 +36,11 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
         return selected_meals, food_type
 
 
-"""
-def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclude=None, number=1, food_type="main course"):
+
+"""def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclude=None, number=1, food_type="main course"):
     
     # API-Call for Meal Planer (optional)
     
-    url = "https://api.spoonacular.com/mealplanner/generate"
-    params = {
-        "apiKey": API_KEY,
-        "timeFrame": timeFrame, #day/week - maybe not necessary - instead number ?
-        "diet": diet,
-        "exclude": exclude,
-        "allergies": intolerances,
-        "number": number
-        #"targetCalories": 10000  # Optional: Kalorienziel
-    }
-
     # API-Call for recipes by meal type
     url = "https://api.spoonacular.com/recipes/complexSearch"
     params = {
@@ -72,4 +61,16 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
             return 402
     except:
         meals = data["results"]
-        return meals, food_type"""
+        return meals, food_type
+    
+
+    url = "https://api.spoonacular.com/mealplanner/generate"
+    params = {
+        "apiKey": API_KEY,
+        "timeFrame": timeFrame, #day/week - maybe not necessary - instead number ?
+        "diet": diet,
+        "exclude": exclude,
+        "allergies": intolerances,
+        "number": number
+        #"targetCalories": 10000  # Optional: Kalorienziel
+    }"""

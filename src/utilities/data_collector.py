@@ -19,12 +19,14 @@ from recipe_api.get_recipe_information import get_recipe_nutrition
 from recipe_api.recipe_data import RecipeData #Recipe object
 API_KEY = API_KEY1
 
+# !!! Datengenerierung der CSV erst ab dem Eintrag 1288 brauchbar, zuvor noch fehlerhaft !!!
 
 def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 
-    # generate 30 sets data
+    # generate data
     for i in range(50):
+        print(i)
         # check if daliy limit es exceeded via try-except
         try:        
             dish, food_type = get_meal_plan(API_KEY, "day", *random_preferences)
@@ -46,11 +48,13 @@ def generate_data():
                 food_type = food_type,
                 cost = get_recipe_price(API_KEY, dish[0]["id"]), 
             )
-            time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+            #time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+            #print("sleep")
             recipe.nutrition = get_recipe_nutrition(API_KEY, dish[0]["id"])
             save_training_example(recipe)
             random_preferences = generate_random_preferences() #generate new preferences
-            time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+            #time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
+            #print("sleep")
         except Exception as e:
             print("Fehler im API-Call:", e)
             break
