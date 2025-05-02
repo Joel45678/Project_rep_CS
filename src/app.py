@@ -243,7 +243,8 @@ with col1f:
             xaxis_title="Macronutrients",
             yaxis_title="Grams",
             template="plotly_white",
-            yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
+            yaxis=dict(tickformat=',d')
+            #yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
         )
         st.plotly_chart(bar_fig)
 
