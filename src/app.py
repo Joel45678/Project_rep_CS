@@ -188,7 +188,7 @@ col1h = st.columns(1)
 with col1h[0]:
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
-    st.image("src/assets/01_Logo.png", width=200)
+#st.image("src/assets/01_Logo.png", width=200)
 
 
 # number-input column (input)
@@ -259,7 +259,7 @@ with col1f:
             if r["image"]:
                 st.image(r["image"], width=250)
             st.markdown("**Instructions:**")
-            st.write(r["instructions"] or "No instructions provided.")
+            st.write(r["instructions"] or "No instructions provided.", unsafe_allow_html=True)
             st.markdown("___")
 
             st.button(
