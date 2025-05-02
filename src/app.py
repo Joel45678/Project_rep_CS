@@ -230,9 +230,9 @@ with col1f:
         selected_amount > 0
     ):
         # calculate averages
-        average_carbs = total_carbs / selected_amount
-        average_fat = total_fat / selected_amount
-        average_protein = total_protein / selected_amount
+        average_carbs = round(total_carbs / selected_amount, 2)
+        average_fat = round(total_fat / selected_amount, 2)
+        average_protein = round(total_protein / selected_amount, 2)
 
         macronutrients = ["Protein", "Fat", "Carbs"]
         values = [average_protein, average_fat, average_carbs]
