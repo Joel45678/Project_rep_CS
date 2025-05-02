@@ -229,7 +229,7 @@ with col1f:
         total_cost != 0.0 and
         selected_amount > 0
     ):
-        #calculate averages
+        # calculate averages
         average_carbs = total_carbs / selected_amount
         average_fat = total_fat / selected_amount
         average_protein = total_protein / selected_amount
@@ -237,6 +237,7 @@ with col1f:
         macronutrients = ["Protein", "Fat", "Carbs"]
         values = [average_protein, average_fat, average_carbs]
 
+        # figure to show nutrient
         bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
         bar_fig.update_layout(
             title="Average Macronutrient Breakdown per Meal",
@@ -244,15 +245,15 @@ with col1f:
             yaxis_title="Grams",
             template="plotly_white",
             yaxis=dict(tickformat=',d')
-            #yaxis=dict(range=(0, 300), tick0=0, dtick=50, tickformat=',d')
         )
         st.plotly_chart(bar_fig)
 
-        # !! currently on the top
+        # !! currently on the top !!!!
         price_placeholder.markdown(
             f"**Price for the plan:** {total_cost:.2f}$"
         )
 
+        # show generated recipes on the page
         for idx, r in enumerate(recipes):
             st.markdown(f"### {r['title']}")
             st.write(f"Price: {r['price']:.2f}$")
@@ -260,14 +261,13 @@ with col1f:
                 st.image(r["image"], width=250)
             st.markdown("**Instructions:**")
             st.write(r["instructions"] or "No instructions provided.", unsafe_allow_html=True)
-            st.markdown("___")
-
             st.button(
                 "Regenerate this recipe",
                 key=f"regen_{idx}",
                 on_click=regenerate_one,
                 args=(idx,),
             )
+            st.markdown("___")
     else:
         st.info("Generate a meal plan to see your recipes and breakdown.")
        
