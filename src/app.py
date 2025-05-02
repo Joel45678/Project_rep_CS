@@ -183,13 +183,6 @@ def regenerate_one(id_regenerate):
 
 # Structure of the app
 
-# Logo (header)
-col1h = st.columns(1)
-with col1h[0]:
-    titles_placeholder = st.empty()  # placeholder for recipes
-    price_placeholder = st.empty()   # placeholder for price
-st.image("src/assets/01_Logo.png", width=200)
-
 
 # number-input column (input)
 # Sidebar Input
@@ -215,6 +208,11 @@ with st.sidebar:
 # Chart and meals with instructions
 col1f =st.columns(1)[0]
 with col1f:
+    st.image("src/assets/01_Logo.png", width=200)
+
+    titles_placeholder = st.empty()  # placeholder for recipes
+    price_placeholder = st.empty()   # placeholder for price
+
     total_carbs = st.session_state.get("total_carbs", 0.0)
     total_fat = st.session_state.get("total_fat", 0.0)
     total_protein = st.session_state.get("total_protein", 0.0)
@@ -249,6 +247,7 @@ with col1f:
         )
         st.plotly_chart(bar_fig)
 
+        # !! currently on the top
         price_placeholder.markdown(
             f"**Price for the plan:** {total_cost:.2f}$"
         )
