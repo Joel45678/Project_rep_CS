@@ -21,6 +21,8 @@ API_KEY = API_KEY1
 
 # !!! Datengenerierung der CSV erst ab dem Eintrag 1288 brauchbar, zuvor noch fehlerhaft !!!
 
+# tree-model for ML!!!!
+
 def generate_data():
     random_preferences = generate_random_preferences() # create random preferences - retruns tubel: (diet, intolerance, exclude)
 

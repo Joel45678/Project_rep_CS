@@ -6,7 +6,7 @@ import requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
-from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY2
+from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY1
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_grams
 
@@ -29,10 +29,9 @@ if 'total_cost' not in st.session_state:
 if 'recipes' not in st.session_state:
     st.session_state.recipes = []
 if 'number_input' not in st.session_state:
-    st.session_state.number_input = 1  # default to 1 meal if not set
+    st.session_state.number_input = 1  # default 1 meal if not set
 
-API_KEY = API_KEY2
-
+API_KEY = API_KEY1
 
 def generate_plan():
 
