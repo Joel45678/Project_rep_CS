@@ -187,6 +187,7 @@ def regenerate_one(id_regenerate):
 # number-input column (input)
 # Sidebar Input
 with st.sidebar:
+    st.image("src/assets/01_Logo.png", width=200)
     st.header("Meal Plan Configuration")
 
     st.number_input(
@@ -208,8 +209,6 @@ with st.sidebar:
 # Chart and meals with instructions
 col1f =st.columns(1)[0]
 with col1f:
-    st.image("src/assets/01_Logo.png", width=200)
-
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
 
