@@ -188,7 +188,7 @@ col1h = st.columns(1)
 with col1h[0]:
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
-#st.image("src/assets/01_Logo.png", width=200)
+st.image("src/assets/01_Logo.png", width=200)
 
 
 # number-input column (input)
