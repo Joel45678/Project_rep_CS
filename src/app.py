@@ -202,7 +202,8 @@ with st.sidebar:
     st.selectbox("Intolerances", intolerances_lst, key="intolerances")
     st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
 
-    #st.markdown("---")
+    st.markdown("<br>" *3, unsafe_allow_html= True)
+
     st.button("Generate Meal Plan", on_click=generate_plan)
 
 
