@@ -186,46 +186,30 @@ def regenerate_one(id_regenerate):
 # Logo (header)
 col1h = st.columns(1)
 with col1h[0]:
-    titles_placeholder = st.empty() #placeholder for recips
-#   st.image("src/assets/01_Logo.png", width=200)
+    titles_placeholder = st.empty()  # placeholder for recipes
+    price_placeholder = st.empty()   # placeholder for price
+    st.image("src/assets/01_Logo.png", width=200)
 
 
 # number-input column (input)
-col1i = st.columns(1)
-with col1i [0]: 
-    st.markdown("<br>" *3, unsafe_allow_html= True) # only design item
-    st.header("Select amount of meals")
-    selected_amount = st.number_input(
-        label= "choose the number of recipes you prefer",
+# Sidebar Input
+with st.sidebar:
+    st.header("Meal Plan Configuration")
+
+    st.number_input(
+        label="Number of recipes",
         min_value=1,
         step=1,
         format="%d",
         key="number_input"
     )
 
-# preferences (body)
-col1b, col2b, col3b = st.columns(3)
-with col1b:
-    st.header("Intolerances")
+    st.selectbox("Diet", diet_lst, key="diet")
     st.selectbox("Intolerances", intolerances_lst, key="intolerances")
-    st.divider()
-    st.markdown("<br>" , unsafe_allow_html=True)
-    st.button("Generate Meal Plan", on_click=generate_plan)
-
-with col2b:
-    st.header("Diet")
-    selected_diet = st.selectbox("Diet", diet_lst, key="diet")
-    st.divider()
-    st.header("Your meal plan for the next week")
-    titles_placeholder = st.empty() #placeholder for recips
-    price_placeholder = st.empty() #placeholder for price
-    
-with col3b:
-    st.header("Ingredients")
     st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
-    st.divider()
-    st.header("4‑week budget forecast")
-    st.write("Coming soon!")
+
+    st.markdown("---")
+    st.button("Generate Meal Plan", on_click=generate_plan)
 
 
 # Chart and meals with instructions
@@ -238,6 +222,7 @@ with col1f:
     recipes = st.session_state.get("recipes", [])
 
     # Ensure we have valid values for the variables
+    selected_amount = st.session_state.get("number_input", 1)
     if (
         recipes and
         total_carbs != 0.0 and
