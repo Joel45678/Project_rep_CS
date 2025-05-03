@@ -10,32 +10,60 @@ This is a university project for the course Grundlagen und Methoden der Informat
 
 ## Project Description
 This app allows users to:
-- Select **ingredients they want to avoid** (e.g. dislikes or allergies)
-- Generate recipe suggestions that match those preferences
-- View an **estimated budget** for each recipe that is based on ML
+- Select **ingredients to avoid**, such as due to allergies or personal preferences
+- Generate personalized **recipe suggestions** based on selected dietary needs
+- View an **estimated budget** for each recipe, fetched using external API data
 
-## How to Run the Code
-1. Make sure you have Python installed.
-2. Run `app.py` to start the program.
-3. ...
-4. ...
+
+## Installation
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository**:
+   git clone https://github.com/Joel45678/Project_rep_CS
+   cd Project_rep_CS
+
+2. **Create and activate a virtual environment:**
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install dependencies:**
+pip install -r requirements.txt
+
+4. **Run the app:**
+streamlit run app.py
+
+
+
 
 ## Folder Overview
 
 - `assets/`              – Contains images used in the project.
-- `data/`                – Stores ML-related data files.
-- `recipe_api/`          – Handles interactions with the recipe API.
-│   ├── `get_meal_plan.py`           – Fetches a meal plan from the API.
+- `data/`                – Stores ML data.
+- `recipe_api/`          – interactions with the recipe API.
+│   ├── `get_meal_plan.py`           – Get a meal plan from the API.
 │   ├── `get_recipe_information.py`  – Retrieves detailed recipe information.
-│   ├── `recipe_data.py`             – Collects and formats recipe data.
+│   ├── `recipe_data.py`             – Defines the `RecipeData` class to encapsulate detailed recipe details.
+
 - `utilities/`           – Utility functions and support modules.
-│   ├── `constants.py`               – Stores global constants (e.g., API keys, ingredient list).
-│   ├── `data_collector.py`          – Collects data from various sources.
-│   ├── `random_user_generator.py`   – Generates mock/random user data.
-- `app.py`               – Main application file.
-- `app_copy.py`          – Backup or experimental version of the main app.
+│   ├── `constants.py`               – Stores global constants (API keys, ingredient list).
+│   ├── `data_collector.py`          – Collects data to get training data for ML.
+│   ├── `random_user_generator.py`   – Generates mock/random user data to  for the data collector.
+- `app.py`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
 - `debugging.py`         – Scripts for testing and debugging.
 
 
 
-## Notes
+## API Usage
+
+This app uses the Spoonacular API (https://spoonacular.com/food-api) to fetch meal plans, recipe details, and nutritional info.  
+The API keys can be found under `utilities/constants.py`
+
+## Features
+- Customizable diet and intolerance inputs
+- Automated meal plan generation
+- Nutritional breakdown and price visualization
+- Option to regenerate individual recipes
+
+## Limitations
+- API key has a limited number of daily requests
