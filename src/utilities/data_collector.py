@@ -3,9 +3,7 @@ import json
 import pandas as pd
 import os
 from random_user_generator import generate_random_preferences
-#from ..functions.get_meal_plan import get_meal_plan
-from constants import API_KEY3
-#from ..functions.get_recipe_information import get_recipe_price
+from constants import API_KEY2
 
 import sys
 import os
@@ -17,7 +15,7 @@ from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price
 from recipe_api.get_recipe_information import get_recipe_nutrition
 from recipe_api.recipe_data import RecipeData #Recipe object
-API_KEY = API_KEY3
+API_KEY = API_KEY2
 
 # !!! Datengenerierung der CSV erst ab dem Eintrag 1288 brauchbar, zuvor noch fehlerhaft !!!
 
@@ -28,7 +26,7 @@ def generate_data():
 
     # generate data
     for i in range(50):
-        print(i)
+        print(i+1)
         # check if daliy limit es exceeded via try-except
         try:        
             dish, food_type = get_meal_plan(API_KEY, "day", *random_preferences)
@@ -50,13 +48,9 @@ def generate_data():
                 food_type = food_type,
                 cost = get_recipe_price(API_KEY, dish[0]["id"]), 
             )
-            #time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
-            #print("sleep")
             recipe.nutrition = get_recipe_nutrition(API_KEY, dish[0]["id"])
             save_training_example(recipe)
             random_preferences = generate_random_preferences() #generate new preferences
-            #time.sleep(0.5) # Sleep for 0.5 seconds, becaus of api-limit
-            #print("sleep")
         except Exception as e:
             print("Fehler im API-Call:", e)
             break
@@ -75,7 +69,6 @@ def save_training_example(recipe: RecipeData, path=DATA_PATH):
 
     # create data frame to save the data in a table
 
-    
     new_data = pd.DataFrame([{
         "food_id": recipe.food_id,
         "diet": recipe.diet,

@@ -12,12 +12,6 @@ from recipe_api.get_recipe_information import get_recipe_price, get_recipe_detai
 
 import plotly.graph_objects as go
 
-#"""def extract_grams(value):
-#    if isinstance(value, str):
-#        return float(value.replace("g", "").strip())
-#    return float(value)"""
-
-# session state variables for updates and recipe regeneration
 if 'total_carbs' not in st.session_state:
     st.session_state.total_carbs = 0.0
 if 'total_fat' not in st.session_state:
