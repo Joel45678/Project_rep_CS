@@ -181,8 +181,8 @@ def regenerate_one(id_regenerate):
 # number-input column (input)
 # Sidebar Input
 with st.sidebar:
-    st.image("src/assets/01_Logo.png", width=150)
-    st.header("Meal Plan Configuration")
+    #st.image("src/assets/01_Logo.png", width=150)
+    #st.header("Meal Plan Configuration")
 
     st.number_input(
         label="Number of recipes",
@@ -255,13 +255,19 @@ with col1f:
                 st.image(r["image"], width=250)
             st.markdown("**Instructions:**")
             st.write(r["instructions"] or "No instructions provided.", unsafe_allow_html=True)
+            
             st.button(
                 "Regenerate this recipe",
                 key=f"regen_{idx}",
                 on_click=regenerate_one,
                 args=(idx,),
             )
+            if st.button(f"View Macronutrients for {r['title']}", key=f"macro_{idx}"):
+                st.experimental_set_query_params(recipe_id=r['id'])
+                st.switch_page("macronutrients_page.py")
+
             st.markdown("___")
+        
     else:
         st.info("Generate a meal plan to see your recipes and breakdown.")
        
