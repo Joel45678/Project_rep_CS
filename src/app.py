@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 import sys, os
 import requests
+from utilities.ml_forecast import train_and_forecast_model
+
 
 # Load the pre-trained machine learning model for meal cost prediction
 # The file 'kosten_forecast_model.pkl' was created by running ml_trial.py
