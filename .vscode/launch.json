@@ -9,13 +9,13 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Streamlit Debug (app_copy)",
+            "name": "Streamlit Debug (app)",
             "type": "python",
             "request": "launch",
             "module": "streamlit",
             "args": [
                 "run",
-                "${workspaceFolder}\\src\\app_copy.py"
+                "${workspaceFolder}\\src\\app.py"
             ],
             "console": "integratedTerminal"
         }
