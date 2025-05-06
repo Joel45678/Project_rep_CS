@@ -2,6 +2,11 @@ import streamlit as st
 import sys, os
 import requests
 
+import os
+
+
+
+
 # assure imports still work
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -9,6 +14,11 @@ from recipe_api.get_recipe_information import get_recipe_price, get_recipe_detai
 from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY1
 from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_grams
+#from data.ml_forecast import train_and_forecast_model
+from data.ml_forecast import forecast_user_constraints
+
+
+
 
 import plotly.graph_objects as go
 
@@ -200,10 +210,29 @@ with st.sidebar:
 
     st.button("Generate Meal Plan", on_click=generate_plan)
 
+    # Button zum Trainieren des Modells und Anzeigen des Forecasts
+    if st.button("ML Forecast anzeigen"):
+        csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'training_data_nutrition.csv')
+        csv_path = os.path.abspath(csv_path)
+
+        pred_cost = forecast_user_constraints(
+            csv_path,
+            diet=st.session_state.diet if st.session_state.diet != "none" else None,
+            intolerance=st.session_state.intolerances if st.session_state.intolerances != "none" else None,
+            excluded_ingredient=st.session_state.excluded_ingredients if st.session_state.excluded_ingredients != "none" else None
+        )
+
+        st.markdown(f"**Vorhergesagte Kosten basierend auf deinen Angaben:** {pred_cost:.2f} €")
+
+
 
 # Chart and meals with instructions
 col1f =st.columns(1)[0]
 with col1f:
+    # Forecast-Anzeige, falls vorhanden
+    if "forecast_avg" in st.session_state:
+        st.markdown(f"**Durchschnittlich vorhergesagte Kosten pro Portion (ML):** {st.session_state.forecast_avg:.2f} €")
+
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
 
