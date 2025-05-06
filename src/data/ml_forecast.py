@@ -9,7 +9,9 @@ from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients
 def forecast_user_constraints(csv_path, diet=None, intolerance=None, excluded_ingredient=None):
     import pandas as pd
     import numpy as np
-    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.tree import DecisionTreeRegressor
+    model = DecisionTreeRegressor(random_state=42)
+
 
     data = pd.read_csv(csv_path)
 
