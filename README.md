@@ -1,3 +1,6 @@
+# Link to the app
+https://projectrepcs-wtumtw66amdt87vvcrnk8u.streamlit.app/
+
 # Project_rep_CS
 
 This is a university project for the course Grundlagen und Methoden der Informatik für Wirtschaftswissenschaften
