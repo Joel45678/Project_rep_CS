@@ -62,7 +62,7 @@ def generate_plan():
     if intolerances == "none":
         intolerances = None
     if excluded_ingredients == "none":
-        diet = None
+        excluded_ingredients = None
 
     # Try retrieving a meal plan from the API
     try:
