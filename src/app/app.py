@@ -293,7 +293,7 @@ with col1f:
             )
             if st.button(f"View Macronutrients for {r['title']}", key=f"macro_{idx}"):
                 st.query_params.update(recipe_id=r['id'], recipe_title=r['title'])
-                st.switch_page("pages/macronutrients_page.py")
+                st.switch_page("pages/page1.py")
 
             st.markdown("___")
         
