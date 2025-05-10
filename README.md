@@ -2,6 +2,9 @@
 
 This is a university project for the course Grundlagen und Methoden der Informatik für Wirtschaftswissenschaften
 
+Link to the app:
+projectrepcs-wtumtw66amdt87vvcrnk8u
+
 ## Team Members
 - Fábio Vinício Scheurer
 - Joel Nussbaumer
@@ -38,6 +41,8 @@ streamlit run app.py
 
 ## Folder Overview
 
+- `app/`              
+│   ├── `app.py`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
 - `assets/`              – Contains images used in the project.
 - `data/`                – Stores ML data.
 - `recipe_api/`          – interactions with the recipe API.
