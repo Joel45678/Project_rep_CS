@@ -10,47 +10,14 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 659742,ketogenic,seafood,none,main course,2.2021,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",519.0,4g,37g,38g
 1096218,ketogenic,none,beef,main course,3.1979,4,"[""gluten free"", ""primal"", ""ketogenic""]",874.0,18g,76g,32g
 715415,none,dairy,none,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-715415,gluten free,none,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
 782601,vegan,tree nut,mushrooms,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
-782601,vegan,none,mushrooms,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
 716342,ketogenic,dairy,beef,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-716342,ketogenic,seafood,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-715415,gluten free,none,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
 716004,vegetarian,none,garlic,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-715415,none,none,mushrooms,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-782601,vegetarian,dairy,none,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
 716627,vegetarian,tree nut,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-782601,vegetarian,tree nut,beef,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
 652417,vegan,seafood,onion,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
 715446,none,seafood,garlic,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-652417,vegan,none,onion,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
-715415,gluten free,seafood,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-715446,gluten free,tree nut,garlic,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-716342,ketogenic,seafood,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-782601,vegan,seafood,mushrooms,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
-716342,ketogenic,tree nut,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-716342,ketogenic,none,beef,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
 638626,ketogenic,tree nut,none,main course,4.9025,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",409.0,11g,29g,26g
-716004,gluten free,dairy,onion,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-716004,gluten free,dairy,onion,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-716004,gluten free,none,onion,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-716004,gluten free,dairy,onion,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-716342,ketogenic,tree nut,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-638626,ketogenic,none,mushrooms,main course,4.9025,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",409.0,11g,29g,26g
-715415,gluten free,gluten,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-716627,vegan,tree nut,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-716627,vegetarian,tree nut,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
 651034,ketogenic,seafood,onion,main course,4.0851,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",505.0,8g,32g,44g
-716627,vegan,seafood,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-782601,vegan,tree nut,none,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
-715415,none,tree nut,mushrooms,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-715415,gluten free,gluten,none,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-715415,gluten free,gluten,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-716342,ketogenic,dairy,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-716004,gluten free,dairy,onion,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-715446,gluten free,dairy,garlic,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-782601,vegan,tree nut,mushrooms,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
-715415,gluten free,seafood,beef,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
 657679,gluten free,gluten,beef,main course,4.3026,2,"[""gluten free"", ""dairy free""]",717.0,89g,35g,20g
 646738,vegan,none,beef,main course,0.7807,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",331.0,46g,9g,16g
 664090,none,tree nut,beef,main course,4.4782,4,"[""gluten free""]",642.0,27g,29g,67g
@@ -68,17 +35,12 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 641025,vegetarian,tree nut,onion,main course,3.114,4,"[""lacto ovo vegetarian""]",387.0,20g,27g,15g
 641200,ketogenic,gluten,none,main course,2.9024,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""ketogenic""]",487.0,3g,32g,40g
 657939,vegetarian,gluten,none,main course,1.9679,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",489.0,11g,44g,14g
-652417,vegan,seafood,onion,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
 635701,none,seafood,beef,main course,2.8826,6,"[""gluten free"", ""dairy free""]",568.0,55g,9g,62g
 1096053,vegan,gluten,onion,main course,2.0147,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",515.0,60g,27g,16g
 652393,vegetarian,seafood,beef,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
-665831,vegetarian,dairy,beef,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
 654476,ketogenic,gluten,beef,main course,5.5427,4,"[""gluten free"", ""primal"", ""pescatarian"", ""ketogenic""]",700.0,6g,59g,36g
-716311,gluten free,gluten,beef,main course,1.5108,2,"[""gluten free"", ""dairy free""]",486.0,95g,4g,15g
 643674,vegetarian,none,beef,main course,1.8892,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",470.0,71g,13g,18g
-716342,none,seafood,beef,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
 1096264,ketogenic,dairy,garlic,main course,2.4763,2,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""pescatarian"", ""ketogenic""]",350.0,9g,26g,22g
-632710,vegetarian,gluten,garlic,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 645818,ketogenic,gluten,onion,main course,2.5766000000000004,2,"[""gluten free"", ""primal"", ""ketogenic""]",275.0,6g,22g,13g
 662075,gluten free,tree nut,garlic,main course,5.1873000000000005,4,"[""gluten free""]",783.0,30g,22g,95g
 1095806,none,gluten,garlic,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
@@ -97,9 +59,6 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 633801,ketogenic,gluten,onion,main course,1.2742,3,"[""gluten free"", ""dairy free"", ""ketogenic""]",433.0,1g,35g,22g
 1095753,none,none,mushrooms,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
 633538,ketogenic,dairy,none,main course,2.2465,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",611.0,16g,42g,35g
-632710,vegan,seafood,garlic,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-650484,vegetarian,tree nut,none,main course,5.5785,2,"[""gluten free"", ""lacto ovo vegetarian""]",559.0,24g,43g,22g
-649926,vegan,tree nut,garlic,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
 633372,ketogenic,seafood,mushrooms,main course,2.2034,6,"[""gluten free"", ""primal"", ""ketogenic""]",701.0,14g,55g,35g
 715596,none,none,garlic,main course,5.2643,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal""]",712.0,5g,44g,68g
 643633,ketogenic,tree nut,onion,main course,1.3384,8,"[""gluten free"", ""lacto ovo vegetarian"", ""primal"", ""ketogenic""]",212.0,5g,15g,13g
@@ -112,744 +71,279 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 642121,none,none,beef,main course,4.6372,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",716.0,74g,44g,14g
 649921,vegan,gluten,none,main course,0.9428,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",405.0,69g,4g,25g
 715769,vegan,gluten,none,main course,4.1424,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",625.0,71g,30g,19g
-653251,vegan,none,none,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
-982371,vegan,none,beef,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
 635601,vegetarian,gluten,beef,main course,2.0676,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""whole 30""]",514.0,25g,39g,16g
 664501,none,gluten,beef,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
-633376,vegan,none,beef,main course,21.495500000000003,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",294.0,51g,3g,29g
 652594,vegan,none,beef,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
-649926,none,gluten,beef,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
 642610,vegetarian,none,beef,main course,1.4724000000000002,7,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",263.0,45g,5g,13g
-1096053,vegan,gluten,beef,main course,2.0147,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",515.0,60g,27g,16g
 1096306,vegan,none,beef,main course,1.6575,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",478.0,48g,27g,15g
-642610,vegetarian,gluten,beef,main course,1.4724000000000002,7,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",263.0,45g,5g,13g
 642468,vegetarian,gluten,none,main course,1.4486,6,"[""gluten free"", ""lacto ovo vegetarian""]",284.0,44g,6g,16g
-643674,vegetarian,gluten,beef,main course,1.8892,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",470.0,71g,13g,18g
 660290,none,gluten,beef,main course,3.6046,8,"[""gluten free""]",566.0,18g,24g,67g
 1098387,vegetarian,gluten,beef,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 648627,none,gluten,none,main course,4.899100000000001,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",584.0,3g,27g,77g
-665831,vegan,none,none,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-1095806,none,none,none,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
 1095749,vegetarian,gluten,none,main course,1.0762,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",297.0,56g,1g,17g
 657243,vegan,none,none,main course,1.7105,6,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",401.0,29g,28g,14g
-641583,vegan,none,none,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
-653251,vegetarian,none,beef,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
 1044252,none,gluten,none,main course,2.3736,5,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",485.0,54g,9g,44g
-982371,none,none,none,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
-660926,none,none,none,main course,4.549,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",336.0,23g,12g,35g
 631752,vegan,gluten,none,main course,0.583,12,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",220.0,30g,5g,12g
 982375,none,gluten,gluten,main course,9.4192,4,"[""gluten free"", ""dairy free"", ""whole 30""]",483.0,53g,9g,50g
-646738,none,gluten,gluten,main course,0.7807,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",331.0,46g,9g,16g
-1095753,vegan,gluten,gluten,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
 637297,none,gluten,none,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
 1000566,none,gluten,none,main course,2.2030000000000003,4,"[""gluten free"", ""dairy free""]",370.0,12g,10g,52g
 716364,none,none,gluten,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
 658091,vegetarian,gluten,none,main course,1.391,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",463.0,55g,22g,12g
-665831,vegan,none,none,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
 659060,none,gluten,none,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
 716361,none,gluten,none,main course,3.5780000000000003,1,"[""gluten free""]",750.0,84g,19g,57g
 660490,none,none,gluten,main course,5.6188,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",432.0,12g,21g,45g
 649433,vegetarian,none,gluten,main course,1.9027,2,"[""gluten free"", ""lacto ovo vegetarian""]",336.0,45g,12g,12g
-652393,vegan,gluten,none,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
 664089,vegetarian,none,gluten,main course,1.1834,8,"[""gluten free"", ""lacto ovo vegetarian""]",488.0,72g,16g,18g
-632710,vegan,none,gluten,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 660989,vegetarian,none,gluten,main course,3.2349,2,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",387.0,57g,15g,12g
 640321,none,none,gluten,main course,6.4604,3,"[""gluten free"", ""dairy free"", ""pescatarian""]",729.0,69g,26g,56g
 649886,vegan,gluten,gluten,main course,0.8842,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",368.0,64g,3g,22g
 660405,vegetarian,none,none,main course,2.6242,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",554.0,102g,7g,23g
 646043,vegan,gluten,none,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-1098387,vegetarian,gluten,none,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
-663559,vegetarian,gluten,gluten,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
-659060,none,none,none,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-982371,vegan,none,gluten,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
 639927,vegetarian,tree nut,mushrooms,main course,1.7536,3,"[""dairy free"", ""lacto ovo vegetarian""]",449.0,69g,12g,20g
 661223,vegan,seafood,none,main course,1.7475999999999998,5,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",248.0,32g,8g,12g
 645849,none,none,onion,main course,4.454,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""pescatarian""]",251.0,2g,10g,34g
-649942,vegan,tree nut,onion,main course,1.942,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",607.0,91g,19g,21g
 638125,ketogenic,tree nut,none,main course,2.0886,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",594.0,8g,40g,46g
-715446,gluten free,seafood,garlic,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
 645978,none,tree nut,none,main course,2.9964,4,"[""gluten free""]",462.0,45g,17g,33g
 649827,ketogenic,seafood,mushrooms,main course,1.2141,4,"[""gluten free"", ""primal"", ""ketogenic""]",428.0,2g,36g,22g
-716311,gluten free,tree nut,beef,main course,1.5108,2,"[""gluten free"", ""dairy free""]",486.0,95g,4g,15g
 801377,ketogenic,seafood,mushrooms,main course,3.3308,3,"[""ketogenic""]",714.0,5g,53g,53g
-982371,none,tree nut,garlic,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
 643252,ketogenic,gluten,beef,main course,1.8298,6,"[""gluten free"", ""ketogenic""]",451.0,5g,32g,33g
-716364,gluten free,dairy,none,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
 655573,vegetarian,none,beef,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
 710766,ketogenic,gluten,garlic,main course,1.8564,6,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",389.0,9g,24g,33g
 636859,vegetarian,gluten,garlic,main course,2.9877,2,"[""gluten free"", ""lacto ovo vegetarian""]",520.0,11g,47g,15g
 635081,vegetarian,none,mushrooms,main course,1.1813,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",508.0,70g,17g,17g
 780000,ketogenic,seafood,beef,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
 636603,vegetarian,gluten,none,main course,2.0633,6,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",235.0,18g,13g,13g
-1098387,gluten free,none,none,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
-663559,vegan,none,mushrooms,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
-780000,ketogenic,gluten,garlic,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
 640982,vegan,dairy,beef,main course,1.3539,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",543.0,98g,8g,19g
 13073,none,tree nut,onion,main course,2.9271,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""pescatarian""]",356.0,64g,3g,17g
-657243,vegan,dairy,none,main course,1.7105,6,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",401.0,29g,28g,14g
-653251,vegetarian,seafood,beef,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
-655573,vegan,none,onion,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-780000,ketogenic,seafood,garlic,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
 1062882,ketogenic,gluten,garlic,main course,1.4324,6,"[""gluten free"", ""primal"", ""ketogenic""]",426.0,5g,31g,31g
 1697619,ketogenic,dairy,none,main course,5.1344,2,"[""dairy free"", ""pescatarian"", ""ketogenic""]",678.0,12g,58g,26g
-659060,gluten free,tree nut,beef,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-653251,vegetarian,dairy,none,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
 716427,ketogenic,tree nut,beef,main course,2.4530000000000003,4,"[""gluten free"", ""whole 30"", ""ketogenic""]",638.0,12g,46g,41g
-1098387,vegan,gluten,mushrooms,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 649502,ketogenic,gluten,mushrooms,main course,5.7373,4,"[""gluten free"", ""ketogenic""]",698.0,7g,57g,37g
 716330,none,seafood,mushrooms,main course,4.5095,1,"[""gluten free"", ""dairy free"", ""whole 30""]",478.0,82g,8g,31g
-632710,vegetarian,gluten,garlic,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 642597,none,none,garlic,main course,6.611599999999999,4,[],661.0,89g,11g,50g
 654009,vegan,none,onion,main course,2.3558000000000003,2,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",634.0,101g,17g,18g
-716245,vegetarian,dairy,garlic,main course,1.5203,1,"[""dairy free"", ""lacto ovo vegetarian""]",382.0,55g,10g,19g
 639653,vegetarian,dairy,onion,main course,0.998,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",245.0,34g,5g,14g
 635055,vegetarian,none,beef,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
 657537,vegetarian,none,mushrooms,main course,1.9678,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",349.0,13g,27g,14g
 631834,vegan,gluten,onion,main course,1.539,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",358.0,74g,2g,14g
-1424143,vegetarian,dairy,onion,main course,1.979,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",362.0,54g,10g,17g
-647830,vegan,seafood,mushrooms,main course,1.0589,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",400.0,41g,19g,16g
 1095768,vegetarian,dairy,garlic,main course,2.2928,2,"[""dairy free"", ""lacto ovo vegetarian""]",543.0,105g,8g,21g
 642540,vegetarian,none,mushrooms,main course,1.8734,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",709.0,80g,35g,23g
 650378,ketogenic,dairy,onion,main course,3.2254,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",682.0,16g,52g,34g
 1095697,ketogenic,dairy,garlic,main course,4.504700000000001,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""fodmap friendly"", ""ketogenic""]",405.0,7g,30g,27g
 661126,ketogenic,none,garlic,main course,6.048500000000001,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian"", ""ketogenic""]",502.0,20g,38g,25g
-637297,vegetarian,none,beef,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
 645722,ketogenic,dairy,beef,main course,2.1205000000000003,4,"[""gluten free"", ""dairy free"", ""ketogenic""]",688.0,9g,48g,49g
 631868,none,none,garlic,main course,4.4062,6,"[""dairy free""]",802.0,49g,30g,79g
 660736,gluten free,dairy,none,main course,9.0232,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",381.0,16g,10g,49g
 649764,gluten free,dairy,onion,main course,2.1721,4,"[""gluten free"", ""dairy free"", ""whole 30""]",680.0,34g,43g,37g
 645753,none,dairy,onion,main course,2.59,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30""]",389.0,3g,19g,48g
 647124,none,seafood,garlic,main course,1.9957,6,[],504.0,68g,19g,14g
-632710,vegan,dairy,none,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-652393,gluten free,seafood,beef,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
 665261,gluten free,dairy,none,main course,5.9284,3,"[""gluten free"", ""dairy free"", ""whole 30""]",1131.0,84g,61g,72g
 646930,gluten free,gluten,garlic,main course,3.2476,4,"[""gluten free""]",495.0,54g,23g,21g
 661948,ketogenic,none,onion,main course,7.9698,4,"[""gluten free"", ""primal"", ""ketogenic""]",902.0,20g,65g,56g
-716330,none,dairy,mushrooms,main course,4.5095,1,"[""gluten free"", ""dairy free"", ""whole 30""]",478.0,82g,8g,31g
 645706,vegetarian,tree nut,garlic,main course,1.5946,3,"[""lacto ovo vegetarian""]",363.0,41g,15g,17g
-1095697,ketogenic,dairy,mushrooms,main course,4.504700000000001,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""fodmap friendly"", ""ketogenic""]",405.0,7g,30g,27g
-1096053,vegan,tree nut,none,main course,2.0147,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",515.0,60g,27g,16g
 1046982,none,seafood,mushrooms,main course,4.8176,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",679.0,84g,18g,48g
-643633,vegetarian,tree nut,onion,main course,1.3384,8,"[""gluten free"", ""lacto ovo vegetarian"", ""primal"", ""ketogenic""]",212.0,5g,15g,13g
-645706,vegetarian,seafood,onion,main course,1.5946,3,"[""lacto ovo vegetarian""]",363.0,41g,15g,17g
-636787,none,gluten,beef,main course,2.2409,4,"[""gluten free"", ""dairy free"", ""whole 30""]",492.0,82g,10g,19g
 652602,ketogenic,tree nut,mushrooms,main course,4.0788,2,"[""gluten free"", ""ketogenic""]",586.0,10g,39g,45g
 661365,vegetarian,none,garlic,main course,3.6148,3,"[""lacto ovo vegetarian""]",565.0,78g,24g,18g
-660494,vegan,dairy,beef,main course,1.9853,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,72g,15g,12g
 617047,vegetarian,gluten,garlic,main course,2.5088,4,"[""gluten free"", ""lacto ovo vegetarian""]",632.0,73g,27g,27g
 662222,vegan,seafood,beef,main course,2.8901,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",471.0,72g,15g,14g
 1096073,ketogenic,seafood,mushrooms,main course,7.6837,8,"[""gluten free"", ""dairy free"", ""ketogenic""]",1056.0,5g,91g,47g
 622598,ketogenic,gluten,onion,main course,2.3884,2,"[""gluten free"", ""primal"", ""ketogenic""]",598.0,8g,43g,41g
 639836,gluten free,dairy,garlic,main course,3.9319,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""pescatarian""]",379.0,8g,23g,38g
 635964,vegetarian,none,mushrooms,main course,1.7150999999999998,1,"[""lacto ovo vegetarian""]",824.0,90g,30g,44g
-664501,gluten free,none,none,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
-637297,vegan,seafood,none,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
-632718,vegan,none,beef,main course,0.8184,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",327.0,63g,2g,16g
 1095743,vegan,tree nut,garlic,main course,5.960800000000001,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",630.0,75g,32g,15g
-647830,vegetarian,none,beef,main course,1.0589,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",400.0,41g,19g,16g
 657651,vegetarian,dairy,garlic,main course,2.7389,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",971.0,108g,50g,31g
-631834,vegetarian,dairy,mushrooms,main course,1.539,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",358.0,74g,2g,14g
-661126,gluten free,dairy,garlic,main course,6.048500000000001,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian"", ""ketogenic""]",502.0,20g,38g,25g
-982371,vegan,dairy,onion,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
 656972,vegetarian,none,beef,main course,1.8305,4,"[""lacto ovo vegetarian""]",382.0,58g,10g,15g
 1095836,gluten free,none,garlic,main course,2.5993,4,"[""gluten free"", ""dairy free""]",407.0,45g,7g,38g
 652834,ketogenic,none,onion,main course,1.4391,3,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",314.0,4g,24g,20g
 654663,ketogenic,none,mushrooms,main course,2.6418,2,"[""ketogenic""]",829.0,20g,63g,40g
 715393,vegetarian,none,mushrooms,main course,3.1597000000000004,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",303.0,33g,12g,19g
 664147,none,gluten,none,main course,0.497,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",242.0,43g,1g,16g
-37513,vegan,seafood,garlic,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
-1424143,vegan,seafood,onion,main course,1.979,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",362.0,54g,10g,17g
 641973,none,gluten,onion,main course,5.298500000000001,8,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",495.0,1g,26g,59g
 649733,none,gluten,garlic,main course,0.5225,4,"[""gluten free"", ""dairy free""]",137.0,3g,7g,14g
 648279,none,tree nut,mushrooms,main course,2.0948,3,"[""dairy free"", ""pescatarian""]",463.0,70g,2g,37g
-1095768,vegetarian,dairy,garlic,main course,2.2928,2,"[""dairy free"", ""lacto ovo vegetarian""]",543.0,105g,8g,21g
-1095806,none,gluten,none,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
 1153778,vegetarian,tree nut,mushrooms,main course,2.059,4,"[""gluten free"", ""lacto ovo vegetarian""]",297.0,41g,9g,14g
-716311,gluten free,none,mushrooms,main course,1.5108,2,"[""gluten free"", ""dairy free""]",486.0,95g,4g,15g
 1095791,none,tree nut,beef,main course,3.422,2,"[""gluten free"", ""dairy free""]",494.0,67g,19g,15g
 639401,gluten free,dairy,none,main course,2.2985,4,"[""gluten free"", ""dairy free""]",467.0,23g,20g,37g
 715392,none,seafood,beef,main course,1.8368,8,"[""gluten free"", ""dairy free""]",282.0,30g,4g,32g
 638534,ketogenic,seafood,mushrooms,main course,1.9841,8,"[""gluten free"", ""primal"", ""ketogenic""]",370.0,7g,26g,26g
 655783,vegetarian,gluten,mushrooms,main course,3.1108,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",534.0,37g,40g,12g
-1096306,vegetarian,dairy,mushrooms,main course,1.6575,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",478.0,48g,27g,15g
 1096185,none,dairy,mushrooms,main course,2.2859,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",635.0,76g,31g,17g
-1000566,gluten free,seafood,none,main course,2.2030000000000003,4,"[""gluten free"", ""dairy free""]",370.0,12g,10g,52g
-37513,vegan,dairy,onion,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
-659060,gluten free,none,mushrooms,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
 654307,gluten free,dairy,garlic,main course,2.6207,4,"[""gluten free"", ""dairy free""]",396.0,28g,19g,24g
 659081,none,none,garlic,main course,4.0262,4,"[""gluten free"", ""primal"", ""pescatarian""]",624.0,12g,34g,65g
-1096218,ketogenic,gluten,beef,main course,3.1979,4,"[""gluten free"", ""primal"", ""ketogenic""]",874.0,18g,76g,32g
-662075,gluten free,seafood,garlic,main course,5.1873000000000005,4,"[""gluten free""]",783.0,30g,22g,95g
-649926,vegetarian,tree nut,none,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
-716627,vegan,tree nut,none,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
 659015,vegetarian,none,beef,main course,2.7901,4,"[""lacto ovo vegetarian""]",556.0,33g,42g,16g
-1095768,vegetarian,seafood,none,main course,2.2928,2,"[""dairy free"", ""lacto ovo vegetarian""]",543.0,105g,8g,21g
-657651,vegetarian,dairy,none,main course,2.7389,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",971.0,108g,50g,31g
 715523,none,none,none,main course,3.6937,4,"[""gluten free""]",685.0,32g,37g,51g
-633538,ketogenic,tree nut,garlic,main course,2.2465,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",611.0,16g,42g,35g
-652417,vegan,none,garlic,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
 641387,gluten free,seafood,beef,main course,0.8008,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,60g,14g,20g
-657537,vegetarian,tree nut,none,main course,1.9678,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",349.0,13g,27g,14g
 633766,vegetarian,none,garlic,main course,1.8554,6,"[""lacto ovo vegetarian""]",480.0,74g,10g,24g
 1096272,ketogenic,tree nut,garlic,main course,1.9232,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",449.0,4g,37g,22g
-716627,vegan,none,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
 633093,vegetarian,gluten,beef,main course,8.496,8,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",497.0,71g,17g,12g
-649502,ketogenic,seafood,beef,main course,5.7373,4,"[""gluten free"", ""ketogenic""]",698.0,7g,57g,37g
-643674,vegetarian,seafood,none,main course,1.8892,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",470.0,71g,13g,18g
 715428,none,tree nut,garlic,main course,1.7573,6,[],839.0,70g,52g,24g
-634715,ketogenic,dairy,mushrooms,main course,6.3749,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",410.0,6g,28g,32g
-716342,none,seafood,mushrooms,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
 637067,vegetarian,none,onion,main course,2.313,2,"[""gluten free"", ""lacto ovo vegetarian""]",380.0,32g,20g,19g
 661556,ketogenic,dairy,mushrooms,main course,2.1888,4,"[""gluten free"", ""dairy free"", ""ketogenic""]",485.0,9g,35g,33g
-652393,none,dairy,beef,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
 716296,ketogenic,dairy,beef,main course,1.4305,6,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",395.0,7g,27g,29g
-645742,vegan,gluten,garlic,main course,1.9696,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",184.0,18g,6g,15g
-657243,vegan,seafood,beef,main course,1.7105,6,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",401.0,29g,28g,14g
 642332,vegetarian,seafood,beef,main course,2.1211,4,"[""lacto ovo vegetarian""]",433.0,31g,24g,22g
 982382,gluten free,tree nut,garlic,main course,2.719,4,"[""gluten free"", ""dairy free""]",345.0,49g,7g,25g
-661223,vegetarian,dairy,mushrooms,main course,1.7475999999999998,5,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",248.0,32g,8g,12g
 643055,none,dairy,none,main course,4.1624,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",298.0,3g,14g,37g
-635055,none,seafood,beef,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
-649921,vegan,seafood,mushrooms,main course,0.9428,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",405.0,69g,4g,25g
-635055,vegetarian,tree nut,beef,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
-1096053,vegan,tree nut,garlic,main course,2.0147,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",515.0,60g,27g,16g
 640134,none,seafood,none,main course,6.4919,6,"[""gluten free""]",993.0,89g,30g,90g
 1697585,ketogenic,seafood,onion,main course,3.6484,2,"[""gluten free"", ""primal"", ""ketogenic""]",1021.0,32g,83g,42g
-716627,vegan,tree nut,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-635701,gluten free,gluten,beef,main course,2.8826,6,"[""gluten free"", ""dairy free""]",568.0,55g,9g,62g
 635032,ketogenic,dairy,beef,main course,2.3493,1,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""ketogenic""]",427.0,5g,32g,26g
 715544,none,none,none,main course,3.5567,4,"[""gluten free"", ""primal""]",676.0,55g,44g,19g
-635081,vegan,dairy,mushrooms,main course,1.1813,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",508.0,70g,17g,17g
-1096185,vegetarian,none,beef,main course,2.2859,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",635.0,76g,31g,17g
-632710,vegetarian,seafood,onion,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-641973,none,none,onion,main course,5.298500000000001,8,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",495.0,1g,26g,59g
 648257,vegan,tree nut,mushrooms,main course,3.756,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",223.0,49g,0.85g,15g
-652594,vegan,gluten,mushrooms,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
 650239,ketogenic,seafood,none,main course,1.9876,2,"[""gluten free"", ""primal"", ""ketogenic""]",399.0,8g,32g,20g
-631834,vegan,none,mushrooms,main course,1.539,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",358.0,74g,2g,14g
-716342,gluten free,seafood,beef,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
 648259,none,dairy,beef,main course,2.1928,2,"[""dairy free"", ""pescatarian""]",590.0,67g,31g,15g
 665550,gluten free,seafood,garlic,main course,4.4302,12,"[""gluten free""]",384.0,3g,18g,50g
-665831,vegan,seafood,garlic,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-657679,none,dairy,beef,main course,4.3026,2,"[""gluten free"", ""dairy free""]",717.0,89g,35g,20g
-652417,vegan,seafood,onion,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
-662222,vegetarian,dairy,none,main course,2.8901,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",471.0,72g,15g,14g
 633541,ketogenic,tree nut,none,main course,1.1259,8,"[""dairy free"", ""ketogenic""]",517.0,11g,38g,31g
 648368,gluten free,none,onion,main course,5.6328,1,"[""gluten free"", ""lacto ovo vegetarian""]",474.0,17g,32g,31g
 1096231,vegetarian,dairy,beef,main course,4.1808,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",427.0,45g,21g,17g
 637102,none,dairy,garlic,main course,2.4335,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",307.0,20g,18g,18g
 649933,gluten free,dairy,beef,main course,2.5625,4,"[""gluten free"", ""dairy free""]",490.0,48g,19g,29g
-664501,vegan,gluten,beef,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
-652834,ketogenic,none,onion,main course,1.4391,3,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",314.0,4g,24g,20g
 639851,none,dairy,onion,main course,6.2614,2,"[""gluten free"", ""dairy free"", ""whole 30""]",733.0,37g,40g,55g
-646043,vegan,gluten,onion,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-982371,vegetarian,gluten,onion,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
-636604,gluten free,dairy,none,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
 652442,ketogenic,dairy,onion,main course,1.5499,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",487.0,2g,38g,30g
 634434,gluten free,seafood,onion,main course,2.5949,8,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",308.0,0.66g,11g,48g
-1096264,ketogenic,dairy,none,main course,2.4763,2,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""pescatarian"", ""ketogenic""]",350.0,9g,26g,22g
-665550,none,tree nut,onion,main course,4.4302,12,"[""gluten free""]",384.0,3g,18g,50g
-664090,none,gluten,beef,main course,4.4782,4,"[""gluten free""]",642.0,27g,29g,67g
-716627,vegetarian,dairy,mushrooms,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
 659109,gluten free,dairy,mushrooms,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
-643252,ketogenic,seafood,mushrooms,main course,1.8298,6,"[""gluten free"", ""ketogenic""]",451.0,5g,32g,33g
-637297,none,tree nut,none,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
-641583,vegan,seafood,beef,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
 635082,vegan,none,mushrooms,main course,1.3043,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",562.0,86g,15g,20g
 654462,gluten free,dairy,onion,main course,4.3483,2,"[""gluten free"", ""dairy free""]",396.0,35g,18g,28g
-654663,ketogenic,seafood,onion,main course,2.6418,2,"[""ketogenic""]",829.0,20g,63g,40g
-1098387,vegetarian,seafood,none,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 658087,vegetarian,gluten,mushrooms,main course,2.2646,4,"[""gluten free"", ""lacto ovo vegetarian""]",444.0,44g,26g,12g
-782601,none,none,mushrooms,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",,,,
-1096306,vegan,gluten,beef,main course,1.6575,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",478.0,48g,27g,15g
 639535,vegetarian,dairy,garlic,main course,2.7878,2,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",570.0,89g,18g,14g
 641944,ketogenic,gluten,mushrooms,main course,0.5771999999999999,7,"[""gluten free"", ""ketogenic""]",320.0,5g,20g,25g
-648097,ketogenic,dairy,mushrooms,main course,1.66,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",467.0,5g,32g,36g
-639535,vegan,none,garlic,main course,2.7878,2,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",570.0,89g,18g,14g
 1096067,ketogenic,none,garlic,main course,1.9719,2,"[""gluten free"", ""lacto ovo vegetarian"", ""primal"", ""ketogenic""]",305.0,4g,24g,16g
 634625,none,none,garlic,main course,1.5687,4,"[""gluten free"", ""primal""]",550.0,20g,34g,38g
 649131,ketogenic,tree nut,beef,main course,2.1717,4,"[""gluten free"", ""dairy free"", ""ketogenic""]",478.0,12g,34g,32g
-659742,ketogenic,tree nut,none,main course,2.2021,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",519.0,4g,37g,38g
-665831,vegetarian,gluten,garlic,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-652417,none,seafood,mushrooms,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
-648627,none,seafood,none,main course,4.899100000000001,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",584.0,3g,27g,77g
 657682,none,dairy,beef,main course,4.6369,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",577.0,81g,20g,21g
-649921,vegetarian,seafood,none,main course,0.9428,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",405.0,69g,4g,25g
-716364,none,gluten,none,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
 638780,gluten free,tree nut,mushrooms,main course,2.2447,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",249.0,33g,8g,17g
-1095753,vegan,dairy,onion,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
 639392,none,seafood,beef,main course,2.1253,6,[],636.0,84g,26g,23g
 634965,none,none,onion,main course,4.8018,4,"[""gluten free"", ""dairy free""]",679.0,60g,31g,39g
-645742,vegan,gluten,none,main course,1.9696,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",184.0,18g,6g,15g
-650239,ketogenic,none,beef,main course,1.9876,2,"[""gluten free"", ""primal"", ""ketogenic""]",399.0,8g,32g,20g
-664501,vegan,gluten,beef,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
 679543,vegetarian,dairy,onion,main course,1.232,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""fodmap friendly"", ""whole 30""]",489.0,2g,43g,19g
 1096017,none,none,onion,main course,4.1008,4,"[""gluten free"", ""dairy free""]",838.0,68g,37g,61g
 640921,gluten free,gluten,mushrooms,main course,3.5785,2,"[""gluten free""]",500.0,51g,8g,55g
-657243,vegetarian,none,garlic,main course,1.7105,6,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",401.0,29g,28g,14g
-1095749,vegetarian,none,beef,main course,1.0762,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",297.0,56g,1g,17g
-632710,vegetarian,dairy,mushrooms,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-659060,none,none,mushrooms,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-650484,vegetarian,gluten,mushrooms,main course,5.5785,2,"[""gluten free"", ""lacto ovo vegetarian""]",559.0,24g,43g,22g
-982382,gluten free,seafood,beef,main course,2.719,4,"[""gluten free"", ""dairy free""]",345.0,49g,7g,25g
 661741,none,none,garlic,main course,2.7393,1,"[""dairy free""]",523.0,78g,17g,14g
-1096017,gluten free,seafood,onion,main course,4.1008,4,"[""gluten free"", ""dairy free""]",838.0,68g,37g,61g
-652393,none,gluten,mushrooms,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
-655573,vegan,seafood,onion,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-716427,ketogenic,tree nut,none,main course,2.4530000000000003,4,"[""gluten free"", ""whole 30"", ""ketogenic""]",638.0,12g,46g,41g
-636859,vegetarian,gluten,garlic,main course,2.9877,2,"[""gluten free"", ""lacto ovo vegetarian""]",520.0,11g,47g,15g
 641962,vegetarian,gluten,mushrooms,main course,2.6265,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",287.0,26g,12g,20g
-657651,vegetarian,dairy,none,main course,2.7389,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",971.0,108g,50g,31g
-660290,gluten free,seafood,beef,main course,3.6046,8,"[""gluten free""]",566.0,18g,24g,67g
-1000566,gluten free,dairy,none,main course,2.2030000000000003,4,"[""gluten free"", ""dairy free""]",370.0,12g,10g,52g
 664718,vegetarian,gluten,garlic,main course,4.7707,2,"[""gluten free"", ""lacto ovo vegetarian""]",626.0,85g,23g,19g
-659109,gluten free,tree nut,beef,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
 655806,none,seafood,none,main course,1.4549,4,[],373.0,48g,14g,12g
-715446,gluten free,gluten,garlic,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-648368,vegetarian,gluten,onion,main course,5.6328,1,"[""gluten free"", ""lacto ovo vegetarian""]",474.0,17g,32g,31g
-664147,none,dairy,mushrooms,main course,0.497,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",242.0,43g,1g,16g
-647830,vegan,seafood,mushrooms,main course,1.0589,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",400.0,41g,19g,16g
-641944,ketogenic,tree nut,beef,main course,0.5771999999999999,7,"[""gluten free"", ""ketogenic""]",320.0,5g,20g,25g
-1096231,vegan,gluten,beef,main course,4.1808,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",427.0,45g,21g,17g
-1098387,vegetarian,gluten,beef,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 649248,gluten free,seafood,none,main course,4.6964,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",941.0,27g,70g,48g
-646043,vegetarian,seafood,beef,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-649944,vegan,dairy,mushrooms,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
 633132,none,seafood,beef,main course,3.5391000000000004,2,"[""gluten free"", ""dairy free"", ""whole 30""]",665.0,26g,57g,21g
 1096261,ketogenic,dairy,onion,main course,4.9579,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",512.0,5g,35g,41g
-646043,vegan,gluten,mushrooms,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
 673451,gluten free,dairy,garlic,main course,10.6807,5,"[""gluten free"", ""dairy free"", ""whole 30""]",382.0,25g,6g,56g
-654663,ketogenic,tree nut,none,main course,2.6418,2,"[""ketogenic""]",829.0,20g,63g,40g
 635834,gluten free,gluten,onion,main course,2.7881,4,"[""gluten free"", ""dairy free""]",345.0,12g,12g,44g
-664501,vegetarian,none,beef,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
-659109,gluten free,dairy,mushrooms,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
 665734,ketogenic,gluten,garlic,main course,0.7221,2,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",210.0,2g,16g,12g
-639851,none,none,none,main course,6.2614,2,"[""gluten free"", ""dairy free"", ""whole 30""]",733.0,37g,40g,55g
 653078,gluten free,seafood,onion,main course,6.9011000000000005,6,"[""gluten free"", ""primal"", ""fodmap friendly""]",369.0,1g,10g,65g
 632983,none,tree nut,onion,main course,4.592099999999999,6,"[""gluten free"", ""dairy free"", ""pescatarian""]",415.0,12g,26g,33g
-665831,vegan,none,none,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-661741,none,seafood,beef,main course,2.7393,1,"[""dairy free""]",523.0,78g,17g,14g
-715544,none,seafood,mushrooms,main course,3.5567,4,"[""gluten free"", ""primal""]",676.0,55g,44g,19g
 637335,ketogenic,tree nut,onion,main course,3.0513,6,"[""gluten free"", ""primal"", ""pescatarian"", ""ketogenic""]",283.0,3g,19g,23g
 1697687,ketogenic,tree nut,beef,main course,1.421,2,"[""gluten free"", ""primal"", ""ketogenic""]",237.0,5g,17g,16g
 673457,none,dairy,garlic,main course,3.1542000000000003,5,"[""gluten free"", ""dairy free""]",451.0,43g,10g,49g
 715595,vegetarian,seafood,mushrooms,main course,1.3461,4,"[""lacto ovo vegetarian""]",779.0,86g,35g,28g
 653682,vegetarian,tree nut,beef,main course,2.4313,4,"[""gluten free"", ""lacto ovo vegetarian""]",440.0,56g,18g,17g
-646043,vegetarian,dairy,onion,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-715392,none,dairy,mushrooms,main course,1.8368,8,"[""gluten free"", ""dairy free""]",282.0,30g,4g,32g
 642602,none,seafood,none,main course,2.7993,2,[],411.0,52g,19g,12g
 909226,vegetarian,seafood,mushrooms,main course,3.3403,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",513.0,74g,16g,23g
-646043,vegan,none,none,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-633541,ketogenic,tree nut,none,main course,1.1259,8,"[""dairy free"", ""ketogenic""]",517.0,11g,38g,31g
 639306,gluten free,tree nut,garlic,main course,3.4753,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",538.0,18g,41g,23g
-639401,none,seafood,mushrooms,main course,2.2985,4,"[""gluten free"", ""dairy free""]",467.0,23g,20g,37g
 1095682,ketogenic,dairy,onion,main course,1.9223,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""whole 30"", ""ketogenic""]",527.0,7g,46g,22g
 663177,none,tree nut,beef,main course,1.536,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",207.0,8g,8g,21g
-1095806,none,dairy,none,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
-642121,none,dairy,beef,main course,4.6372,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",716.0,74g,44g,14g
-622598,ketogenic,none,mushrooms,main course,2.3884,2,"[""gluten free"", ""primal"", ""ketogenic""]",598.0,8g,43g,41g
-1095791,none,tree nut,onion,main course,3.422,2,"[""gluten free"", ""dairy free""]",494.0,67g,19g,15g
 659143,gluten free,gluten,garlic,main course,4.2776,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",440.0,18g,29g,27g
 663150,vegan,dairy,onion,main course,2.1428,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",641.0,60g,41g,13g
-648257,vegan,dairy,mushrooms,main course,3.756,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",223.0,49g,0.85g,15g
-1095743,vegan,tree nut,none,main course,5.960800000000001,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",630.0,75g,32g,15g
 1063645,ketogenic,gluten,onion,main course,4.3916,4,"[""gluten free""]",143.0,12g,9g,2g
-641387,vegetarian,none,mushrooms,main course,0.8008,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,60g,14g,20g
-1095697,gluten free,seafood,onion,main course,4.504700000000001,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""fodmap friendly"", ""ketogenic""]",405.0,7g,30g,27g
-1096185,vegan,seafood,garlic,main course,2.2859,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",635.0,76g,31g,17g
-982371,vegetarian,seafood,none,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
-649131,ketogenic,none,beef,main course,2.1717,4,"[""gluten free"", ""dairy free"", ""ketogenic""]",478.0,12g,34g,32g
-649886,vegan,gluten,beef,main course,0.8842,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",368.0,64g,3g,22g
-1095753,gluten free,dairy,mushrooms,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
 654432,ketogenic,gluten,beef,main course,3.8258,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",491.0,6g,43g,20g
-637297,vegan,gluten,mushrooms,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
-661223,vegan,none,beef,main course,1.7475999999999998,5,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",248.0,32g,8g,12g
-637297,vegan,dairy,none,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
 643514,ketogenic,none,mushrooms,main course,1.6934,1,"[""gluten free"", ""primal"", ""ketogenic""]",316.0,5g,25g,16g
-657537,vegetarian,gluten,mushrooms,main course,1.9678,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",349.0,13g,27g,14g
 646589,none,gluten,mushrooms,main course,2.5771,6,"[""gluten free"", ""dairy free""]",417.0,53g,8g,29g
-1044252,none,seafood,garlic,main course,2.3736,5,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",485.0,54g,9g,44g
-649926,vegetarian,tree nut,none,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
-633376,vegan,none,onion,main course,21.495500000000003,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",294.0,51g,3g,29g
-659143,none,dairy,garlic,main course,4.2776,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",440.0,18g,29g,27g
-633372,ketogenic,seafood,none,main course,2.2034,6,"[""gluten free"", ""primal"", ""ketogenic""]",701.0,14g,55g,35g
-716342,none,dairy,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
 660835,none,seafood,onion,main course,1.4553,6,"[""lacto ovo vegetarian""]",432.0,62g,14g,14g
-659015,vegetarian,seafood,onion,main course,2.7901,4,"[""lacto ovo vegetarian""]",556.0,33g,42g,16g
 659135,none,tree nut,none,main course,5.2046,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",495.0,44g,18g,38g
 659927,gluten free,tree nut,mushrooms,main course,11.5726,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",639.0,53g,37g,33g
-37513,vegan,seafood,garlic,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
-649944,gluten free,tree nut,beef,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
-642610,vegan,dairy,mushrooms,main course,1.4724000000000002,7,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",263.0,45g,5g,13g
 649495,ketogenic,seafood,beef,main course,1.1235,6,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",346.0,3g,26g,24g
-654432,ketogenic,dairy,mushrooms,main course,3.8258,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",491.0,6g,43g,20g
-638626,none,dairy,none,main course,4.9025,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",409.0,11g,29g,26g
 654991,vegetarian,seafood,garlic,main course,1.2525,12,"[""lacto ovo vegetarian""]",373.0,40g,17g,14g
-652393,vegan,seafood,beef,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
-641583,vegan,none,garlic,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
-636604,vegan,dairy,beef,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
-646043,vegetarian,gluten,mushrooms,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-633541,ketogenic,seafood,onion,main course,1.1259,8,"[""dairy free"", ""ketogenic""]",517.0,11g,38g,31g
 660306,none,seafood,garlic,main course,2.9881,6,"[""gluten free"", ""dairy free""]",586.0,48g,14g,65g
 1096203,ketogenic,none,onion,main course,6.2845,2,"[""gluten free"", ""primal"", ""ketogenic""]",500.0,12g,38g,28g
-652417,vegan,dairy,garlic,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
-663177,gluten free,dairy,beef,main course,1.536,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",207.0,8g,8g,21g
-649926,gluten free,seafood,mushrooms,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
-1095836,none,seafood,garlic,main course,2.5993,4,"[""gluten free"", ""dairy free""]",407.0,45g,7g,38g
-1096272,ketogenic,dairy,garlic,main course,1.9232,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",449.0,4g,37g,22g
-780000,ketogenic,dairy,garlic,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
-716004,gluten free,gluten,garlic,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-780000,ketogenic,seafood,none,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
 652919,vegetarian,tree nut,mushrooms,main course,2.0518,4,"[""gluten free"", ""lacto ovo vegetarian""]",642.0,66g,34g,20g
 1095830,ketogenic,seafood,none,main course,2.3186,4,"[""gluten free"", ""primal"", ""ketogenic""]",761.0,7g,59g,47g
 664565,none,seafood,beef,main course,1.2365000000000002,4,[],412.0,79g,4g,18g
-651034,ketogenic,tree nut,mushrooms,main course,4.0851,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",505.0,8g,32g,44g
-661126,ketogenic,dairy,beef,main course,6.048500000000001,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian"", ""ketogenic""]",502.0,20g,38g,25g
-37513,vegan,dairy,onion,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
 1098288,gluten free,gluten,garlic,main course,1.8382,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",319.0,18g,20g,18g
-641583,vegan,gluten,garlic,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
 1454187,vegetarian,gluten,beef,main course,0.6664,4,"[""gluten free"", ""lacto ovo vegetarian""]",249.0,25g,10g,14g
-633376,vegetarian,seafood,beef,main course,21.495500000000003,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",294.0,51g,3g,29g
-656972,none,none,onion,main course,1.8305,4,"[""lacto ovo vegetarian""]",382.0,58g,10g,15g
-649248,ketogenic,none,none,main course,4.6964,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",941.0,27g,70g,48g
 639850,none,dairy,garlic,main course,3.3432,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",345.0,15g,18g,24g
-1095753,gluten free,dairy,onion,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
-638125,ketogenic,dairy,none,main course,2.0886,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",594.0,8g,40g,46g
-649944,vegetarian,tree nut,beef,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
-654476,ketogenic,tree nut,onion,main course,5.5427,4,"[""gluten free"", ""primal"", ""pescatarian"", ""ketogenic""]",700.0,6g,59g,36g
 638248,none,tree nut,onion,main course,3.1662,2,[],815.0,94g,31g,40g
-1096203,ketogenic,gluten,garlic,main course,6.2845,2,"[""gluten free"", ""primal"", ""ketogenic""]",500.0,12g,38g,28g
-642602,none,none,mushrooms,main course,2.7993,2,[],411.0,52g,19g,12g
-631752,vegan,gluten,beef,main course,0.583,12,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",220.0,30g,5g,12g
-643055,none,gluten,none,main course,4.1624,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",298.0,3g,14g,37g
-1424143,vegan,seafood,beef,main course,1.979,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",362.0,54g,10g,17g
 660266,gluten free,tree nut,mushrooms,main course,2.1666,10,"[""gluten free"", ""dairy free"", ""whole 30""]",405.0,29g,20g,24g
 654967,vegetarian,seafood,onion,main course,0.925,6,"[""lacto ovo vegetarian""]",375.0,33g,20g,12g
 657379,vegetarian,tree nut,mushrooms,main course,2.3308,4,"[""gluten free"", ""lacto ovo vegetarian""]",447.0,33g,30g,14g
-641583,vegan,seafood,none,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
 1697541,vegetarian,seafood,none,main course,3.8267,2,"[""lacto ovo vegetarian""]",805.0,95g,34g,29g
 645265,gluten free,none,garlic,main course,3.6029,4,"[""gluten free""]",289.0,22g,18g,12g
 1697553,none,dairy,onion,main course,4.7663,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",457.0,19g,25g,38g
-655573,none,seafood,beef,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-660306,none,dairy,none,main course,2.9881,6,"[""gluten free"", ""dairy free""]",586.0,48g,14g,65g
-1098387,vegan,gluten,onion,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 665378,vegetarian,seafood,none,main course,1.2322,6,"[""lacto ovo vegetarian""]",345.0,49g,9g,17g
-982371,gluten free,seafood,mushrooms,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
-633372,ketogenic,none,mushrooms,main course,2.2034,6,"[""gluten free"", ""primal"", ""ketogenic""]",701.0,14g,55g,35g
-635964,vegetarian,tree nut,onion,main course,1.7150999999999998,1,"[""lacto ovo vegetarian""]",824.0,90g,30g,44g
 648275,vegetarian,seafood,garlic,main course,1.703,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",269.0,9g,13g,28g
 635317,none,gluten,onion,main course,4.3323,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",343.0,12g,16g,35g
-664089,vegetarian,none,garlic,main course,1.1834,8,"[""gluten free"", ""lacto ovo vegetarian""]",488.0,72g,16g,18g
 636608,vegetarian,gluten,mushrooms,main course,2.5124,4,"[""gluten free"", ""lacto ovo vegetarian""]",492.0,57g,23g,16g
 658440,vegetarian,gluten,onion,main course,1.4874,4,"[""gluten free"", ""lacto ovo vegetarian""]",344.0,47g,12g,13g
-639851,gluten free,none,mushrooms,main course,6.2614,2,"[""gluten free"", ""dairy free"", ""whole 30""]",733.0,37g,40g,55g
 647563,vegetarian,seafood,onion,main course,4.3995,6,"[""gluten free"", ""lacto ovo vegetarian""]",500.0,53g,23g,25g
-780000,ketogenic,dairy,mushrooms,main course,2.3504,3,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",537.0,11g,42g,33g
-646589,none,dairy,mushrooms,main course,2.5771,6,"[""gluten free"", ""dairy free""]",417.0,53g,8g,29g
-662222,vegetarian,dairy,none,main course,2.8901,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",471.0,72g,15g,14g
-664089,vegetarian,gluten,none,main course,1.1834,8,"[""gluten free"", ""lacto ovo vegetarian""]",488.0,72g,16g,18g
-641200,ketogenic,dairy,garlic,main course,2.9024,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""ketogenic""]",487.0,3g,32g,40g
 641062,vegetarian,tree nut,garlic,main course,1.5373,6,"[""gluten free"", ""lacto ovo vegetarian""]",272.0,34g,10g,13g
-633766,vegetarian,tree nut,garlic,main course,1.8554,6,"[""lacto ovo vegetarian""]",480.0,74g,10g,24g
-648627,gluten free,tree nut,beef,main course,4.899100000000001,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",584.0,3g,27g,77g
-1098387,none,seafood,beef,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
-661126,ketogenic,dairy,beef,main course,6.048500000000001,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian"", ""ketogenic""]",502.0,20g,38g,25g
 648524,none,dairy,none,main course,5.3209,9,"[""dairy free""]",524.0,20g,18g,67g
-636608,vegetarian,gluten,garlic,main course,2.5124,4,"[""gluten free"", ""lacto ovo vegetarian""]",492.0,57g,23g,16g
 633165,vegetarian,seafood,garlic,main course,1.73,4,"[""lacto ovo vegetarian""]",506.0,71g,17g,17g
-1095749,vegan,seafood,none,main course,1.0762,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",297.0,56g,1g,17g
-631752,vegan,gluten,mushrooms,main course,0.583,12,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",220.0,30g,5g,12g
 681706,vegetarian,gluten,onion,main course,1.683,2,"[""gluten free"", ""lacto ovo vegetarian""]",380.0,29g,13g,35g
-1095836,gluten free,seafood,beef,main course,2.5993,4,"[""gluten free"", ""dairy free""]",407.0,45g,7g,38g
-716004,vegetarian,dairy,garlic,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-659060,ketogenic,tree nut,beef,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-1095749,vegetarian,tree nut,mushrooms,main course,1.0762,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",297.0,56g,1g,17g
-664501,none,gluten,beef,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
 652706,vegetarian,dairy,beef,main course,9.3974,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",512.0,73g,9g,40g
-715521,none,gluten,onion,main course,2.7325,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",382.0,11g,30g,20g
-1095768,vegetarian,seafood,beef,main course,2.2928,2,"[""dairy free"", ""lacto ovo vegetarian""]",543.0,105g,8g,21g
-1095749,gluten free,dairy,mushrooms,main course,1.0762,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",297.0,56g,1g,17g
 1096162,ketogenic,none,onion,main course,1.3043,10,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",327.0,4g,23g,19g
-655573,vegetarian,seafood,beef,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
 715447,none,seafood,none,main course,3.4526,8,"[""dairy free""]",565.0,55g,19g,45g
-664089,vegetarian,tree nut,none,main course,1.1834,8,"[""gluten free"", ""lacto ovo vegetarian""]",488.0,72g,16g,18g
 637357,gluten free,tree nut,onion,main course,2.7452,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",459.0,16g,27g,35g
-716627,vegan,dairy,mushrooms,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-1096203,ketogenic,gluten,beef,main course,6.2845,2,"[""gluten free"", ""primal"", ""ketogenic""]",500.0,12g,38g,28g
-1046982,none,none,beef,main course,4.8176,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",679.0,84g,18g,48g
-633132,gluten free,tree nut,beef,main course,3.5391000000000004,2,"[""gluten free"", ""dairy free"", ""whole 30""]",665.0,26g,57g,21g
-632718,vegan,tree nut,mushrooms,main course,0.8184,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",327.0,63g,2g,16g
 1096265,ketogenic,dairy,none,main course,4.8013,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",855.0,20g,68g,40g
-715415,none,gluten,mushrooms,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
-655573,vegan,tree nut,onion,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-636787,gluten free,seafood,none,main course,2.2409,4,"[""gluten free"", ""dairy free"", ""whole 30""]",492.0,82g,10g,19g
-665831,gluten free,tree nut,beef,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-631752,vegan,dairy,beef,main course,0.583,12,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",220.0,30g,5g,12g
-636859,vegetarian,gluten,onion,main course,2.9877,2,"[""gluten free"", ""lacto ovo vegetarian""]",520.0,11g,47g,15g
 649946,none,dairy,beef,main course,1.001,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",303.0,55g,1g,19g
-633132,gluten free,dairy,mushrooms,main course,3.5391000000000004,2,"[""gluten free"", ""dairy free"", ""whole 30""]",665.0,26g,57g,21g
-663559,vegetarian,seafood,none,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
-716245,vegetarian,dairy,none,main course,1.5203,1,"[""dairy free"", ""lacto ovo vegetarian""]",382.0,55g,10g,19g
 633624,none,seafood,none,main course,3.9608,6,[],662.0,33g,29g,65g
 661570,none,tree nut,garlic,main course,7.7724,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",232.0,2g,4g,43g
-632710,vegan,none,garlic,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-716364,none,tree nut,none,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
-1096265,ketogenic,seafood,none,main course,4.8013,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",855.0,20g,68g,40g
-638166,ketogenic,dairy,beef,main course,1.8087,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",,,,
 660475,vegetarian,none,mushrooms,main course,2.4349000000000003,8,"[""dairy free"", ""lacto ovo vegetarian""]",440.0,54g,21g,13g
 654125,none,dairy,none,main course,7.4204,6,"[""dairy free""]",444.0,15g,18g,46g
-657651,vegan,tree nut,garlic,main course,2.7389,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",971.0,108g,50g,31g
-657651,vegan,dairy,garlic,main course,2.7389,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",971.0,108g,50g,31g
 636167,ketogenic,tree nut,onion,main course,3.6816,2,"[""gluten free"", ""dairy free"", ""ketogenic""]",419.0,11g,29g,23g
-632718,vegetarian,tree nut,none,main course,0.8184,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",327.0,63g,2g,16g
 657312,none,seafood,garlic,main course,1.5447,6,[],610.0,75g,25g,22g
-1095791,none,dairy,mushrooms,main course,3.422,2,"[""gluten free"", ""dairy free""]",494.0,67g,19g,15g
-636604,vegan,gluten,mushrooms,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
-660266,none,dairy,none,main course,2.1666,10,"[""gluten free"", ""dairy free"", ""whole 30""]",405.0,29g,20g,24g
-652706,gluten free,seafood,beef,main course,9.3974,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",512.0,73g,9g,40g
-1095753,vegetarian,seafood,mushrooms,main course,3.0589,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",524.0,59g,28g,16g
-645863,none,dairy,garlic,main course,9.7057,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""pescatarian""]",727.0,96g,14g,51g
-632710,vegan,tree nut,garlic,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 648774,ketogenic,gluten,garlic,main course,4.1684,6,"[""gluten free"", ""ketogenic""]",778.0,7g,62g,44g
-641387,gluten free,dairy,beef,main course,0.8008,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,60g,14g,20g
-660101,vegetarian,dairy,none,main course,0.9492,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",758.0,78g,43g,13g
-716627,vegan,seafood,garlic,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-716342,none,gluten,garlic,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-633132,none,seafood,garlic,main course,3.5391000000000004,2,"[""gluten free"", ""dairy free"", ""whole 30""]",665.0,26g,57g,21g
-1096053,vegetarian,gluten,garlic,main course,2.0147,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",515.0,60g,27g,16g
-665734,ketogenic,tree nut,garlic,main course,0.7221,2,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",210.0,2g,16g,12g
 639620,ketogenic,none,mushrooms,main course,3.0634,6,"[""pescatarian"", ""ketogenic""]",322.0,6g,26g,15g
-617047,vegetarian,gluten,garlic,main course,2.5088,4,"[""gluten free"", ""lacto ovo vegetarian""]",632.0,73g,27g,27g
-652393,none,tree nut,none,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
-638534,ketogenic,none,garlic,main course,1.9841,8,"[""gluten free"", ""primal"", ""ketogenic""]",370.0,7g,26g,26g
-649942,vegan,tree nut,onion,main course,1.942,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",607.0,91g,19g,21g
 640798,vegetarian,none,mushrooms,main course,3.1289,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",678.0,29g,55g,20g
 75081,ketogenic,none,garlic,main course,8.8658,10,[],370.0,24g,26g,8g
-659109,none,none,mushrooms,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
-661223,vegan,gluten,beef,main course,1.7475999999999998,5,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",248.0,32g,8g,12g
-646043,vegan,tree nut,none,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-715446,none,seafood,mushrooms,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-648257,vegan,dairy,onion,main course,3.756,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",223.0,49g,0.85g,15g
-653251,vegetarian,seafood,none,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
-635055,vegetarian,seafood,garlic,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
 644108,gluten free,seafood,mushrooms,main course,4.2975,2,"[""gluten free"", ""lacto ovo vegetarian""]",459.0,48g,25g,21g
-37513,vegan,tree nut,none,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
 1095763,ketogenic,gluten,mushrooms,main course,1.3454,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",400.0,7g,31g,22g
-658091,gluten free,seafood,garlic,main course,1.391,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",463.0,55g,22g,12g
 638455,ketogenic,tree nut,none,main course,3.3675,4,"[""gluten free"", ""ketogenic""]",627.0,14g,43g,42g
-636604,vegan,gluten,garlic,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
-13073,gluten free,tree nut,beef,main course,2.9271,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""whole 30"", ""pescatarian""]",356.0,64g,3g,17g
-665831,vegan,none,onion,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
 652427,ketogenic,gluten,none,main course,1.6408,8,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",372.0,8g,28g,20g
-37513,vegan,seafood,beef,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
 638552,none,tree nut,onion,main course,3.0609,4,"[""gluten free""]",455.0,25g,25g,33g
-635834,none,dairy,onion,main course,2.7881,4,"[""gluten free"", ""dairy free""]",345.0,12g,12g,44g
-659143,none,none,mushrooms,main course,4.2776,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",440.0,18g,29g,27g
-634715,ketogenic,tree nut,onion,main course,6.3749,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",410.0,6g,28g,32g
-648257,vegan,tree nut,mushrooms,main course,3.756,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",223.0,49g,0.85g,15g
-642540,none,dairy,none,main course,1.8734,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",709.0,80g,35g,23g
-641387,vegan,dairy,mushrooms,main course,0.8008,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,60g,14g,20g
-1095682,ketogenic,gluten,onion,main course,1.9223,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""whole 30"", ""ketogenic""]",527.0,7g,46g,22g
-659742,ketogenic,seafood,none,main course,2.2021,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",519.0,4g,37g,38g
 647606,ketogenic,none,none,main course,2.9742,6,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",620.0,14g,45g,37g
 661522,none,seafood,onion,main course,1.7588,2,"[""gluten free""]",368.0,0.64g,22g,37g
-636604,gluten free,gluten,none,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
-633376,vegan,seafood,garlic,main course,21.495500000000003,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",294.0,51g,3g,29g
 661340,none,gluten,none,main course,3.3897000000000004,1,"[""gluten free"", ""primal""]",321.0,29g,12g,22g
-716361,none,seafood,mushrooms,main course,3.5780000000000003,1,"[""gluten free""]",750.0,84g,19g,57g
-657679,none,tree nut,beef,main course,4.3026,2,"[""gluten free"", ""dairy free""]",717.0,89g,35g,20g
-637297,vegan,none,mushrooms,main course,1.4025,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",455.0,86g,7g,13g
-1095806,none,dairy,garlic,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
-665831,none,gluten,mushrooms,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-716311,gluten free,seafood,beef,main course,1.5108,2,"[""gluten free"", ""dairy free""]",486.0,95g,4g,15g
-909226,vegan,seafood,none,main course,3.3403,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",513.0,74g,16g,23g
-1098387,vegan,none,mushrooms,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
 1096010,vegetarian,dairy,garlic,main course,1.8848,2,"[""dairy free"", ""lacto ovo vegetarian""]",571.0,39g,34g,25g
-1095743,vegan,none,beef,main course,5.960800000000001,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",630.0,75g,32g,15g
-660926,none,tree nut,onion,main course,4.549,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",336.0,23g,12g,35g
-642121,none,none,beef,main course,4.6372,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",716.0,74g,44g,14g
-982371,vegetarian,gluten,onion,main course,3.0167,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",407.0,68g,9g,15g
-634965,gluten free,dairy,onion,main course,4.8018,4,"[""gluten free"", ""dairy free""]",679.0,60g,31g,39g
-715523,gluten free,seafood,none,main course,3.6937,4,"[""gluten free""]",,,,
-632718,vegetarian,seafood,none,main course,0.8184,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",327.0,63g,2g,16g
-657243,vegan,none,onion,main course,1.7105,6,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",401.0,29g,28g,14g
-639850,gluten free,tree nut,onion,main course,3.3432,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",345.0,15g,18g,24g
 646626,none,seafood,onion,main course,1.9,4,"[""dairy free""]",500.0,92g,5g,16g
-646043,vegan,seafood,mushrooms,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-642332,vegetarian,seafood,onion,main course,2.1211,4,"[""lacto ovo vegetarian""]",433.0,31g,24g,22g
-638780,gluten free,seafood,beef,main course,2.2447,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",249.0,33g,8g,17g
-652594,vegetarian,none,mushrooms,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
-655573,none,dairy,none,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-648774,ketogenic,tree nut,beef,main course,4.1684,6,"[""gluten free"", ""ketogenic""]",778.0,7g,62g,44g
-635055,vegetarian,gluten,beef,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
 643150,ketogenic,none,mushrooms,main course,1.4799,4,"[""gluten free"", ""primal"", ""ketogenic""]",281.0,5g,20g,19g
-1424143,vegan,none,onion,main course,1.979,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",362.0,54g,10g,17g
-649502,ketogenic,none,onion,main course,5.7373,4,"[""gluten free"", ""ketogenic""]",698.0,7g,57g,37g
-635032,ketogenic,tree nut,onion,main course,2.3493,1,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""ketogenic""]",427.0,5g,32g,26g
-646043,vegan,seafood,onion,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-665831,vegetarian,tree nut,garlic,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-659060,none,none,mushrooms,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-652442,ketogenic,gluten,beef,main course,1.5499,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",487.0,2g,38g,30g
-1098387,vegan,seafood,beef,main course,2.0857,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",458.0,59g,18g,14g
-1096231,vegan,gluten,beef,main course,4.1808,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",427.0,45g,21g,17g
-633538,ketogenic,dairy,garlic,main course,2.2465,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""ketogenic""]",611.0,16g,42g,35g
-1095806,none,dairy,garlic,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
-716361,none,gluten,mushrooms,main course,3.5780000000000003,1,"[""gluten free""]",750.0,84g,19g,57g
 652250,gluten free,dairy,onion,main course,2.0649,4,"[""gluten free"", ""dairy free""]",331.0,44g,5g,26g
 633921,gluten free,gluten,onion,main course,4.4376,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",301.0,18g,14g,25g
-632710,vegan,tree nut,onion,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 730914,none,none,beef,main course,3.138,1,"[""gluten free"", ""primal""]",,,,
-652594,vegetarian,gluten,none,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
-659109,none,gluten,beef,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
-633921,gluten free,none,beef,main course,4.4376,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",301.0,18g,14g,25g
-658087,none,none,beef,main course,2.2646,4,"[""gluten free"", ""lacto ovo vegetarian""]",444.0,44g,26g,12g
-649944,vegan,none,none,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
-716364,none,none,none,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
-653251,vegetarian,none,beef,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
-715415,gluten free,none,none,main course,3.0045,8,"[""gluten free"", ""dairy free""]",477.0,51g,20g,26g
 642230,ketogenic,none,beef,main course,2.8467,2,"[""gluten free"", ""primal"", ""ketogenic""]",795.0,10g,69g,32g
 639954,vegan,none,none,main course,1.638,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",384.0,62g,11g,12g
-715393,vegetarian,none,none,main course,3.1597000000000004,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",303.0,33g,12g,19g
-640234,vegan,none,none,main course,1.2747,5,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",436.0,75g,8g,16g
-715521,ketogenic,none,onion,main course,2.7325,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",382.0,11g,30g,20g
-639653,vegetarian,none,beef,main course,0.998,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",245.0,34g,5g,14g
-664147,gluten free,none,none,main course,0.497,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",242.0,43g,1g,16g
-660290,gluten free,none,none,main course,3.6046,8,"[""gluten free""]",566.0,18g,24g,67g
-652417,vegan,none,beef,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
 715391,gluten free,none,none,main course,1.4143,6,"[""gluten free"", ""dairy free""]",311.0,49g,3g,24g
-653251,vegan,none,beef,main course,1.0577,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",686.0,96g,24g,20g
-643150,ketogenic,none,beef,main course,1.4799,4,"[""gluten free"", ""primal"", ""ketogenic""]",281.0,5g,20g,19g
-659927,gluten free,none,none,main course,11.5726,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",639.0,53g,37g,33g
-659109,none,none,beef,main course,3.8296,4,"[""gluten free"", ""dairy free"", ""pescatarian""]",404.0,39g,18g,21g
-648279,none,none,onion,main course,2.0948,3,"[""dairy free"", ""pescatarian""]",463.0,70g,2g,37g
 637686,vegetarian,none,onion,main course,1.064,4,"[""gluten free"", ""lacto ovo vegetarian""]",262.0,27g,11g,14g
-659060,gluten free,none,none,main course,8.8594,2,"[""gluten free"", ""pescatarian"", ""ketogenic""]",865.0,24g,67g,46g
-664147,vegetarian,none,none,main course,0.497,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",242.0,43g,1g,16g
-664501,vegan,none,none,main course,2.5686,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",529.0,22g,48g,12g
-782601,vegetarian,none,none,main course,1.6843,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",392.0,69g,6g,18g
-641583,vegetarian,none,none,main course,4.4912,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",727.0,97g,33g,13g
-641200,ketogenic,none,beef,main course,2.9024,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""ketogenic""]",487.0,3g,32g,40g
-648257,vegan,none,beef,main course,3.756,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",223.0,49g,0.85g,15g
-636603,vegetarian,none,none,main course,2.0633,6,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",235.0,18g,13g,13g
-715393,gluten free,none,beef,main course,3.1597000000000004,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",303.0,33g,12g,19g
-1096261,ketogenic,none,none,main course,4.9579,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""fodmap friendly"", ""whole 30"", ""ketogenic""]",512.0,5g,35g,41g
-648368,vegetarian,none,beef,main course,5.6328,1,"[""gluten free"", ""lacto ovo vegetarian""]",474.0,17g,32g,31g
-1095806,none,none,none,main course,7.7965,2,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian""]",944.0,51g,59g,52g
-639954,vegan,none,none,main course,1.638,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",384.0,62g,11g,12g
-716004,vegetarian,none,none,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-656972,vegetarian,none,none,main course,1.8305,4,"[""lacto ovo vegetarian""]",382.0,58g,10g,15g
-652393,vegan,none,none,main course,0.7436,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",396.0,66g,3g,25g
-635081,gluten free,none,none,main course,1.1813,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",508.0,70g,17g,17g
-37513,vegan,none,beef,main course,23.0666,1,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",738.0,107g,18g,32g
-655573,vegan,none,beef,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
 659058,ketogenic,none,none,main course,4.6734,2,"[""dairy free"", ""pescatarian"", ""ketogenic""]",537.0,14g,34g,39g
-1095743,vegan,none,none,main course,5.960800000000001,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",630.0,75g,32g,15g
-665831,vegan,none,beef,main course,8.996599999999999,1,"[""gluten free"", ""dairy free"", ""paleolithic"", ""lacto ovo vegetarian"", ""primal"", ""whole 30"", ""vegan""]",565.0,76g,24g,23g
-649827,ketogenic,none,beef,main course,1.2141,4,"[""gluten free"", ""primal"", ""ketogenic""]",428.0,2g,36g,22g
 662654,gluten free,none,beef,main course,4.7797,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""pescatarian""]",731.0,96g,19g,41g
-654009,vegetarian,none,beef,main course,2.3558000000000003,2,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",634.0,101g,17g,18g
-715391,gluten free,none,none,main course,1.4143,6,"[""gluten free"", ""dairy free""]",311.0,49g,3g,24g
-641387,vegetarian,none,none,main course,0.8008,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",451.0,60g,14g,20g
-632710,vegetarian,none,none,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
 647687,vegetarian,none,none,main course,2.4598,8,"[""lacto ovo vegetarian""]",636.0,46g,45g,14g
-663559,vegetarian,none,none,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
-649944,vegetarian,none,none,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
-715446,none,none,none,main course,2.7041000000000004,6,"[""gluten free"", ""dairy free""]",433.0,40g,11g,44g
-715392,none,none,none,main course,1.8368,8,"[""gluten free"", ""dairy free""]",282.0,30g,4g,32g
 716408,none,none,none,main course,3.0359,4,"[""gluten free"", ""pescatarian""]",344.0,28g,12g,27g
-715393,vegetarian,none,none,main course,3.1597000000000004,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",303.0,33g,12g,19g
-652594,vegetarian,none,none,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
-642121,vegetarian,none,none,main course,4.6372,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",716.0,74g,44g,14g
-649926,none,none,none,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
-649926,vegetarian,none,none,main course,0.4071,10,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",204.0,36g,0.77g,12g
-662654,none,none,none,main course,4.7797,4,"[""gluten free"", ""dairy free"", ""fodmap friendly"", ""pescatarian""]",731.0,96g,19g,41g
-715769,none,none,none,main course,4.1424,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",625.0,71g,30g,19g
-652417,vegetarian,none,none,main course,1.2612,3,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",465.0,82g,7g,20g
 652775,none,none,none,main course,6.64,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",685.0,52g,28g,38g
-636787,none,none,none,main course,2.2409,4,"[""gluten free"", ""dairy free"", ""whole 30""]",492.0,82g,10g,19g
-716364,none,none,none,main course,2.4353,4,"[""gluten free"", ""dairy free""]",625.0,50g,33g,30g
-652594,vegetarian,none,none,main course,1.4947,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",355.0,50g,11g,16g
-642121,vegetarian,none,none,main course,4.6372,1,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",716.0,74g,44g,14g
 633754,none,none,none,main course,8.6126,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",1029.0,82g,69g,32g
-660405,none,none,none,main course,2.6242,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",554.0,102g,7g,23g
 715421,none,none,none,main course,2.6225,4,"[""gluten free""]",594.0,68g,23g,34g
-716004,none,none,none,main course,1.8691,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",538.0,84g,14g,20g
-665378,vegetarian,none,none,main course,1.2322,6,"[""lacto ovo vegetarian""]",345.0,49g,9g,17g
-716342,none,none,none,main course,1.6749,1,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",564.0,21g,35g,43g
-657939,vegetarian,none,none,main course,1.9679,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",489.0,11g,44g,14g
-638626,none,none,none,main course,4.9025,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",409.0,11g,29g,26g
-664090,none,none,none,main course,4.4782,4,"[""gluten free""]",642.0,27g,29g,67g
-663559,vegetarian,none,none,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
 639957,none,none,none,main course,3.9638,2,"[""pescatarian""]",469.0,58g,10g,34g
-649944,vegan,none,none,main course,1.5925,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",252.0,39g,6g,12g
-665378,none,none,none,main course,1.2322,6,"[""lacto ovo vegetarian""]",345.0,49g,9g,17g
-646738,vegan,none,none,main course,0.7807,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",331.0,46g,9g,16g
 663225,vegetarian,none,none,main course,8.0661,1,"[""lacto ovo vegetarian""]",915.0,77g,55g,32g
-640982,vegan,none,none,main course,1.3539,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",543.0,98g,8g,19g
-633766,vegetarian,none,none,main course,1.8554,6,"[""lacto ovo vegetarian""]",480.0,74g,10g,24g
-1096306,vegan,none,none,main course,1.6575,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",478.0,48g,27g,15g
-655573,vegetarian,none,none,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
 1095755,vegan,none,none,main course,0.8867,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",254.0,45g,2g,12g
-716627,none,none,none,main course,1.0602,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",445.0,86g,4g,19g
-636604,vegan,none,none,main course,1.5473,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",260.0,31g,11g,12g
 636178,vegetarian,none,none,main course,1.9638,4,"[""lacto ovo vegetarian""]",610.0,27g,46g,24g
-632718,vegetarian,none,none,main course,0.8184,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",327.0,63g,2g,16g
-635055,none,none,none,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
-659143,none,none,none,main course,4.2776,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",440.0,18g,29g,27g
-635055,none,none,none,main course,8.5456,3,"[""gluten free"", ""lacto ovo vegetarian""]",631.0,80g,31g,27g
-632710,vegan,none,none,main course,0.3701,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",231.0,29g,7g,12g
-636603,vegetarian,none,none,main course,2.0633,6,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",235.0,18g,13g,13g
-635082,vegan,none,none,main course,1.3043,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",562.0,86g,15g,20g
-660405,none,none,none,main course,2.6242,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian""]",554.0,102g,7g,23g
-715523,none,none,none,main course,3.6937,4,"[""gluten free""]",685.0,32g,37g,51g
-661365,none,none,none,main course,3.6148,3,"[""lacto ovo vegetarian""]",565.0,78g,24g,18g
 654959,none,none,none,main course,1.6812,4,"[""pescatarian""]",422.0,57g,10g,24g
-663559,vegetarian,none,none,main course,1.1556,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",340.0,50g,8g,18g
-635081,vegetarian,none,none,main course,1.1813,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",508.0,70g,17g,17g
-646043,vegetarian,none,none,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-631834,vegan,none,none,main course,1.539,2,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",358.0,74g,2g,14g
 660843,vegetarian,none,none,main course,3.9966,8,"[""lacto ovo vegetarian""]",632.0,44g,40g,24g
-649886,vegan,none,none,main course,0.8842,6,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",368.0,64g,3g,22g
-644826,none,none,none,main course,3.0598,6,"[""gluten free"", ""dairy free""]",363.0,28g,15g,30g
-648627,none,none,none,main course,4.899100000000001,4,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30""]",584.0,3g,27g,77g
-655573,vegan,none,none,main course,1.0484,4,"[""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",466.0,82g,8g,14g
-633921,none,none,none,main course,4.4376,2,"[""gluten free"", ""dairy free"", ""pescatarian""]",301.0,18g,14g,25g
-660989,vegetarian,none,none,main course,3.2349,2,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",387.0,57g,15g,12g
 664786,none,none,none,main course,2.0202,7,"[""dairy free""]",316.0,29g,6g,32g
-646043,vegan,none,none,main course,1.641,4,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",375.0,66g,5g,19g
-644826,none,none,none,main course,3.0598,6,"[""gluten free"", ""dairy free""]",363.0,28g,15g,30g
-648275,vegetarian,none,none,main course,1.703,4,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",269.0,9g,13g,28g
-639954,vegetarian,none,none,main course,1.638,3,"[""gluten free"", ""dairy free"", ""lacto ovo vegetarian"", ""vegan""]",384.0,62g,11g,12g
 1100990,vegetarian,gluten,mushrooms,main course,2.9395,1,[],774.0,90g,42g,13g
 642585,vegetarian,gluten,mushrooms,main course,0.9712,1,[],556.0,89g,14g,16g
-716627,vegetarian,gluten,mushrooms,main course,1.0602,1,[],445.0,86g,4g,19g
 657178,ketogenic,dairy,beef,main course,1.6425999999999998,1,[],427.0,20g,30g,24g
-1063645,ketogenic,dairy,beef,main course,4.3916,1,[],143.0,12g,9g,2g
-661126,ketogenic,dairy,beef,main course,6.048500000000001,1,[],502.0,20g,38g,25g
-657178,ketogenic,gluten,none,main course,1.6425999999999998,1,[],427.0,20g,30g,24g
-1063645,ketogenic,gluten,none,main course,4.3916,1,[],143.0,12g,9g,2g
 633324,ketogenic,gluten,none,main course,3.7184,1,[],567.0,14g,44g,27g
-657178,ketogenic,dairy,mushrooms,main course,1.6425999999999998,1,[],427.0,20g,30g,24g
-661126,ketogenic,dairy,mushrooms,main course,6.048500000000001,1,[],502.0,20g,38g,25g
-1063645,ketogenic,dairy,mushrooms,main course,4.3916,1,[],143.0,12g,9g,2g
-1100990,vegan,seafood,beef,main course,2.9395,1,[],774.0,90g,42g,13g
-652417,vegan,seafood,beef,main course,1.2612,1,[],465.0,82g,7g,20g
-654009,vegan,seafood,beef,main course,2.3558000000000003,1,[],634.0,101g,17g,18g
-1100990,none,gluten,garlic,main course,2.9395,1,[],774.0,90g,42g,13g
-642585,none,gluten,garlic,main course,0.9712,1,[],556.0,89g,14g,16g
 664658,none,gluten,garlic,main course,1.8951,1,[],552.0,96g,10g,21g
-657178,ketogenic,none,onion,main course,1.6425999999999998,1,[],427.0,20g,30g,24g
-1063645,ketogenic,none,onion,main course,4.3916,1,[],143.0,12g,9g,2g
-661126,ketogenic,none,onion,main course,6.048500000000001,1,[],502.0,20g,38g,25g
 636392,gluten free,none,none,main course,0.921,1,[],374.0,54g,13g,13g
-715769,gluten free,none,none,main course,4.1424,1,[],625.0,71g,30g,19g
 634404,gluten free,none,none,main course,2.556,1,[],654.0,95g,20g,19g
-1100990,vegan,gluten,onion,main course,2.9395,1,[],774.0,90g,42g,13g
-652417,vegan,gluten,onion,main course,1.2612,1,[],465.0,82g,7g,20g
-654009,vegan,gluten,onion,main course,2.3558000000000003,1,[],634.0,101g,17g,18g
-1100990,vegetarian,seafood,none,main course,2.9395,1,[],774.0,90g,42g,13g
-642585,vegetarian,seafood,none,main course,0.9712,1,[],556.0,89g,14g,16g
-660405,vegetarian,seafood,none,main course,2.6242,1,[],554.0,102g,7g,23g
-1100990,none,seafood,mushrooms,main course,2.9395,1,[],774.0,90g,42g,13g
-642585,none,seafood,mushrooms,main course,0.9712,1,[],556.0,89g,14g,16g
-634404,none,seafood,mushrooms,main course,2.556,1,[],654,95g,20g,19g
+641220,ketogenic,dairy,beef,main course,4.5646,2,"[""gluten free"", ""dairy free"", ""ketogenic""]",493.0,13g,35g,31g
+638375,ketogenic,none,beef,main course,3.5812,4,"[""gluten free"", ""ketogenic""]",,,,
+982365,gluten free,seafood,onion,main course,2.3534,4,"[""gluten free"", ""dairy free""]",473.0,68g,5g,37g
+648565,ketogenic,seafood,mushrooms,main course,1.25,4,"[""dairy free"", ""ketogenic""]",463.0,11g,32g,28g
+1095894,none,dairy,onion,main course,3.1022000000000003,6,"[""dairy free"", ""pescatarian""]",311.0,33g,8g,23g
+1095955,gluten free,seafood,garlic,main course,2.6859,6,"[""gluten free"", ""dairy free""]",538.0,56g,14g,42g
+638550,ketogenic,gluten,onion,main course,1.1086,8,"[""gluten free"", ""dairy free"", ""whole 30"", ""ketogenic""]",344.0,7g,28g,15g
+639320,ketogenic,gluten,none,main course,1.6277,3,"[""gluten free"", ""primal"", ""ketogenic""]",361.0,7g,25g,23g
+641375,none,seafood,garlic,main course,3.3633,2,"[""gluten free"", ""primal""]",249.0,14g,8g,29g
+654902,none,seafood,onion,main course,1.7967,8,[],555.0,50g,30g,19g
+646651,gluten free,tree nut,garlic,main course,3.1255,4,"[""gluten free""]",709.0,78g,24g,46g
+643428,ketogenic,gluten,none,main course,2.6664,4,"[""gluten free"", ""dairy free"", ""whole 30"", ""pescatarian"", ""ketogenic""]",322.0,10g,22g,22g
+1096273,ketogenic,tree nut,none,main course,2.1353,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""whole 30"", ""ketogenic""]",339.0,6g,24g,23g
+644711,none,seafood,onion,main course,5.2891,8,"[""gluten free""]",532.0,37g,15g,54g
+632021,gluten free,dairy,onion,main course,2.2884,3,"[""gluten free"", ""dairy free"", ""pescatarian""]",117.0,2g,4g,16g
+636589,gluten free,seafood,mushrooms,main course,3.4039,1,"[""gluten free""]",462.0,96g,3g,23g
+632209,none,seafood,onion,main course,2.5935,4,"[""gluten free"", ""dairy free""]",592.0,26g,41g,32g
+641893,none,seafood,none,main course,3.9549,6,[],902.0,46g,54g,56g
+642619,none,tree nut,none,main course,5.0589,4,"[""pescatarian""]",388.0,17g,15g,43g

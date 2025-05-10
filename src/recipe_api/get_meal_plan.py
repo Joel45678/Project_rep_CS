@@ -14,7 +14,7 @@ def get_meal_plan(API_KEY, timeFrame="day", diet=None, intolerances=None, exclud
         "diet": diet,
         "intolerances": intolerances,
         "excludeIngredients": exclude,
-        "number": 100, # necessary because we need to use complexSearch instead of https://api.spoonacular.com/recipes/random
+        "number": 2000, # necessary because we need to use complexSearch instead of https://api.spoonacular.com/recipes/random
         "addRecipeInformation": True
     }
 
