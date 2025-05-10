@@ -16,6 +16,7 @@ from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_grams
 #from data.ml_forecast import train_and_forecast_model
 from data.ml_forecast import forecast_user_constraints
+from src.app import app
 
 
 
