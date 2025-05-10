@@ -1,27 +1,36 @@
+"""
+Meal Plan Generator App (Streamlit)
+
+This app allows users to generate meal plans based on dietary preferences, intolerances,
+and excluded ingredients using the Spoonacular API. It also forecasts meal costs using a trained ML model.
+"""
+
 import streamlit as st
 import sys, os
 import requests
-
+import plotly.graph_objects as go
 import os
 
 
-
-
-# assure imports still work
+# Ensure project root is in the path for module imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition
+
+# Import functions to retrieve price, nutrition, detailed instructions, and gram conversions for recipes
+from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_nutrition, get_recipe_grams
+
+# Import predefined constants for dietary options, intolerances, exclusions, and the API key
 from utilities.constants import intolerances_lst, diet_lst, excluded_ingredients_lst, API_KEY1
+
+## Import function to generate a meal plan from the Spoonacular API
 from recipe_api.get_meal_plan import get_meal_plan
-from recipe_api.get_recipe_information import get_recipe_price, get_recipe_details, get_recipe_grams
-#from data.ml_forecast import train_and_forecast_model
+
+# Import ML-based forecasting function to estimate expected meal costs based on user constraints
 from data.ml_forecast import forecast_user_constraints
 
 
 
-
-import plotly.graph_objects as go
-
+# Initialize Streamlit session state variables
 if 'total_carbs' not in st.session_state:
     st.session_state.total_carbs = 0.0
 if 'total_fat' not in st.session_state:
@@ -37,9 +46,11 @@ if 'number_input' not in st.session_state:
 
 API_KEY = API_KEY1
 
+
+# ------ generate meals ------ #
 def generate_plan():
 
-    #use inputs from session state
+    # Extract user input
     input_number    = st.session_state.number_input
     diet            = st.session_state.diet
     intolerances    = st.session_state.intolerances
@@ -53,7 +64,7 @@ def generate_plan():
     if excluded_ingredients == "none":
         diet = None
 
-    #API-Call to get recipe
+    # Try retrieving a meal plan from the API
     try:
         recipes, food_type = get_meal_plan(
             API_KEY,
@@ -80,13 +91,14 @@ def generate_plan():
                 st.error(f"API-Call Error: {recipes}.")
             return
 
+    # Reset totals and recipe list
     st.session_state.recipes = []
     st.session_state.total_cost = 0.0
     st.session_state.total_carbs = 0.0
     st.session_state.total_protein = 0.0
     st.session_state.total_fat = 0.0
 
-    #go through recipes to create the output for each recipe
+    # Collect recipe information
     for rid in recipes:
         rec_id = rid["id"]
         title, img, instr = get_recipe_details(API_KEY, rec_id)   # instructions for recipe
@@ -112,7 +124,7 @@ def generate_plan():
             "price":        cost,
         })
 
-#regenerate meal, if user doesn't like the meal
+# ------ regenerate meal, if user doesn't like the meal ------ #
 def regenerate_one(id_regenerate):
 
     #inputs
@@ -120,7 +132,7 @@ def regenerate_one(id_regenerate):
     intolerances = st.session_state.intolerances
     excluded_ingredients = st.session_state.excluded_ingredients
 
-    # convert values
+    # Normalize inputs
     if diet == "none":
         diet = None
     if intolerances == "none":
@@ -128,7 +140,7 @@ def regenerate_one(id_regenerate):
     if excluded_ingredients == "none":
         excluded_ingredients = None
 
-    # Build params for /recipes/random
+    # Build query parameters
     params = {"apiKey": API_KEY, "number": 1}
     if diet:
         params["tags"] = diet
@@ -140,7 +152,7 @@ def regenerate_one(id_regenerate):
     #ID for current recipes
     currents_recipe_id = [r["id"] for r in st.session_state.recipes]
 
-    # 4) non-duplicate recipe
+    # Try up to 5 times to get a unique recipe
     new_recipe = None
     for _ in range(5):
         resp = requests.get("https://api.spoonacular.com/recipes/random", params=params)
@@ -163,7 +175,7 @@ def regenerate_one(id_regenerate):
         st.error("Couldn’t find a new recipe after several tries. Try again later.")
         return
 
-    #extract values for the new recipe
+    # Extract and store new recipe
     new_id    = new_recipe["id"]
     title     = new_recipe.get("title", "")
     image_url = new_recipe.get("image", "")
@@ -185,14 +197,13 @@ def regenerate_one(id_regenerate):
 
 
 
-# Structure of the app
+########### Structure of the app ##################
 
 
-# number-input column (input)
-# Sidebar Input
+# Sidebar configuration inputs
+
 with st.sidebar:
-    #st.image("src/assets/01_Logo.png", width=150)
-    #st.header("Meal Plan Configuration")
+    st.image("src/assets/01_Logo.png", width=150)
 
     st.number_input(
         label="Number of recipes",
@@ -210,7 +221,7 @@ with st.sidebar:
 
     st.button("Generate Meal Plan", on_click=generate_plan)
 
-    # Button zum Trainieren des Modells und Anzeigen des Forecasts
+    # Run forecast model
     if st.button("ML Forecast anzeigen"):
         csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'training_data_nutrition.csv')
         csv_path = os.path.abspath(csv_path)
@@ -226,12 +237,12 @@ with st.sidebar:
 
 
 
-# Chart and meals with instructions
+# Main content: Recipe display and charts
 col1f =st.columns(1)[0]
 with col1f:
-    # Forecast-Anzeige, falls vorhanden
+    # Show forecast
     if "forecast_avg" in st.session_state:
-        st.markdown(f"**Durchschnittlich vorhergesagte Kosten pro Portion (ML):** {st.session_state.forecast_avg:.2f} €")
+        st.markdown(f"**Estimated price per serving:** {st.session_state.forecast_avg:.2f} €")
 
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
@@ -260,7 +271,7 @@ with col1f:
         macronutrients = ["Protein", "Fat", "Carbs"]
         values = [average_protein, average_fat, average_carbs]
 
-        # figure to show nutrient
+        # chart to show nutrient
         bar_fig = go.Figure([go.Bar(x=macronutrients, y=values, text=values, textposition='auto')])
         bar_fig.update_layout(
             title="Average Macronutrient Breakdown per Meal",
@@ -271,7 +282,7 @@ with col1f:
         )
         st.plotly_chart(bar_fig)
 
-        # !! currently on the top !!!!
+        
         price_placeholder.markdown(
             f"**Price for the plan:** {total_cost:.2f}$"
         )

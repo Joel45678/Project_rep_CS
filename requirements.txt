@@ -1,4 +1,6 @@
 streamlit
 plotly
 requests
-random
+pandas
+numpy
+scikit-learn
