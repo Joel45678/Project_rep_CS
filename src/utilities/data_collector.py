@@ -103,4 +103,4 @@ def remove_duplicate_values(path=DATA_PATH):
         df = df.drop_duplicates(subset="food_id", keep="first")
         df.to_csv(path, index=False)
 
-#remove_duplicate_values(DATA_PATH)
+remove_duplicate_values(DATA_PATH)

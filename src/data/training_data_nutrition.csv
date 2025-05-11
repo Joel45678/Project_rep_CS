@@ -380,3 +380,5 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 1096276,ketogenic,seafood,onion,main course,3.1662,4,"[""gluten free"", ""primal"", ""ketogenic""]",416.0,12g,29g,27g
 664664,vegetarian,none,onion,main course,1.1959,6,"[""gluten free"", ""lacto ovo vegetarian""]",491.0,41g,27g,21g
 646575,ketogenic,gluten,none,main course,3.3933,8,"[""gluten free"", ""ketogenic""]",606.0,22g,38g,37g
+634673,gluten free,none,onion,main course,8.4275,6,"[""gluten free"", ""dairy free""]",1007.0,47g,47g,94g
+648320,none,none,beef,main course,6.9604,2,"[""gluten free"", ""dairy free"", ""paleolithic"", ""primal"", ""pescatarian""]",382.0,5g,24g,34g
