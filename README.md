@@ -47,12 +47,13 @@ streamlit run app.py
 - `app/`              
 │   ├── `app.py`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
 - `assets/`              – Contains images used in the project.
-- `data/`                – Stores ML data.
+- `data/`                – ML data and forecast.
+│   ├── `get_meal_plan.py`           – Function for price prediction.
+│   ├── `training_data_nutrition.csv`  – Training data for ML.
 - `recipe_api/`          – interactions with the recipe API.
 │   ├── `get_meal_plan.py`           – Get a meal plan from the API.
 │   ├── `get_recipe_information.py`  – Retrieves detailed recipe information.
 │   ├── `recipe_data.py`             – Defines the `RecipeData` class to encapsulate detailed recipe details.
-
 - `utilities/`           – Utility functions and support modules.
 │   ├── `constants.py`               – Stores global constants (API keys, ingredient list).
 │   ├── `data_collector.py`          – Collects data to get training data for ML.
