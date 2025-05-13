@@ -309,6 +309,7 @@ with col1f:
                 st.session_state.selected_recipe_id = r['id']
                 st.session_state.selected_recipe_title = r['title']
                 st.switch_page("pages/page1.py")
+
             st.markdown("___")
 
         
