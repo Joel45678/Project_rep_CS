@@ -30,6 +30,7 @@ from data.ml_forecast import forecast_user_constraints
 
 
 
+
 # Initialize Streamlit session state variables
 if 'total_carbs' not in st.session_state:
     st.session_state.total_carbs = 0.0
@@ -196,6 +197,20 @@ def regenerate_one(id_regenerate):
     }
 
 
+# ---- trigger forecasting model when dropdown selection changes --- #
+def run_forecast():
+    csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'training_data_nutrition.csv')
+    csv_path = os.path.abspath(csv_path)
+
+    pred_cost = forecast_user_constraints(
+        csv_path,
+        diet=st.session_state.diet if st.session_state.diet != "none" else None,
+        intolerance=st.session_state.intolerances if st.session_state.intolerances != "none" else None,
+        excluded_ingredient=st.session_state.excluded_ingredients if st.session_state.excluded_ingredients != "none" else None
+    )
+
+    st.session_state.forecast_avg = pred_cost
+
 
 ########### Structure of the app ##################
 
@@ -213,36 +228,24 @@ with st.sidebar:
         key="number_input"
     )
 
-    st.selectbox("Diet", diet_lst, key="diet")
-    st.selectbox("Intolerances", intolerances_lst, key="intolerances")
-    st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients")
+    st.selectbox("Diet", diet_lst, key="diet",on_change=run_forecast)
+    st.selectbox("Intolerances", intolerances_lst, key="intolerances",on_change=run_forecast)
+    st.selectbox("Exclude ingredients", excluded_ingredients_lst, key="excluded_ingredients",on_change=run_forecast)
 
     st.markdown("<br>", unsafe_allow_html= True)
 
     st.button("Generate Meal Plan", on_click=generate_plan)
 
-    # Run forecast model
-    if st.button("ML Forecast anzeigen"):
-        csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'training_data_nutrition.csv')
-        csv_path = os.path.abspath(csv_path)
-
-        pred_cost = forecast_user_constraints(
-            csv_path,
-            diet=st.session_state.diet if st.session_state.diet != "none" else None,
-            intolerance=st.session_state.intolerances if st.session_state.intolerances != "none" else None,
-            excluded_ingredient=st.session_state.excluded_ingredients if st.session_state.excluded_ingredients != "none" else None
-        )
-
-        st.markdown(f"**Vorhergesagte Kosten basierend auf deinen Angaben:** {pred_cost:.2f} €")
+    # Show forecast directly in the sidebar, if available
+    if "forecast_avg" in st.session_state:
+        st.markdown(f"**Estimated price per serving:** {st.session_state.forecast_avg:.2f} €")
 
 
+    
 
 # Main content: Recipe display and charts
 col1f =st.columns(1)[0]
 with col1f:
-    # Show forecast
-    if "forecast_avg" in st.session_state:
-        st.markdown(f"**Estimated price per serving:** {st.session_state.forecast_avg:.2f} €")
 
     titles_placeholder = st.empty()  # placeholder for recipes
     price_placeholder = st.empty()   # placeholder for price
