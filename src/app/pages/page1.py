@@ -2,12 +2,11 @@ import streamlit as st
 from recipe_api.get_recipe_information import get_recipe_nutrition, get_recipe_grams
 from utilities.constants import API_KEY1
 
-
-params = st.query_params
-recipe_id = params.get("recipe_id", [None])[0]
-recipe_title = params.get("recipe_title", [None])[0]
-
 API_KEY = API_KEY1
+
+# Retrieve from session state
+recipe_id = st.session_state.get("selected_recipe_id")
+recipe_title = st.session_state.get("selected_recipe_title")
 
 if recipe_id and recipe_title:
     st.header(f"Macronutrients of {recipe_title}")
