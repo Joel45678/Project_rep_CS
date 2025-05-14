@@ -1,15 +1,22 @@
 import streamlit as st
+
+st.set_page_config(
+    page_title="Macronutrients"
+)
 from recipe_api.get_recipe_information import get_recipe_nutrition, get_recipe_grams
 from utilities.constants import API_KEY1
 
 API_KEY = API_KEY1
 
-# Retrieve from session state
+# Retrieve from session states
 recipe_id = st.session_state.get("selected_recipe_id")
 recipe_title = st.session_state.get("selected_recipe_title")
+recipe_image = st.session_state.get("selected_recipe_image")
 
 if recipe_id and recipe_title:
     st.header(f"Macronutrients of {recipe_title}")
+    if recipe_image:
+        st.image(recipe_image, width=300)
 
 if recipe_id:
     try:

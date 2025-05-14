@@ -308,7 +308,8 @@ with col1f:
             if st.button(f"View Macronutrients for {r['title']}", key=f"macro_{idx}"):
                 st.session_state.selected_recipe_id = r['id']
                 st.session_state.selected_recipe_title = r['title']
-                st.switch_page("pages/page1.py")
+                st.session_state.selected_recipe_image = r["image"]
+                st.switch_page("pages/Macronutrients.py")
 
             st.markdown("___")
 
