@@ -218,7 +218,7 @@ def run_forecast():
 # Sidebar configuration inputs
 
 with st.sidebar:
-    #st.image("src/assets/01_Logo.png", width=150)
+    st.image("src/assets/01_Logo.png", width=150)
 
     st.number_input(
         label="Number of recipes",
