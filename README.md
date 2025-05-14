@@ -41,11 +41,13 @@ streamlit run app.py
 
 
 
-
 ## Folder Overview
 
 - `app/`              
 │   ├── `app.py`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
+│   ├── `debugging.py`         – Scripts for testing and debugging.
+│   ├── `pages`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
+│   ├──  ├──  `macronutrients_page.py`               – Additional page for additional nutrition information for the recipes
 - `assets/`              – Contains images used in the project.
 - `data/`                – ML data and forecast.
 │   ├── `get_meal_plan.py`           – Function for price prediction.
@@ -58,9 +60,6 @@ streamlit run app.py
 │   ├── `constants.py`               – Stores global constants (API keys, ingredient list).
 │   ├── `data_collector.py`          – Collects data to get training data for ML.
 │   ├── `random_user_generator.py`   – Generates mock/random user data to  for the data collector.
-- `app.py`               – Main Streamlit application that lets users generate and visualize customized daily meal plans
-- `debugging.py`         – Scripts for testing and debugging.
-
 
 
 ## API Usage

@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import os
 from random_user_generator import generate_random_preferences
-from constants import API_KEY2
+from constants import API_KEY00
 
 import sys
 import os
@@ -15,7 +15,7 @@ from recipe_api.get_meal_plan import get_meal_plan
 from recipe_api.get_recipe_information import get_recipe_price
 from recipe_api.get_recipe_information import get_recipe_nutrition
 from recipe_api.recipe_data import RecipeData #Recipe object
-API_KEY = API_KEY2
+API_KEY = API_KEY00
 
 
 # to get paths 

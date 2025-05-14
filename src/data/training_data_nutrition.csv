@@ -396,3 +396,14 @@ food_id,diet,intolerances,excluded_ingredients,food_type,meal_costs_perserving,s
 638642,none,none,garlic,main course,3.9043,4,"[""gluten free"", ""dairy free""]",779.0,48g,45g,51g
 659419,ketogenic,gluten,none,main course,1.5962,4,"[""gluten free"", ""primal"", ""ketogenic""]",606.0,2g,46g,37g
 645647,gluten free,tree nut,onion,main course,4.6721,4,"[""gluten free"", ""primal""]",731.0,11g,38g,83g
+997285,gluten free,tree nut,onion,main course,4.8818,4,"[""gluten free"", ""primal"", ""pescatarian""]",327.0,6g,18g,37g
+679539,vegetarian,gluten,garlic,main course,4.0476,1,"[""gluten free"", ""lacto ovo vegetarian"", ""primal""]",515.0,42g,35g,14g
+1095872,none,none,onion,main course,4.6987,4,"[""pescatarian""]",496.0,43g,17g,41g
+982368,gluten free,tree nut,garlic,main course,3.6246,3,"[""gluten free""]",643.0,52g,26g,51g
+638649,gluten free,none,garlic,main course,3.2528,2,"[""gluten free""]",316.0,11g,6g,50g
+452116,none,none,beef,main course,3.3814,2,[],855.0,96g,39g,35g
+1095994,none,dairy,onion,main course,4.3581,4,"[""dairy free""]",538.0,69g,9g,42g
+654313,vegetarian,gluten,mushrooms,main course,1.2227,4,"[""gluten free"", ""lacto ovo vegetarian"", ""whole 30""]",337.0,43g,12g,15g
+1165029,gluten free,seafood,garlic,main course,1.8907,4,"[""gluten free"", ""lacto ovo vegetarian""]",424.0,51g,17g,18g
+651076,ketogenic,seafood,mushrooms,main course,1.9699,6,"[""gluten free"", ""dairy free"", ""ketogenic""]",553.0,3g,46g,26g
+645060,vegetarian,tree nut,garlic,main course,0.8506999999999999,1,"[""dairy free"", ""lacto ovo vegetarian""]",407.0,28g,23g,18g
