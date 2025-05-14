@@ -238,7 +238,7 @@ with st.sidebar:
 
     # Show forecast directly in the sidebar, if available
     if "forecast_avg" in st.session_state:
-        st.markdown(f"**Estimated price per serving:** {st.session_state.forecast_avg:.2f} €")
+        st.markdown(f"**Estimated price per serving:** {st.session_state.forecast_avg:.2f} $")
 
 
     
