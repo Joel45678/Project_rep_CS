@@ -5,9 +5,6 @@ https://projectrepcs-wtumtw66amdt87vvcrnk8u.streamlit.app/
 
 This is a university project for the course Grundlagen und Methoden der Informatik für Wirtschaftswissenschaften
 
-Link to the app:
-projectrepcs-wtumtw66amdt87vvcrnk8u
-
 ## Team Members
 - Fábio Vinício Scheurer
 - Joel Nussbaumer
@@ -75,3 +72,19 @@ The API keys can be found under `utilities/constants.py`
 
 ## Limitations
 - API key has a limited number of daily requests
+
+# Note on the Use of Artificial Intelligence (AI)
+
+During the development of this application, we used ChatGPT by OpenAI as a support tool in the programming process. The AI was used in the following ways:
+
+   - To generate ideas for implementation strategies and architectural decisions,
+
+   - To get assistance with debugging and understanding code behavior,
+
+   - To improve readability of comments and documentation (e.g., this README),
+
+   - To review and refine code snippets based on best practices.
+
+All outputs generated with the help of AI were critically reviewed, edited, and adapted by us to ensure correctness, reliability, and contextual relevance. The final implementation reflects our own understanding and decisions.
+
+In accordance with university guidelines, AI tools were used as supplementary support during development. They did not replace our own analysis or problem-solving. AI-generated outputs are not treated as authoritative sources but as optional assistance—similar to using online documentation or developer forums.
