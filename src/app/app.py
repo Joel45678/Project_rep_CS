@@ -218,7 +218,7 @@ def run_forecast():
 # Sidebar configuration inputs
 
 with st.sidebar:
-    st.image("src/assets/01_Logo.png", width=150)
+    #st.image("src/assets/01_Logo.png", width=150)
 
     st.number_input(
         label="Number of recipes",
@@ -306,10 +306,12 @@ with col1f:
                 args=(idx,),
             )
             if st.button(f"View Macronutrients for {r['title']}", key=f"macro_{idx}"):
-                st.query_params.update(recipe_id=r['id'], recipe_title=r['title'])
-                st.switch_page("pages/macronutrients_page.py")
+                st.session_state.selected_recipe_id = r['id']
+                st.session_state.selected_recipe_title = r['title']
+                st.switch_page("pages/page1.py")
 
             st.markdown("___")
+
         
     else:
         st.info("Generate a meal plan to see your recipes and breakdown.")
